@@ -1,6 +1,6 @@
 {
   "control":{
-    "Start_autobalance": true,
+    "Start_autobalance": false,
     "Date_calculation": "2025-11-30",
     "Month": 12
     },
@@ -711,7 +711,7 @@
       "Q_kchng": { "value": 1420, "status": 0, "message": null },
       "G_skn": { "value": 10200, "status": 0, "message": null },
       "G_kchng": null,
-      "G_gnps": 10000000000000,
+      "G_gnps": null,
 
       "V_gnps": { "value": null, "status": null, "message": null },
       "V_nps_1": { "value": null, "status": null, "message": null },
@@ -3733,7 +3733,7 @@
       "G_sikn_vankor": null,
       "G_sikn_suzun": null,
       "G_sikn_vslu": null,
-      "G_sikn_tagul": { "value": null, "status": null, "message": null },
+      "G_sikn_tagul": { "value": 1400, "status": null, "message": null },
       "G_sikn_tng": null,
       "delta_G_sikn": null,
       "Q_suzun": { "value": 2101, "status": 0, "message": null },
