@@ -2251,12 +2251,12 @@ def node_correction_calc(
         F_bp = sum(vals.values())
     elif obj in ("НПС-1", "НПС-2"):
         t_ost_nps_1_2 = int(parts[2])
-        # TODO: применить корректировку по НПС
+
 
     elif len(parts) > 10:
         t_ost_sikn = int(parts[2])
         t_ost_nps_1_2 = int(parts[10])
-        # TODO: применить корректировку по СИКН + НПС
+
 
     return {
         "K_work":K_work,
