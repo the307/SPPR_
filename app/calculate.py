@@ -32,14 +32,21 @@ def day_zero_calc(
         "V_tstn_vn_0":V_tstn_vn_0,
     }
 def prev_day_calc(
-    V_upn_suzun_prev, V_upn_lodochny_prev, V_tagul_tr_prev, V_upsv_yu_prev, V_upsv_s_prev, V_cps_prev, V_nps_1_prev, V_nps_2_prev, V_tstn_rn_vn_prev
+    V_upn_suzun_prev, V_upn_lodochny_prev, V_tagul_tr_prev, V_upsv_yu_prev, V_upsv_s_prev, V_cps_prev, V_nps_1_prev, V_nps_2_prev, V_tstn_rn_vn_prev,
+    V_upsv_yu, V_upsv_s, V_cps, V_upn_suzun, V_upn_lodochny, V_tagul_tr
     ):       
-    V_upn_suzun = V_upn_suzun_prev
-    V_upn_lodochny = V_upn_lodochny_prev
-    V_tagul_tr = V_tagul_tr_prev
-    V_upsv_yu = V_upsv_yu_prev
-    V_upsv_s = V_upsv_s_prev
-    V_cps = V_cps_prev
+    if not V_upn_suzun:
+        V_upn_suzun = V_upn_suzun_prev
+    if not V_upn_lodochny:
+        V_upn_lodochny = V_upn_lodochny_prev
+    if not V_tagul_tr:
+        V_tagul_tr = V_tagul_tr_prev
+    if not V_upsv_yu:
+        V_upsv_yu = V_upsv_yu_prev
+    if not V_upsv_s:
+        V_upsv_s = V_upsv_s_prev
+    if not V_cps:
+        V_cps = V_cps_prev
     V_nps_1 = V_nps_1_prev
     V_nps_2 = V_nps_2_prev
     V_tstn_rn_vn = V_tstn_rn_vn_prev
@@ -93,11 +100,12 @@ def lodochny_upsv_yu_calc(Q_lodochny, K_delta_g_upn_lodochny, K_otkachki, G_lodo
 def precalc_value(
         Q_vslu, V_suzun_vslu_prev, V_suzun_tng_prev, G_payaha, G_suzun_tng, Q_vo, G_ichem, V_ichem_prev, G_lodochny_upsv_yu_month,
         Q_tagul, V_tagul_tr_prev, V_tagul_tr, K_delta_g_tagul, Q_kchng, N, G_buying_oil_month, G_out_udt_month, G_sikn_tagul, day,
-        V_lodochny_cps_upsv_yu_prev, G_lodochny_upsv_yu
+        V_lodochny_cps_upsv_yu_prev, G_lodochny_upsv_yu, V_suzun_vslu, G_sikn_tagul_manual_entries
 ):
     G_suzun_vslu = Q_vslu
     V_suzun_tng = G_payaha + V_suzun_tng_prev - G_suzun_tng
-    V_suzun_vslu = V_suzun_vslu_prev + Q_vslu - G_suzun_vslu
+    if not V_suzun_vslu:
+        V_suzun_vslu = V_suzun_vslu_prev + Q_vslu - G_suzun_vslu
     G_upn_lodochny_ichem = Q_vo
     V_ichem = V_ichem_prev + G_upn_lodochny_ichem - G_ichem
     
@@ -108,28 +116,38 @@ def precalc_value(
     G_per = G_buying_oil - G_out_udt
     G_sikn_tng = G_suzun_tng
     delta_G_tagul = Q_tagul - G_tagul - (V_tagul_tr - V_tagul_tr_prev)
-    if not G_sikn_tagul:
-        if day <= N-2:
-            G_sikn_tagul = round(G_lodochny_upsv_yu_month / N / 10) * 10
+    G_sikn_tagul_is_manual = G_sikn_tagul is not None
+    if G_sikn_tagul is None:
+        base = round(G_lodochny_upsv_yu_month / N / 10) * 10
+        # Определяем 2 последних дня без ручного ввода (остаточные дни)
+        remainder_days = []
+        for d in range(N, 0, -1):
+            if d not in G_sikn_tagul_manual_entries:
+                remainder_days.append(d)
+            if len(remainder_days) == 2:
+                break
+        if day in set(remainder_days):
+            manual_sum = sum(G_sikn_tagul_manual_entries.values())
+            base_count = N - len(G_sikn_tagul_manual_entries) - len(remainder_days)
+            G_sikn_tagul = (G_lodochny_upsv_yu_month - base * base_count - manual_sum) / len(remainder_days)
         else:
-            value = round(G_lodochny_upsv_yu_month / N / 10) * 10
-            G_sikn_tagul_N = [value for _ in range(N - 2)]
-            G_sikn_tagul = (G_lodochny_upsv_yu_month - sum(G_sikn_tagul_N))/2
-        if not (900 <= G_sikn_tagul <= 1500):
-            G_sikn_tagul = {
-                "value": G_sikn_tagul,
-                "status": 3,
-                "message": (
-                    f"откачка нефти на СИКН-1208 вне допустимой вилки (900 … 1500) т "
-                    f"(текущее {G_sikn_tagul:.2f})"
-                ),
+            G_sikn_tagul = base
+    if not (900 <= G_sikn_tagul <= 1500):
+        G_sikn_tagul = {
+            "value": G_sikn_tagul,
+            "status": 3,
+            "message": (
+                f"откачка нефти на СИКН-1208 вне допустимой вилки (900 … 1500) т "
+                f"(текущее {G_sikn_tagul:.2f})"
+            ),
+        }
+    else:
+        G_sikn_tagul = {
+            "value": G_sikn_tagul,
+            "status": 1,
+            "message": (None),
             }
-        else:
-            G_sikn_tagul = {
-                "value": G_sikn_tagul,
-                "status": 1,
-                "message": (None),
-            }
+    
     V_lodochny_cps_upsv_yu = V_lodochny_cps_upsv_yu_prev + G_lodochny_upsv_yu - G_sikn_tagul['value']
     return {
         "G_suzun_vslu":G_suzun_vslu,
@@ -144,6 +162,7 @@ def precalc_value(
         "G_per":G_per,
         "G_sikn_tng":G_sikn_tng,
         "G_sikn_tagul":G_sikn_tagul,
+        "G_sikn_tagul_is_manual":G_sikn_tagul_is_manual,
         "delta_G_tagul":delta_G_tagul,
         "V_lodochny_cps_upsv_yu":V_lodochny_cps_upsv_yu,
     }
@@ -195,26 +214,39 @@ def value_recalculation (
 def rn_vankor_calc (
         F_vn_month, F_suzun_month, N, day, V_tstn_suzun_vslu_norm, F_tagul_lpu_month, F_tagul_tpu_month, F_skn_month, F_vo_month, F_kchng_month, 
         e_suzun, e_vo, e_kchng, e_tng, F_tng_month, G_suzun_vslu, F_suzun_vankor_month,  V_tstn_suzun_vslu_prev,
-        F_bp_vn, F_bp_suzun, F_bp_suzun_vankor, F_bp_suzun_vslu, F_bp_tagul_lpu, F_bp_tagul_tpu, F_bp_skn, F_bp_vo, F_bp_tng, F_bp_kchng
+        F_bp_vn, F_bp_suzun, F_bp_suzun_vankor, F_bp_suzun_vslu, F_bp_tagul_lpu, F_bp_tagul_tpu, F_bp_skn, F_bp_vo, F_bp_tng, F_bp_kchng,
+        bp_manual
 ):
+    # Предварительный расчёт остаточных дней для каждой F_bp_* переменной
+    bp_rdays = {}
+    for _var, _manual in bp_manual.items():
+        _rd = []
+        for _d in range(N, 0, -1):
+            if _d not in _manual:
+                _rd.append(_d)
+            if len(_rd) == 2:
+                break
+        bp_rdays[_var] = (set(_rd), sum(_manual.values()), N - len(_manual) - len(_rd), len(_rd))
 
 # =========================================================
 # 40. Ванкорнефть
     if not F_bp_vn:
         base = round((F_vn_month / N) / 50) * 50
-        if day <= (N-2):
-            F_bp_vn = base
+        rset, msum, bcnt, rcnt = bp_rdays["F_bp_vn"]
+        if day in rset:
+            F_bp_vn = (F_vn_month - base * bcnt - msum) / rcnt
         else:
-            F_bp_vn = (F_vn_month - base * (N - 2))/2
+            F_bp_vn = base
     F_suzun = F_suzun_month - F_suzun_vankor_month
 # =========================================================
 # 41. Сузун (общий)
     if not F_bp_suzun:
         base = round((F_suzun / N) / 50) * 50
-        if day <= (N-2):
-            F_bp_suzun = base
+        rset, msum, bcnt, rcnt = bp_rdays["F_bp_suzun"]
+        if day in rset:
+            F_bp_suzun = (F_suzun - base * bcnt - msum) / rcnt
         else:
-            F_bp_suzun = (F_suzun - base * (N - 2))/2
+            F_bp_suzun = base
 # =========================================================
 # 42. Сузун → Ванкор (через e)
     if not F_bp_suzun_vankor:
@@ -237,12 +269,17 @@ def rn_vankor_calc (
                         F_bp_suzun_vankor = base
                     else:
                         F_bp_suzun_vankor = F_suzun_vankor_month - base * (delivery_count - 1)
+                else:
+                    F_bp_suzun_vankor = 0
+            else:
+                F_bp_suzun_vankor = 0
         elif F_suzun_vankor_month >= 20000:
             base = round((F_suzun_vankor_month / N) / 50) * 50
-            if day <= N-2:
-                F_bp_suzun_vankor = base
+            rset, msum, bcnt, rcnt = bp_rdays["F_bp_suzun_vankor"]
+            if day in rset:
+                F_bp_suzun_vankor = (F_suzun_vankor_month - base * bcnt - msum) / rcnt
             else:
-                F_bp_suzun_vankor = (F_suzun_vankor_month - base * (N - 2))/2
+                F_bp_suzun_vankor = base
 # =========================================================
 # 43. Сузун → ВСЛУ
     V_tstn_suzun_vslu = V_tstn_suzun_vslu_prev + G_suzun_vslu - F_bp_suzun_vslu
@@ -255,25 +292,31 @@ def rn_vankor_calc (
 # 44. Тагульское — ЛПУ
     if not F_bp_tagul_lpu:
         base = round((F_tagul_lpu_month / N) / 50) * 50
-        if day <= N-2:
-            F_bp_tagul_lpu = base
+        rset, msum, bcnt, rcnt = bp_rdays["F_bp_tagul_lpu"]
+        if day in rset:
+            F_bp_tagul_lpu = (F_tagul_lpu_month - base * bcnt - msum) / rcnt
         else:
-            F_bp_tagul_lpu = (F_tagul_lpu_month - base * (N - 2))/2
+            F_bp_tagul_lpu = base
 # =========================================================
 # 45. Тагульское — ТПУ
     if not F_bp_tagul_tpu:
         base = round((F_tagul_tpu_month / N) / 50) * 50
-        if day <= N-2:
-            F_bp_tagul_tpu = base
+        rset, msum, bcnt, rcnt = bp_rdays["F_bp_tagul_tpu"]
+        if day in rset:
+            F_bp_tagul_tpu = (F_tagul_tpu_month - base * bcnt - msum) / rcnt
         else:
-            F_bp_tagul_tpu = (F_tagul_tpu_month - base * (N - 2))/2
+            F_bp_tagul_tpu = base
 # 46. Расчет суммарной сдачи ООО "Тагульское" через СИКН №1209
     F_bp_tagul = F_bp_tagul_lpu + F_bp_tagul_tpu
 # =========================================================
 # 47. СКН
     if not F_bp_skn:
         base = round((F_skn_month / N) / 50) * 50
-        F_bp_skn = base if day <= (N-2) else (F_skn_month - base * (N - 2))/2
+        rset, msum, bcnt, rcnt = bp_rdays["F_bp_skn"]
+        if day in rset:
+            F_bp_skn = (F_skn_month - base * bcnt - msum) / rcnt
+        else:
+            F_bp_skn = base
 
 # =========================================================
 # 48. Восток Ойл (через e)   
@@ -292,15 +335,22 @@ def rn_vankor_calc (
                 delivery_count = len(delivery_days)
                 last_day = delivery_days[-1]
                 base = round((F_vo_month / delivery_count) / 50) * 50
-
                 if day in delivery_days:
                     if day != last_day:
                         F_bp_vo = base
                     else:
                         F_bp_vo = F_vo_month - base * (delivery_count - 1)
+                else:
+                    F_bp_vo = 0
+            else:
+                F_bp_vo = 0
         else:
             base = round((F_vo_month / N) / 50) * 50
-            F_bp_vo = base if day <= (N-2) else (F_vo_month - base * (N - 2))/2
+            rset, msum, bcnt, rcnt = bp_rdays["F_bp_vo"]
+            if day in rset:
+                F_bp_vo = (F_vo_month - base * bcnt - msum) / rcnt
+            else:
+                F_bp_vo = base
 # =========================================================
 # 49. Определение посуточной сдачи нефти АО "Таймырнефтегаз" через СИКН №1209
     if not F_bp_tng:
@@ -323,9 +373,17 @@ def rn_vankor_calc (
                         F_bp_tng = base
                     else:
                         F_bp_tng = F_tng_month - base * (delivery_count - 1)
+                else:
+                    F_bp_tng = 0
+            else:
+                F_bp_tng = 0
         else:
             base = round((F_tng_month / N) / 50) * 50
-            F_bp_tng = base if day < (N-2) else (F_tng_month - base * (N - 2))/2
+            rset, msum, bcnt, rcnt = bp_rdays["F_bp_tng"]
+            if day in rset:
+                F_bp_tng = (F_tng_month - base * bcnt - msum) / rcnt
+            else:
+                F_bp_tng = base
 # =========================================================
 #  50.	Определение посуточной сдачи нефти ООО «КЧНГ» через СИКН № 1209, т/сут:
     if not F_bp_kchng:
@@ -343,15 +401,22 @@ def rn_vankor_calc (
                 delivery_count = len(delivery_days)
                 last_day = delivery_days[-1]
                 base = round((F_kchng_month / delivery_count) / 50) * 50
-
                 if day in delivery_days:
                     if day != last_day:
                         F_bp_kchng = base
                     else:
                         F_bp_kchng = F_kchng_month - base * (delivery_count - 1)
+                else:
+                    F_bp_kchng = 0
+            else:
+                F_bp_kchng = 0
         else:
             base = round((F_kchng_month / N) / 50) * 50
-            F_bp_kchng = base if day < (N-2) else ((F_kchng_month - base * (N - 2))/2)
+            rset, msum, bcnt, rcnt = bp_rdays["F_bp_kchng"]
+            if day in rset:
+                F_bp_kchng = (F_kchng_month - base * bcnt - msum) / rcnt
+            else:
+                F_bp_kchng = base
     F_bp = F_bp_vn + F_bp_tagul_lpu + F_bp_tagul_tpu + F_bp_suzun_vankor + F_bp_suzun_vslu + F_bp_skn + F_bp_vo + F_bp_tng + F_bp_kchng + F_bp_suzun
     return{
         "F_bp_vn":F_bp_vn,
@@ -370,10 +435,11 @@ def rn_vankor_calc (
     }
     # V_gnps = V_gnps_prev + G_sikn - G_gnps
 # Расчет месячных значений
-def availability_and_pumping_calc(G_gpns_i, N, V_gnps_prev, G_sikn, G_suzun_vslu):
+def availability_and_pumping_calc(G_gpns_i, N, V_gnps_prev, G_sikn, G_suzun_vslu,G_gnps):
     G_sikn_vslu = G_suzun_vslu
     G_gnps_month = G_gpns_i.sum()
-    G_gnps = G_gnps_month/N
+    if not G_gnps:
+        G_gnps = G_gnps_month/N
     V_gnps = V_gnps_prev + G_sikn - G_gnps
 
 
@@ -494,7 +560,7 @@ def auto_balance_volumes_calc(
         V_upn_suzun_prev, Start_autobalance, V_upn_suzun_0, VN_upn_suzun_min, V_upn_lodochny_0, VN_upn_lodochny_min,
         V_upsv_yu_0, VN_upsv_yu_min, V_upsv_s_0, VN_upsv_s_min,
         V_cps_0, VN_cps_min, V_upn_lodochny_prev, V_upsv_yu_prev, V_upsv_s_prev, V_cps_prev, N, V_upn_suzun,
-
+        V_upn_lodochny, V_upsv_yu, V_upsv_s, V_cps,
 ):
     if Start_autobalance:
         V_upn_suzun = V_upn_suzun_prev - (V_upn_suzun_0 - VN_upn_suzun_min) / N
@@ -502,12 +568,6 @@ def auto_balance_volumes_calc(
         V_upsv_yu = V_upsv_yu_prev - (V_upsv_yu_0 - VN_upsv_yu_min) / N
         V_upsv_s = V_upsv_s_prev - (V_upsv_s_0 - VN_upsv_s_min) / N
         V_cps = V_cps_prev - (V_cps_0 - VN_cps_min) / N
-    else:
-        V_upn_lodochny = V_upn_lodochny_prev
-        V_upsv_yu = V_upsv_yu_prev
-        V_upsv_s = V_upsv_s_prev
-        V_cps = V_cps_prev
-        V_upn_suzun = V_upn_suzun
     return {
         "V_upn_suzun": V_upn_suzun, "V_upn_lodochny": V_upn_lodochny, "V_upsv_yu": V_upsv_yu, "V_upsv_s": V_upsv_s,
         "V_cps": V_cps,
@@ -946,7 +1006,7 @@ def rn_vankor_check_calc(
         VA_tagul_min, V_tagul_tr, VA_tagul_max, VA_gnps_min, V_gnps, VA_gnps_max, V_gnps_prev, delta_V_gnps_max, delta_VO_gnps_max,
         VA_nps_1_min, V_nps_1, VA_nps_1_max, V_nps_1_prev, delta_V_nps_1_max, delta_VO_nps_1_max, VA_nps_2_min, V_nps_2, VA_nps_2_max,
         V_nps_2_prev, delta_V_nps_2_max, delta_VO_nps_2_max, VN_knps_min, V_knps, VA_knps_max, V_knps_prev, delta_V_knps_max,
-        delta_VO_knps_max, V_ichem_min, V_ichem, V_ichem_max, V_lodochny_cps_upsv_yu, G_sikn_tagul, V_tstn_vn_min, V_tstn_vn, V_tstn_vn_max,
+        delta_VO_knps_max, V_ichem_min, V_ichem, V_ichem_max, V_lodochny_cps_upsv_yu, G_sikn_tagul, G_sikn_tagul_is_manual, V_tstn_vn_min, V_tstn_vn, V_tstn_vn_max,
         V_tstn_suzun_min, V_tstn_suzun, V_tstn_suzun_max, V_tstn_suzun_vankor_min, V_tstn_suzun_vankor, V_tstn_suzun_vankor_max, V_tstn_suzun_vslu_min,
         V_tstn_suzun_vslu, V_tstn_suzun_vslu_max, V_tstn_tagul_obsh_min, V_tstn_tagul_obsh, V_tstn_tagul_obsh_max, V_tstn_lodochny_min,
         V_tstn_lodochny, V_tstn_lodochny_max, V_tstn_tagul_min, V_tstn_tagul, V_tstn_tagul_max, V_tstn_skn_min, V_tstn_skn, V_tstn_skn_max,
@@ -1186,7 +1246,9 @@ def rn_vankor_check_calc(
     else:
         msg = "Значение наличия нефти Лодочного ЛУ на ЦПС и на УПСВ-Юг меньше нуля. Необходимо уменьшить откачку нефти ООО «Тагульское» на СИНК-1208 (столбец Р)."
         V_lodochny_cps_upsv_yu.update({"status": 3, "message": msg})
-        G_sikn_tagul = G_sikn_tagul - abs(V_lodochny_cps_upsv_yu["value"])
+        if not G_sikn_tagul_is_manual:
+            G_sikn_tagul = G_sikn_tagul - abs(V_lodochny_cps_upsv_yu["value"])
+        
     # --- 95.	Проверка наличия нефти на объектах ЦТН по недропользователям
     V_tstn_vn = {"value": (V_tstn_vn.get("value") if isinstance(V_tstn_vn, dict) else V_tstn_vn), "status": 0, "message": ""}
     if V_tstn_vn_min <= V_tstn_vn["value"] <= V_tstn_vn_max:
@@ -2149,4 +2211,65 @@ def planned_balance_for_bp_tagul_gtm_calc(
         "V_tagul_gtm_ost_km":{"value": V_tagul_gtm_ost_km, "status": _status, "message": _message},
         "V_tagul_gtm_check":{"value": V_tagul_gtm_check, "status": _status, "message": _message},
         "delta_V_tagul_gtm_ost":{"value": delta_V_tagul_gtm_ost, "status": _status, "message": _message},
+    }
+
+
+# ------------------------------------------------------------------
+# Пересчёт F_bp_* при наличии node (остановка/ремонт).
+# Получает текущие F_bp_* и текст node, корректирует значения.
+# ------------------------------------------------------------------
+def node_correction_calc(
+    F_bp, F_bp_vn, F_bp_suzun, F_bp_suzun_vankor, F_bp_suzun_vslu,
+    F_bp_tagul, F_bp_tagul_lpu, F_bp_tagul_tpu,
+    F_bp_skn, F_bp_vo, F_bp_tng, F_bp_kchng,
+    node,
+):
+    _status = 0
+    _message = f"Скорректировано по node: {node}"
+    parts = node.split()
+    obj = parts[1]
+
+    vals = {
+        "F_bp_vn": F_bp_vn,
+        "F_bp_suzun": F_bp_suzun,
+        "F_bp_suzun_vankor": F_bp_suzun_vankor,
+        "F_bp_suzun_vslu": F_bp_suzun_vslu,
+        "F_bp_tagul": F_bp_tagul,
+        "F_bp_tagul_lpu": F_bp_tagul_lpu,
+        "F_bp_tagul_tpu": F_bp_tagul_tpu,
+        "F_bp_skn": F_bp_skn,
+        "F_bp_vo": F_bp_vo,
+        "F_bp_tng": F_bp_tng,
+        "F_bp_kchng": F_bp_kchng,
+    }
+
+
+    if obj == "СИКН-1209":
+        K_work = (24 - int(parts[2])) / 24
+        for key in vals:
+            vals[key] *= K_work
+        F_bp = sum(vals.values())
+    elif obj in ("НПС-1", "НПС-2"):
+        t_ost_nps_1_2 = int(parts[2])
+        # TODO: применить корректировку по НПС
+
+    elif len(parts) > 10:
+        t_ost_sikn = int(parts[2])
+        t_ost_nps_1_2 = int(parts[10])
+        # TODO: применить корректировку по СИКН + НПС
+
+    return {
+        "K_work":K_work,
+        "F_bp_vn":F_bp_vn,
+        "F_bp_suzun":F_bp_suzun,
+        "F_bp_suzun_vankor":F_bp_suzun_vankor,
+        "F_bp_suzun_vslu":F_bp_suzun_vslu,
+        "F_bp_tagul":F_bp_tagul,
+        "F_bp_tagul_lpu":F_bp_tagul_lpu,
+        "F_bp_tagul_tpu": F_bp_tagul_tpu,
+        "F_bp_skn":F_bp_skn,
+        "F_bp_vo":F_bp_vo,
+        "F_bp_tng":F_bp_tng,
+        "F_bp_kchng":F_bp_kchng,
+        "F_bp":F_bp
     }

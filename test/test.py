@@ -27,7 +27,8 @@ with open('data_input.json', 'rb') as f:
 
 
 result = response.json()
-with open("data_output.json", 'w', encoding='utf-8') as f:
+test_dir = Path(__file__).resolve().parent
+with open(test_dir / "data_output.json", 'w', encoding='utf-8') as f:
     json.dump(result, f, indent=2, ensure_ascii=False)
 
 export_to_excel()

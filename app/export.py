@@ -118,6 +118,18 @@ def _merge_template_value(template_value: Any, actual_value: Any) -> Any:
         except Exception:
             pass
         return {"value": _to_serializable(value), "status": status, "message": message}
+    if isinstance(actual_value, dict) and "value" in actual_value and "status" in actual_value:
+        value = actual_value.get("value")
+        if value is None:
+            value = template_value
+        status = actual_value.get("status", 0)
+        message = actual_value.get("message")
+        try:
+            if pd.isna(status):
+                status = 0
+        except Exception:
+            pass
+        return {"value": _to_serializable(value), "status": status, "message": message}
     if isinstance(actual_value, dict):
         value = actual_value.get("value")
         if value is None:

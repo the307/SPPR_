@@ -122,7 +122,8 @@ def _apply_input_statuses(node: Any) -> None:
         "Q_gnps",
         "Q_nps_1_2",
         "Q_knps",
-        # month: расчётные проверки/дельты (в шаблоне часто {value,status,message} с null)
+        # текстовое примечание к дню (не требует ввода)
+        "node",
         "G_per_month",
     }
 

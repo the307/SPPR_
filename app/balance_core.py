@@ -29,12 +29,14 @@ from .calculate import (
     planned_balance_for_bp_vo_gtm_calc,
     planned_balance_for_bp_lodochny_gtm_calc,
     planned_balance_for_bp_tagul_gtm_calc,
+    node_correction_calc,
 )
 
 from .data_prep import (
     get_prev_day_data,
     get_month_data,
     precalc_value_data,
+    _get_day_value_nullable,
     recalculation_data,
     vankor_data,
     lodochny_upsv_yu_data,
@@ -56,6 +58,7 @@ from .data_prep import (
     get_planned_balance_for_bp_vo_gtm_data,
     get_planned_balance_for_bp_lodochny_gtm_data,
     get_planned_balance_for_bp_tagul_gtm_data,
+    get_node_correction_data,
 )
 from .export import export_to_json
 from .error_handler import handle_error
@@ -75,6 +78,9 @@ import calendar
 
 
 
+# Вспомогательная: приводит любое значение к числу float.
+# Если на входе dict {value:...} — рекурсивно достаёт value.
+# Если значение отсутствует или некорректно — возвращает NaN.
 def _scalarize(v):
     """Приводит значение (в т.ч. dict {value,..}) к float или NaN."""
     if isinstance(v, dict):
@@ -92,6 +98,8 @@ def _scalarize(v):
         return float("nan")
 
 
+# Сравнивает два значения с допуском tol.
+# Используется для определения, изменил ли autobalance ключевые объёмы.
 def _changed(old_v, new_v, tol=1e-9):
     """True если значения отличаются (с допуском)."""
     old_s = _scalarize(old_v)
@@ -103,6 +111,8 @@ def _changed(old_v, new_v, tol=1e-9):
     return abs(old_s - new_s) > tol
 
 
+# Загружает JSON и собирает единый DataFrame (master_df) со всеми данными.
+# Все даты нормализуются (время обнуляется).
 def build_master_df(input_data) -> pd.DataFrame:
     master_df = build_all_data(input_data)
     if "date" not in master_df.columns:
@@ -111,6 +121,8 @@ def build_master_df(input_data) -> pd.DataFrame:
     return master_df
 
 
+# Извлекает из входного JSON список дат, число дней в месяце (N)
+# и дату последнего дня предыдущего месяца (prev_month).
 def prepare_dates_and_N(data: dict) -> tuple[list[pd.Timestamp], int, pd.Timestamp]:
     days_section = data.get("days", []) or []
     if not days_section:
@@ -131,6 +143,9 @@ def prepare_dates_and_N(data: dict) -> tuple[list[pd.Timestamp], int, pd.Timesta
     return dates, N, prev_month
 
 
+# ЭТАП 1: Расчёт начальных (нулевых) значений на последний день прошлого месяца.
+# Вычисляет производные V_* (V_suzun_slu_0, V_cppn_1_0, V_tstn_0 и т.д.)
+# из входных данных секции last_day.
 def stage_day_zero(master_df: pd.DataFrame, prev_month: pd.Timestamp, state: dict) -> pd.DataFrame:
     """Считает нулевые значения 1 раз и записывает в строку prev_month."""
     state["current_date"] = prev_month
@@ -141,18 +156,22 @@ def stage_day_zero(master_df: pd.DataFrame, prev_month: pd.Timestamp, state: dic
     return update_df(master_df, day_result)
 
 
+# ЭТАП 2: Для каждого дня копирует значения предыдущего дня (V_*_prev).
+# Нужно чтобы формулы текущего дня могли ссылаться на «вчера».
 def stage_prev_day(master_df: pd.DataFrame, dates: list[pd.Timestamp], state: dict) -> pd.DataFrame:
     for n in dates:
         state["current_date"] = n
         day_result = {"date": n}
         prev_day = n - timedelta(days=1)
-        prev_day_data = get_prev_day_data(master_df, prev_day)
+        prev_day_data = get_prev_day_data(master_df, prev_day, n)
         prev_day_result = prev_day_calc(**prev_day_data)
         day_result.update(prev_day_result)
         master_df = update_df(master_df, day_result)
     return master_df
 
 
+# ЭТАП 3: Расчёт объёмов Лодочного и УПСВ-Юг по дням.
+# Определяет распределение потоков нефти через узлы Лодочный/УПСВ-Юг.
 def stage_lodochny_upsv_yu(master_df: pd.DataFrame, dates: list[pd.Timestamp], N: int, state: dict) -> pd.DataFrame:
     for n in dates:
         state["current_date"] = n
@@ -167,19 +186,32 @@ def stage_lodochny_upsv_yu(master_df: pd.DataFrame, dates: list[pd.Timestamp], N
     return master_df
 
 
+# ЭТАП 4: Предварительный расчёт дневных значений (G_sikn, G_suzun, delta и т.д.).
+# Вычисляет промежуточные показатели, которые потом используются в пересчёте.
 def stage_precalc(master_df: pd.DataFrame, dates: list[pd.Timestamp], N: int, state: dict) -> pd.DataFrame:
+    # Предварительно определяем, какие дни имеют ручной ввод G_sikn_tagul
+    sikn_manual = {}
+    for n_date in dates:
+        val = _get_day_value_nullable(master_df, "G_sikn_tagul", n_date)
+        if val is not None:
+            sikn_manual[n_date.day] = val
+
     for n in dates:
         state["current_date"] = n
         day_result = {"date": n}
         prev_day = n - timedelta(days=1)
         day = n.day
         payload = precalc_value_data(master_df, n, prev_day, N, day)
+        payload["G_sikn_tagul_manual_entries"] = sikn_manual
         result = precalc_value(**payload)
         day_result.update(result)
         master_df = update_df(master_df, day_result)
     return master_df
 
 
+# ЭТАП 5: Пересчёт дневных объёмов (V_upn_suzun, V_upsv_yu, V_tstn и т.д.).
+# Корректирует значения с учётом нормативов и ограничений.
+# Параметр start_from позволяет пересчитать только с определённой даты (оптимизация).
 def stage_value_recalculation(
     master_df: pd.DataFrame,
     dates: list[pd.Timestamp],
@@ -201,19 +233,39 @@ def stage_value_recalculation(
     return master_df
 
 
+# ЭТАП 6: Расчёт показателей РН-Ванкор по дням.
+# Вычисляет объёмы добычи и транспорта для кластера Ванкор.
 def stage_rn_vankor(master_df: pd.DataFrame, dates: list[pd.Timestamp], N: int, state: dict) -> pd.DataFrame:
+    # Предварительно определяем, какие дни имеют ручной ввод F_bp_*
+    bp_vars = [
+        "F_bp_vn", "F_bp_suzun", "F_bp_suzun_vankor",
+        "F_bp_tagul_lpu", "F_bp_tagul_tpu", "F_bp_skn",
+        "F_bp_vo", "F_bp_tng", "F_bp_kchng",
+    ]
+    bp_manual = {}
+    for var in bp_vars:
+        manual = {}
+        for n_date in dates:
+            val = _get_day_value_nullable(master_df, var, n_date)
+            if val:
+                manual[n_date.day] = val
+        bp_manual[var] = manual
+
     for n in dates:
         state["current_date"] = n
         day_result = {"date": n}
         day = n.day
         prev_day = n - timedelta(days=1)
-        payload = vankor_data(master_df, n, N, day,prev_day)
+        payload = vankor_data(master_df, n, N, day, prev_day)
+        payload["bp_manual"] = bp_manual
         result = rn_vankor_calc(**payload)
         day_result.update(result)
         master_df = update_df(master_df, day_result)
     return master_df
 
 
+# ЭТАП 7: Расчёт наличия нефти и перекачки по дням.
+# Определяет сколько нефти доступно для перекачки на каждом узле.
 def stage_availability_and_pumping(master_df: pd.DataFrame, dates: list[pd.Timestamp], N: int, state: dict) -> pd.DataFrame:
     for n in dates:
         state["current_date"] = n
@@ -227,6 +279,8 @@ def stage_availability_and_pumping(master_df: pd.DataFrame, dates: list[pd.Times
     return master_df
 
 
+# ЭТАП 8: Месячные итоги — суммирует дневные показатели за весь месяц.
+# Результат записывается на последний день месяца (Q_*_month, G_*_month и т.д.).
 def stage_month_calc(master_df: pd.DataFrame, dates: list[pd.Timestamp], state: dict, N: int) -> pd.DataFrame:
 
     last_date = max(dates)
@@ -241,6 +295,10 @@ def stage_month_calc(master_df: pd.DataFrame, dates: list[pd.Timestamp], state: 
     return master_df
 
 
+# ЭТАП 9: Автобалансировка объёмов (V_upn_suzun, V_upn_lodochny, V_upsv_yu и т.д.).
+# Корректирует ключевые объёмы для сведения баланса.
+# Возвращает дату первого изменения — если что-то изменилось,
+# нужно пересчитать этапы 5, 7, 8 заново.
 def stage_auto_balance_volumes(
     master_df: pd.DataFrame,
     dates: list[pd.Timestamp],
@@ -283,6 +341,9 @@ def stage_auto_balance_volumes(
     return master_df, earliest_change
 
 
+# ЭТАП 10б: Суточные остатки нефти в резервуарах по дням.
+# Считает сколько нефти осталось на конец дня на каждом узле.
+# Зависит от F_bp_* текущего дня, поэтому вызывается ПОСЛЕ balance_calc.
 def stage_availability_oil(master_df: pd.DataFrame, dates: list[pd.Timestamp], state: dict) -> pd.DataFrame:
     """Суточные остатки (использует уже скорректированные F_bp_* / F_* для дня n)."""
     for n in dates:
@@ -294,6 +355,9 @@ def stage_availability_oil(master_df: pd.DataFrame, dates: list[pd.Timestamp], s
     return master_df
 
 
+# ЭТАП 10а: Балансировка F_bp_* по дням через РН-Ванкор.
+# Корректирует плановые значения F_bp_* и записывает фактические F_*.
+# Вызывается последовательно по дням, т.к. зависит от остатков предыдущего дня.
 def stage_balance_calc(master_df: pd.DataFrame, dates: list[pd.Timestamp], state: dict) -> pd.DataFrame:
     """
     1) Корректирует F_bp_* через rn_vankor_balance_calc (пишет F_* как dict + обновляет F_bp_* числами).
@@ -314,6 +378,8 @@ def stage_balance_calc(master_df: pd.DataFrame, dates: list[pd.Timestamp], state
     return master_df
 
 
+# ЭТАП 11: Месячные суммы F_* (факт балансировки) — итоги за весь месяц.
+# Записывает результат на последний день месяца.
 def stage_bp_month_calc(master_df: pd.DataFrame, dates: list[pd.Timestamp], state: dict) -> pd.DataFrame:
     """Считает месячные суммы F_* и пишет их на последний день месяца."""
     if not dates:
@@ -326,6 +392,8 @@ def stage_bp_month_calc(master_df: pd.DataFrame, dates: list[pd.Timestamp], stat
     master_df = update_df(master_df, {"date": last_date, **result})
     return master_df
 
+# ЭТАП 12: Проверки ограничений и режимов РН-Ванкор по каждому дню.
+# Сверяет рассчитанные значения с допустимыми пределами.
 def stage_rn_vankor_check(master_df: pd.DataFrame, dates: list[pd.Timestamp], state: dict) -> pd.DataFrame:
     """Проверки ограничений/режимов (calculate.rn_vankor_check) по каждому дню."""
     for n in dates:
@@ -336,6 +404,8 @@ def stage_rn_vankor_check(master_df: pd.DataFrame, dates: list[pd.Timestamp], st
         master_df = update_df(master_df, {"date": n, **check_result})
     return master_df
 
+# ЭТАП 13: Расчёт отклонений факта от бизнес-плана за месяц.
+# Сравнивает фактические месячные итоги с плановыми значениями.
 def stage_deviations_from_bp(master_df: pd.DataFrame, dates: list[pd.Timestamp]) -> pd.DataFrame:
     last_date = max(dates)
     month = int(last_date.month)
@@ -344,6 +414,7 @@ def stage_deviations_from_bp(master_df: pd.DataFrame, dates: list[pd.Timestamp])
     master_df = update_df(master_df, {"date": last_date, **result})
     return master_df
 
+# ЭТАП 14: Плановый баланс БП — Ванкорское направление.
 def stage_planned_balance_for_bp_vn(master_df: pd.DataFrame, dates: list[pd.Timestamp]) -> pd.DataFrame:
     last_date = max(dates)
     payload = get_planned_balance_for_bp_vn_data(master_df)
@@ -351,6 +422,7 @@ def stage_planned_balance_for_bp_vn(master_df: pd.DataFrame, dates: list[pd.Time
     master_df = update_df(master_df, {"date": last_date, **result})
     return master_df
 
+# ЭТАП 14: Плановый баланс БП — Сузунское направление.
 def stage_planned_balance_for_suzun_vn(master_df: pd.DataFrame, dates: list[pd.Timestamp]) -> pd.DataFrame:
     last_date = max(dates)
     payload = get_planned_balance_for_bp_suzun_data(master_df)
@@ -358,6 +430,7 @@ def stage_planned_balance_for_suzun_vn(master_df: pd.DataFrame, dates: list[pd.T
     master_df = update_df(master_df, {"date": last_date, **result})
     return master_df
 
+# ЭТАП 14: Плановый баланс БП — Восточное направление.
 def stage_planned_balance_for_bp_vo(master_df: pd.DataFrame, dates: list[pd.Timestamp]) -> pd.DataFrame:
     last_date = max(dates)
     payload = get_planned_balance_for_bp_vo_data(master_df)
@@ -365,6 +438,7 @@ def stage_planned_balance_for_bp_vo(master_df: pd.DataFrame, dates: list[pd.Time
     master_df = update_df(master_df, {"date": last_date, **result})
     return master_df
 
+# ЭТАП 14: Плановый баланс БП — Лодочное направление.
 def stage_planned_balance_for_bp_lodochny(master_df: pd.DataFrame, dates: list[pd.Timestamp]) -> pd.DataFrame:
     last_date = max(dates)
     payload = get_planned_balance_for_bp_lodochny_data(master_df)
@@ -372,6 +446,7 @@ def stage_planned_balance_for_bp_lodochny(master_df: pd.DataFrame, dates: list[p
     master_df = update_df(master_df, {"date": last_date, **result})
     return master_df
 
+# ЭТАП 14: Плановый баланс БП — Тагульское направление.
 def stage_planned_balance_for_bp_tagul(master_df: pd.DataFrame, dates: list[pd.Timestamp]) -> pd.DataFrame:
     last_date = max(dates)
     payload = get_planned_balance_for_bp_tagul_data(master_df)
@@ -380,6 +455,7 @@ def stage_planned_balance_for_bp_tagul(master_df: pd.DataFrame, dates: list[pd.T
     return master_df
 
 
+# ЭТАП 15: Плановый баланс БП с учётом ГТМ — Ванкорское направление.
 def stage_planned_balance_for_bp_vn_gtm(master_df: pd.DataFrame, dates: list[pd.Timestamp], prev_month) -> pd.DataFrame:
     last_date = max(dates)
     payload = get_planned_balance_for_bp_vn_gtm_data(master_df, prev_month)
@@ -387,6 +463,7 @@ def stage_planned_balance_for_bp_vn_gtm(master_df: pd.DataFrame, dates: list[pd.
     master_df = update_df(master_df, {"date": last_date, **result})
     return master_df
 
+# ЭТАП 15: Плановый баланс БП с учётом ГТМ — Сузунское направление.
 def stage_planned_balance_for_bp_suzun_gtm(master_df: pd.DataFrame, dates: list[pd.Timestamp], prev_month) -> pd.DataFrame:
     last_date = max(dates)
     payload = get_planned_balance_for_bp_suzun_gtm_data(master_df, prev_month)
@@ -394,6 +471,7 @@ def stage_planned_balance_for_bp_suzun_gtm(master_df: pd.DataFrame, dates: list[
     master_df = update_df(master_df, {"date": last_date, **result})
     return master_df
 
+# ЭТАП 15: Плановый баланс БП с учётом ГТМ — Восточное направление.
 def stage_planned_balance_for_bp_vo_gtm(master_df: pd.DataFrame, dates: list[pd.Timestamp], prev_month) -> pd.DataFrame:
     last_date = max(dates)
     payload = get_planned_balance_for_bp_vo_gtm_data(master_df, prev_month)
@@ -401,6 +479,7 @@ def stage_planned_balance_for_bp_vo_gtm(master_df: pd.DataFrame, dates: list[pd.
     master_df = update_df(master_df, {"date": last_date, **result})
     return master_df
 
+# ЭТАП 15: Плановый баланс БП с учётом ГТМ — Лодочное направление.
 def stage_planned_balance_for_bp_lodochny_gtm(master_df: pd.DataFrame, dates: list[pd.Timestamp], prev_month) -> pd.DataFrame:
     last_date = max(dates)
     payload = get_planned_balance_for_bp_lodochny_gtm_data(master_df, prev_month)
@@ -408,6 +487,7 @@ def stage_planned_balance_for_bp_lodochny_gtm(master_df: pd.DataFrame, dates: li
     master_df = update_df(master_df, {"date": last_date, **result})
     return master_df
 
+# ЭТАП 15: Плановый баланс БП с учётом ГТМ — Тагульское направление.
 def stage_planned_balance_for_bp_tagul_gtm(master_df: pd.DataFrame, dates: list[pd.Timestamp], prev_month) -> pd.DataFrame:
     last_date = max(dates)
     payload = get_planned_balance_for_bp_tagul_gtm_data(master_df, prev_month)
@@ -415,6 +495,71 @@ def stage_planned_balance_for_bp_tagul_gtm(master_df: pd.DataFrame, dates: list[
     master_df = update_df(master_df, {"date": last_date, **result})
     return master_df
 
+# ЭТАП 16: Корректировка по node (остановки, ремонты и т.д.).
+# Проходит по всем дням. Если на день node не null —
+# подтягивает данные дня через get_node_correction_data (data_prep),
+# передаёт их вместе со значением node в node_correction_calc (calculate),
+# и перезаписывает результат в master_df.
+# Если node пустой — день пропускается без изменений.
+def stage_node_correction(master_df: pd.DataFrame, dates: list[pd.Timestamp], state: dict) -> pd.DataFrame:
+    """Пересчитывает F_bp_* и связанные значения для дней, где node не null."""
+    if "node" not in master_df.columns:
+        return master_df
+
+    for n in dates:
+        state["current_date"] = n
+
+        row = master_df.loc[master_df["date"] == n]
+        if row.empty:
+            continue
+
+        node_raw = row.iloc[0]["node"]
+
+        # Распаковываем dict {value, status, message} если нужно
+        if isinstance(node_raw, dict):
+            node_val = node_raw.get("value")
+        else:
+            node_val = node_raw
+
+        # Если node пустой — пропускаем этот день
+        if node_val is None or (isinstance(node_val, float) and pd.isna(node_val)):
+            continue
+        if isinstance(node_val, str) and node_val.strip() == "":
+            continue
+
+        # node не пустой — подтягиваем данные дня и пересчитываем
+        prev_day = n - timedelta(days=1)
+        payload = get_node_correction_data(master_df, n, prev_day)
+        result = node_correction_calc(**payload, node=node_val)
+        master_df = update_df(master_df, {"date": n, **result})
+
+    return master_df
+
+
+# =============================================================================
+# ГЛАВНАЯ ФУНКЦИЯ: Оркестратор всего расчёта баланса.
+# Принимает входной JSON, последовательно запускает все этапы (1-15),
+# и возвращает результат в виде JSON-словаря.
+#
+# Порядок этапов:
+#   1. day_zero          — начальные значения (последний день прошлого месяца)
+#   2. prev_day          — копирование значений предыдущего дня
+#   3. lodochny_upsv_yu  — распределение потоков Лодочный/УПСВ-Юг
+#   4. precalc           — предварительный расчёт G_sikn, G_suzun, дельт
+#   5. value_recalculation — пересчёт дневных объёмов V_*
+#   6. rn_vankor         — показатели РН-Ванкор
+#   7. availability_and_pumping — наличие нефти и перекачка
+#   8. month_calc        — месячные итоги
+#   9. auto_balance      — автобалансировка (+ повтор этапов 5,7,8 при изменениях)
+#  10. node_correction   — корректировка F_bp_* если есть node (остановка и т.д.)
+#  10а. balance + availability_oil — балансировка F_bp_* и остатки (по дням)
+#  11. bp_month_calc     — месячные суммы F_*
+#  12. rn_vankor_check   — проверки ограничений
+#  13. deviations_from_bp — отклонения от бизнес-плана
+#  14. planned_balance_*  — плановый баланс по направлениям (ВН, Сузун, ВО, Лодочный, Тагул)
+#  15. planned_balance_*_gtm — плановый баланс с учётом ГТМ по направлениям
+#  16. node_correction   — пересчёт F_bp_* для дней с node (остановки/ремонты)
+# =============================================================================
 def calculate_json_data(input_data):
     state = {"current_date": None}
     
@@ -439,15 +584,7 @@ def calculate_json_data(input_data):
         # (value_recalculation и далее), чтобы все показатели соответствовали новым V_upn_*.
         if earliest_change is not None:
             # 1) пересчёт дневных балансов с даты первого изменения
-            master_df = stage_value_recalculation(
-                master_df,
-                dates,
-                N,
-                prev_month,
-                state,
-                start_from=earliest_change,
-            )
-
+            master_df = stage_value_recalculation(master_df, dates, N, prev_month, state, start_from=earliest_change,)
             # 2) availability_and_pumping зависит от месячной суммы G_gpns_i,
             # поэтому безопаснее пересчитать его для всего месяца
             master_df = stage_availability_and_pumping(master_df, dates, N, state)
@@ -474,6 +611,10 @@ def calculate_json_data(input_data):
         master_df = stage_planned_balance_for_bp_vo_gtm(master_df, dates, prev_month)
         master_df = stage_planned_balance_for_bp_lodochny_gtm(master_df, dates, prev_month)
         master_df = stage_planned_balance_for_bp_tagul_gtm(master_df, dates, prev_month)
+
+        # Корректировка по node: пересчёт для дней с остановками/ремонтами
+        # master_df = stage_node_correction(master_df, dates, state)
+
         # Экспорт результата
         result = export_to_json( master_df=master_df, input_json= input_data)  # dict в памяти, файл НЕ создаётся
 

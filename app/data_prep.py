@@ -2,6 +2,9 @@ import numpy as np
 import pandas as pd
 
 
+# Преобразует любое значение (dict, list, np.ndarray, скаляр) в число float.
+# Если значение — словарь {value: ...}, рекурсивно достаёт value.
+# Если значение отсутствует или некорректно — возвращает 0.0.
 def _to_scalar(val):
     """Безопасно извлекает скаляр из массива/списка/скаляра."""
     if isinstance(val, dict):
@@ -19,6 +22,29 @@ def _to_scalar(val):
     except (TypeError, ValueError):
         return 0.0
 
+# Как _get_day_value, но возвращает None когда значение отсутствует (null/NaN).
+# Используется для полей, где нужно отличить «не введено» от «введён 0».
+def _get_day_value_nullable(master_df, name, day):
+    if name not in master_df.columns:
+        return None
+    vals = master_df.loc[master_df["date"] == day, name].values
+    if len(vals) == 0:
+        return None
+    cell = vals[0]
+    if isinstance(cell, dict):
+        cell = cell.get("value")
+    if cell is None:
+        return None
+    if isinstance(cell, float) and pd.isna(cell):
+        return None
+    try:
+        return float(cell)
+    except (TypeError, ValueError):
+        return None
+
+
+# Получает одно числовое значение из DataFrame по имени колонки и дате.
+# Если колонки или строки нет — возвращает default (по умолчанию 0.0).
 def _get_day_value(master_df, name, day, default=0.0):
     """Безопасно получает значение колонки name на дату day.
 
@@ -32,6 +58,8 @@ def _get_day_value(master_df, name, day, default=0.0):
         return default
     return _to_scalar(value)
 
+# Возвращает массив «сырых» значений колонки за все дни указанного месяца.
+# Если колонки нет — возвращает пустой массив.
 def _get_month_values(master_df, column_name, month):
     """Получает значения колонки за указанный месяц."""
     if column_name not in master_df.columns:
@@ -39,6 +67,8 @@ def _get_month_values(master_df, column_name, month):
     return master_df.loc[master_df["date"].dt.month == month, column_name].values
 
 
+# То же что _get_month_values, но каждое значение приводится к float через _to_scalar.
+# Словари {value, status, message} автоматически распаковываются.
 def _get_month_scalar_values(master_df, column_name, month):
     """
     Получает значения колонки за месяц и приводит каждое значение к числу.
@@ -47,6 +77,8 @@ def _get_month_scalar_values(master_df, column_name, month):
     raw = _get_month_values(master_df, column_name, month)
     return np.array([_to_scalar(v) for v in raw], dtype=float)
 
+# Возвращает первое непустое (не NaN) значение столбца как константу.
+# Используется для значений, одинаковых на все дни (нормативы, план БП и т.д.).
 def _get_const(master_df, column_name, default=0.0):
     """Возвращает константу из master_df (первое валидное значение столбца)."""
     if column_name not in master_df.columns:
@@ -57,6 +89,8 @@ def _get_const(master_df, column_name, default=0.0):
     return _to_scalar(series.values)
 
 
+# Возвращает последнее непустое (не NaN) значение столбца.
+# Полезно, когда нужно взять самое актуальное значение на конец периода.
 def _get_last_const(master_df, column_name, default=0.0):
     """Возвращает последнее валидное (не NaN) значение столбца."""
     if column_name not in master_df.columns:
@@ -65,7 +99,7 @@ def _get_last_const(master_df, column_name, default=0.0):
     if series.empty:
         return default
     return _to_scalar(series.iloc[-1])
-    
+
 def get_day_zero_data(master_df,prev_month):
     V_upn_suzun_0 = _get_day_value(master_df,"V_upn_suzun", prev_month)
     V_suzun_vslu_0 = _get_day_value(master_df,"V_suzun_vslu", prev_month)
@@ -110,7 +144,7 @@ def get_day_zero_data(master_df,prev_month):
         "V_tstn_kchng_0":V_tstn_kchng_0,
     }
     
-def get_prev_day_data(master_df, prev_day):
+def get_prev_day_data(master_df, prev_day, n):
     V_upn_suzun_prev = _get_day_value(master_df,"V_upn_suzun", prev_day)
     V_upn_lodochny_prev = _get_day_value(master_df,"V_upn_lodochny", prev_day)
     V_tagul_tr_prev = _get_day_value(master_df,"V_tagul_tr", prev_day)
@@ -120,6 +154,12 @@ def get_prev_day_data(master_df, prev_day):
     V_nps_1_prev = _get_day_value(master_df,"V_nps_1", prev_day)
     V_nps_2_prev = _get_day_value(master_df,"V_nps_2", prev_day)
     V_tstn_rn_vn_prev  = _get_day_value(master_df,"V_tstn_rn_vn", prev_day)
+    V_upsv_yu = _get_day_value(master_df,"V_upsv_yu", n)
+    V_upsv_s = _get_day_value(master_df,"V_upsv_s", n)
+    V_cps = _get_day_value(master_df,"V_cps", n)
+    V_upn_suzun = _get_day_value(master_df,"V_upn_suzun", n)
+    V_upn_lodochny = _get_day_value(master_df,"V_upn_lodochny", n)
+    V_tagul_tr = _get_day_value(master_df,"V_tagul_tr", n)
 
     return{
         "V_upn_suzun_prev": V_upn_suzun_prev,
@@ -131,6 +171,12 @@ def get_prev_day_data(master_df, prev_day):
         "V_nps_1_prev":V_nps_1_prev,
         "V_nps_2_prev":V_nps_2_prev,
         "V_tstn_rn_vn_prev":V_tstn_rn_vn_prev,
+        "V_upsv_yu":V_upsv_yu,
+        "V_upsv_s":V_upsv_s,
+        "V_cps":V_cps,
+        "V_upn_suzun":V_upn_suzun,
+        "V_upn_lodochny":V_upn_lodochny,
+        "V_tagul_tr":V_tagul_tr,
     }
 
 def precalc_value_data(master_df, n, prev_day,N,day):
@@ -149,10 +195,11 @@ def precalc_value_data(master_df, n, prev_day,N,day):
     V_lodochny_cps_upsv_yu_prev = _get_day_value(master_df,"V_lodochny_cps_upsv_yu",prev_day)
     G_lodochny_upsv_yu = _get_day_value(master_df,"G_lodochny_upsv_yu",n)
     G_lodochny_upsv_yu_month = _get_last_const(master_df, "G_lodochny_upsv_yu_month")
-    G_sikn_tagul = _get_day_value(master_df,"G_sikn_tagul",n)
+    G_sikn_tagul = _get_day_value_nullable(master_df, "G_sikn_tagul", n)
     V_suzun_vslu_prev = _get_day_value(master_df,"V_suzun_vslu",prev_day)
     V_suzun_tng_prev = _get_day_value(master_df,"V_suzun_tng",prev_day)
     V_ichem_prev = _get_day_value(master_df, "V_ichem", prev_day)
+    V_suzun_vslu = _get_day_value(master_df,"V_suzun_vslu",n)
 
 
     return{
@@ -177,6 +224,7 @@ def precalc_value_data(master_df, n, prev_day,N,day):
         "G_out_udt_month":G_out_udt_month,
         "day":day,
         "G_sikn_tagul":G_sikn_tagul,
+        "V_suzun_vslu":V_suzun_vslu,
 
     }
 
@@ -291,17 +339,17 @@ def vankor_data(master_df,n,N,day,prev_day):
     F_tng_month = _get_const(master_df,"F_tng_month")
     G_suzun_vslu = _get_day_value(master_df,"G_suzun_vslu",n)
     F_suzun_vankor_month = _get_day_value(master_df,"F_suzun_vankor_month",n)
-    F_bp_suzun_vankor = _get_day_value(master_df,"F_bp_suzun_vankor",n)
+    F_bp_suzun_vankor = _get_day_value_nullable(master_df,"F_bp_suzun_vankor",n)
     V_tstn_suzun_vslu_prev = _get_day_value(master_df, "V_tstn_suzun_vslu",prev_day)
-    F_bp_vn = _get_day_value(master_df, "F_bp_vn",n)
-    F_bp_suzun = _get_day_value(master_df, "F_bp_suzun",n)
+    F_bp_vn = _get_day_value_nullable(master_df, "F_bp_vn",n)
+    F_bp_suzun = _get_day_value_nullable(master_df, "F_bp_suzun",n)
     F_bp_suzun_vslu = _get_day_value(master_df, "F_bp_suzun_vslu",prev_day)
-    F_bp_tagul_lpu = _get_day_value(master_df, "F_bp_tagul_lpu",n)
-    F_bp_tagul_tpu = _get_day_value(master_df, "F_bp_tagul_tpu",n)
-    F_bp_skn = _get_day_value(master_df, "F_bp_skn",n)
-    F_bp_vo = _get_day_value(master_df, "F_bp_vo",n)
-    F_bp_tng = _get_day_value(master_df, "F_bp_tng",n)
-    F_bp_kchng = _get_day_value(master_df, "F_bp_kchng",n)
+    F_bp_tagul_lpu = _get_day_value_nullable(master_df, "F_bp_tagul_lpu",n)
+    F_bp_tagul_tpu = _get_day_value_nullable(master_df, "F_bp_tagul_tpu",n)
+    F_bp_skn = _get_day_value_nullable(master_df, "F_bp_skn",n)
+    F_bp_vo = _get_day_value_nullable(master_df, "F_bp_vo",n)
+    F_bp_tng = _get_day_value_nullable(master_df, "F_bp_tng",n)
+    F_bp_kchng = _get_day_value_nullable(master_df, "F_bp_kchng",n)
     return{
         "F_vn_month":F_vn_month,
         "F_suzun_month":F_suzun_month,
@@ -338,7 +386,9 @@ def get_availability_and_pumping_data(master_df, n, N, month, prev_day):
     V_gnps_prev = _get_day_value(master_df, "V_gnps",prev_day)
     # month здесь — номер месяца (1..12), поэтому берём ряд значений за месяц
     G_gpns_i = _get_month_values(master_df, "G_gpns_i", month)
+    G_gnps = _get_day_value_nullable(master_df, "G_gnps",n)
     return {
+        "G_gnps":G_gnps,
         "N":N,
         "G_suzun_vslu":G_suzun_vslu,
         "G_sikn":G_sikn,
@@ -454,8 +504,13 @@ def get_auto_balance_volumes(master_df, n, prev_day, N, prev_month):
     V_upsv_yu_prev = _get_day_value(master_df,"V_upsv_yu",prev_day)
     V_upsv_s_prev = _get_day_value(master_df,"V_upsv_s",prev_day)
     V_cps_prev = _get_day_value(master_df,"V_cps",prev_day)
-    # Текущее значение (нужно для ветки Start_autobalance=False)
+    # Текущие значения (нужны для ветки Start_autobalance=False,
+    # чтобы не затереть пользовательский ввод, сохранённый prev_day_calc)
     V_upn_suzun = _get_day_value(master_df,"V_upn_suzun",n)
+    V_upn_lodochny = _get_day_value(master_df,"V_upn_lodochny",n)
+    V_upsv_yu = _get_day_value(master_df,"V_upsv_yu",n)
+    V_upsv_s = _get_day_value(master_df,"V_upsv_s",n)
+    V_cps = _get_day_value(master_df,"V_cps",n)
     return {
         "V_upn_suzun_prev":V_upn_suzun_prev,
         "Start_autobalance":Start_autobalance,
@@ -474,6 +529,10 @@ def get_auto_balance_volumes(master_df, n, prev_day, N, prev_month):
         "V_upsv_s_prev":V_upsv_s_prev,
         "V_cps_prev":V_cps_prev,
         "V_upn_suzun":V_upn_suzun,
+        "V_upn_lodochny":V_upn_lodochny,
+        "V_upsv_yu":V_upsv_yu,
+        "V_upsv_s":V_upsv_s,
+        "V_cps":V_cps,
         "N":N
     }
 
@@ -790,6 +849,7 @@ def get_rn_vankor_check_data(master_df, n, prev_day):
     V_ichem_max = _get_const(master_df,"V_ichem_max")
     V_lodochny_cps_upsv_yu = _get_day_value(master_df,"V_lodochny_cps_upsv_yu",n)
     G_sikn_tagul = _get_day_value(master_df,"G_sikn_tagul",n)
+    G_sikn_tagul_is_manual = bool(_get_day_value(master_df, "G_sikn_tagul_is_manual", n))
     V_tstn_vn_min = _get_const(master_df,"V_tstn_vn_min")
     V_tstn_vn = _get_day_value(master_df,"V_tstn_vn",n)
     V_tstn_vn_max = _get_const(master_df,"V_tstn_vn_max")
@@ -901,6 +961,7 @@ def get_rn_vankor_check_data(master_df, n, prev_day):
         "V_ichem_max":V_ichem_max,
         "V_lodochny_cps_upsv_yu":V_lodochny_cps_upsv_yu,
         "G_sikn_tagul":G_sikn_tagul,
+        "G_sikn_tagul_is_manual":G_sikn_tagul_is_manual,
         "V_tstn_vn_min":V_tstn_vn_min,
         "V_tstn_vn":V_tstn_vn,
         "V_tstn_vn_max":V_tstn_vn_max,
@@ -1416,4 +1477,37 @@ def get_planned_balance_for_bp_tagul_gtm_data(master_df, prev_month):
         "V_tagul_gtm_ost_app_km":V_tagul_gtm_ost_app_km,
         "V_tstn_tagul":V_tstn_tagul,
         
+    }
+
+
+# Подготовка данных для пересчёта по node (остановки/ремонты).
+# Подтягивает F_bp_* и связанные значения на конкретный день,
+# чтобы передать их в node_correction_calc.
+def get_node_correction_data(master_df, day, prev_day):
+    F_bp = _get_day_value(master_df, "F_bp", day)
+    F_bp_vn = _get_day_value(master_df, "F_bp_vn", day)
+    F_bp_suzun = _get_day_value(master_df, "F_bp_suzun", day)
+    F_bp_suzun_vankor = _get_day_value(master_df, "F_bp_suzun_vankor", day)
+    F_bp_suzun_vslu = _get_day_value(master_df, "F_bp_suzun_vslu", day)
+    F_bp_tagul = _get_day_value(master_df, "F_bp_tagul", day)
+    F_bp_tagul_lpu = _get_day_value(master_df, "F_bp_tagul_lpu", day)
+    F_bp_tagul_tpu = _get_day_value(master_df, "F_bp_tagul_tpu", day)
+    F_bp_skn = _get_day_value(master_df, "F_bp_skn", day)
+    F_bp_vo = _get_day_value(master_df, "F_bp_vo", day)
+    F_bp_tng = _get_day_value(master_df, "F_bp_tng", day)
+    F_bp_kchng = _get_day_value(master_df, "F_bp_kchng", day)
+
+    return {
+        "F_bp": F_bp,
+        "F_bp_vn": F_bp_vn,
+        "F_bp_suzun": F_bp_suzun,
+        "F_bp_suzun_vankor": F_bp_suzun_vankor,
+        "F_bp_suzun_vslu": F_bp_suzun_vslu,
+        "F_bp_tagul": F_bp_tagul,
+        "F_bp_tagul_lpu": F_bp_tagul_lpu,
+        "F_bp_tagul_tpu": F_bp_tagul_tpu,
+        "F_bp_skn": F_bp_skn,
+        "F_bp_vo": F_bp_vo,
+        "F_bp_tng": F_bp_tng,
+        "F_bp_kchng": F_bp_kchng,
     }

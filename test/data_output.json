@@ -182,9 +182,9 @@
     "G_gnps_month": 794537.7689999997,
     "F_bp_month": 1331898.999,
     "F_bp_sr_month": 42964.48383870968,
-    "F_sum": 1453048.999,
+    "F_sum": 1453098.999,
     "delta_F": {
-      "value": 170100.0,
+      "value": 170150.0,
       "status": 1,
       "message": null
     },
@@ -194,9 +194,9 @@
       "message": null
     },
     "F_bp_vn_month": 700243.6140000001,
-    "F_vn_sum": 681943.6140000001,
+    "F_vn_sum": 681993.6140000001,
     "delta_F_vn": {
-      "value": -18300.0,
+      "value": -18250.0,
       "status": 2,
       "message": null
     },
@@ -1465,75 +1465,255 @@
       "status": 0,
       "message": null
     },
-    "V_vn_ost_vpy_nm": 42190.556000000004,
-    "V_vn_ost_nm": 52885.65700000001,
-    "Q_vn_total": 719171.0,
-    "V_vn_lost": 116.0,
-    "G_vn_own": 0.0,
-    "G_vn_release": 18811.0,
-    "V_vn_ost_vpy_km": 42190.556000000004,
-    "V_vn_ost_km": 52885.65700000001,
-    "V_vn_delta_ost": 0.0,
+    "V_vn_ost_vpy_nm": {
+      "value": 42190.556000000004,
+      "status": 1,
+      "message": "Проверка пройдена"
+    },
+    "V_vn_ost_nm": {
+      "value": 52885.65700000001,
+      "status": 1,
+      "message": "Проверка пройдена"
+    },
+    "Q_vn_total": {
+      "value": 719171.0,
+      "status": 1,
+      "message": "Проверка пройдена"
+    },
+    "V_vn_lost": {
+      "value": 116.0,
+      "status": 1,
+      "message": "Проверка пройдена"
+    },
+    "G_vn_own": {
+      "value": 0.0,
+      "status": 1,
+      "message": "Проверка пройдена"
+    },
+    "G_vn_release": {
+      "value": 18811.0,
+      "status": 1,
+      "message": "Проверка пройдена"
+    },
+    "V_vn_ost_vpy_km": {
+      "value": 42190.556000000004,
+      "status": 1,
+      "message": "Проверка пройдена"
+    },
+    "V_vn_ost_km": {
+      "value": 52885.65700000001,
+      "status": 1,
+      "message": "Проверка пройдена"
+    },
+    "V_vn_delta_ost": {
+      "value": 0.0,
+      "status": 1,
+      "message": "Проверка пройдена"
+    },
     "V_vn_check": {
       "value": 0.0,
       "status": 1,
-      "message": null
+      "message": "Проверка пройдена"
     },
-    "V_suzun_ost_spy_nm": 22119.697,
-    "V_suzun_ost_nm": 27406.64,
-    "Q_suzun_total": 64495.181,
-    "V_suzun_lost": 43.0,
-    "G_suzun_own": 3824.0,
-    "G_suzun_release": 3824.0,
-    "F_suzun_suzun": 63957.0,
-    "V_suzun_ost_spy_km": 22119.78,
-    "V_suzun_ost_km": 27406.78,
-    "V_suzun_delta_ost": 0.13999999999941792,
+    "V_suzun_ost_spy_nm": {
+      "value": 22119.697,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "V_suzun_ost_nm": {
+      "value": 27406.64,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "Q_suzun_total": {
+      "value": 64495.181,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "V_suzun_lost": {
+      "value": 43.0,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "G_suzun_own": {
+      "value": 3824.0,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "G_suzun_release": {
+      "value": 3824.0,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "F_suzun_suzun": {
+      "value": 63957.0,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "V_suzun_ost_spy_km": {
+      "value": 22119.78,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "V_suzun_ost_km": {
+      "value": 27406.78,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "V_suzun_delta_ost": {
+      "value": 0.13999999999941792,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
     "V_suzun_check": {
       "value": -3645.9590000000026,
       "status": 2,
-      "message": null
+      "message": "Проверка не пройдена"
     },
-    "V_vo_ost_vpy_nm": 184.108,
-    "V_vo_ost_nm": 184.108,
-    "Q_vo_total": 15892.0,
-    "V_vo_lost": 1.0,
-    "G_vo_own": 0.0,
-    "V_vo_ost_vpy_km": 184.108,
-    "V_vo_ost_km": 184.108,
-    "V_vo_delta_ost": 0.0,
+    "V_vo_ost_vpy_nm": {
+      "value": 184.108,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "V_vo_ost_nm": {
+      "value": 184.108,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "Q_vo_total": {
+      "value": 15892.0,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "V_vo_lost": {
+      "value": 1.0,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "G_vo_own": {
+      "value": 0.0,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "V_vo_ost_vpy_km": {
+      "value": 184.108,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "V_vo_ost_km": {
+      "value": 184.108,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "V_vo_delta_ost": {
+      "value": 0.0,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
     "V_vo_check": {
       "value": 1.0,
       "status": 2,
-      "message": null
+      "message": "Проверка не пройдена"
     },
-    "V_lodochny_ost_lpy_nm": 5896.137000000001,
-    "V_lodochny_ost_nm": 10886.735,
-    "Q_lodochny_total": 95470.0,
-    "V_lodochny_lost": 14.0,
-    "G_lodochny_own": 0.0,
-    "G_lodochny_release": 941.0,
-    "V_lodochny_ost_lpy_km": 5896.137000000001,
-    "V_lodochny_ost_km": 10886.735,
-    "V_lodochny_delta_ost": 0.0,
+    "V_lodochny_ost_lpy_nm": {
+      "value": 5896.137000000001,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "V_lodochny_ost_nm": {
+      "value": 10886.735,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "Q_lodochny_total": {
+      "value": 95470.0,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "V_lodochny_lost": {
+      "value": 14.0,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "G_lodochny_own": {
+      "value": 0.0,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "G_lodochny_release": {
+      "value": 941.0,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "V_lodochny_ost_lpy_km": {
+      "value": 5896.137000000001,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "V_lodochny_ost_km": {
+      "value": 10886.735,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "V_lodochny_delta_ost": {
+      "value": 0.0,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
     "V_lodochny_check": {
       "value": -1.0,
       "status": 2,
-      "message": null
+      "message": "Проверка не пройдена"
     },
-    "V_tagul_ost_tpy_nm": 2992.612,
-    "V_tagul_ost_nm": 10310.006000000001,
-    "Q_tagul_total": 171427.0,
-    "V_tagul_lost": 14.0,
-    "G_tagul_own": 0.0,
-    "G_tagul_release": 664.0,
-    "V_tagul_ost_tpu_km": 2992.612,
-    "V_tagul_ost_km": 10310.006000000001,
-    "delta_V_tagul_ost": 0.0,
+    "V_tagul_ost_tpy_nm": {
+      "value": 2992.612,
+      "status": 1,
+      "message": "Проверка пройдена"
+    },
+    "V_tagul_ost_nm": {
+      "value": 10310.006000000001,
+      "status": 1,
+      "message": "Проверка пройдена"
+    },
+    "Q_tagul_total": {
+      "value": 171427.0,
+      "status": 1,
+      "message": "Проверка пройдена"
+    },
+    "V_tagul_lost": {
+      "value": 14.0,
+      "status": 1,
+      "message": "Проверка пройдена"
+    },
+    "G_tagul_own": {
+      "value": 0.0,
+      "status": 1,
+      "message": "Проверка пройдена"
+    },
+    "G_tagul_release": {
+      "value": 664.0,
+      "status": 1,
+      "message": "Проверка пройдена"
+    },
+    "V_tagul_ost_tpu_km": {
+      "value": 2992.612,
+      "status": 1,
+      "message": "Проверка пройдена"
+    },
+    "V_tagul_ost_km": {
+      "value": 10310.006000000001,
+      "status": 1,
+      "message": "Проверка пройдена"
+    },
+    "delta_V_tagul_ost": {
+      "value": 0.0,
+      "status": 1,
+      "message": "Проверка пройдена"
+    },
     "V_tagul_check": {
       "value": 0.0,
       "status": 1,
-      "message": null
+      "message": "Проверка пройдена"
     }
   },
   "plan_GTM": {
@@ -1837,150 +2017,630 @@
       "status": 0,
       "message": null
     },
-    "V_vn_gtm_ost_texn_nm": 36701.0,
-    "V_vn_gtm_ost_rvs_nm": 36701.0,
-    "V_vn_gtm_path_nm": 12740.0,
-    "V_vn_gtm_ost_vpy_nm": 43420.259,
-    "V_vn_gtm_ost_nm": 56160.259,
-    "Q_vn_gtm_total": 677738.0,
-    "Q_vn_gtm_oil": 676130.0,
-    "F_vn_gtm_total": 700244.0,
-    "V_vn_gtm_lost_oil": 1.0843808000000001,
-    "V_vn_gtm_lost_transport": 115,
-    "V_vn_gtm_lost": 116.0843808,
-    "G_vn_gtm_own": 0.0,
-    "G_vn_gtm_release_suzun": 17050.0,
-    "G_vn_gtm_release": 17050.0,
-    "V_vn_gtm_ost_np_km": 2772.479,
-    "V_vn_gtm_ost_texn_km": 33588.79300000001,
-    "V_vn_gtm_ost_dead_km": 0.0,
-    "V_vn_gtm_ost_rvs_km": 33588.79300000001,
-    "V_vn_gtm_ost_tov_km": 0.0,
-    "V_vn_gtm_ost_vpu_km": 36361.27200000001,
-    "V_vn_gtm_path_km": -19873.097380800056,
-    "V_vn_gtm_ost_km": 16488.174619199955,
-    "delta_V_vn_gtm_ost": -39672.08438080004,
+    "V_vn_gtm_ost_texn_nm": {
+      "value": 36701.0,
+      "status": 1,
+      "message": "Проверка пройдена"
+    },
+    "V_vn_gtm_ost_rvs_nm": {
+      "value": 36701.0,
+      "status": 1,
+      "message": "Проверка пройдена"
+    },
+    "V_vn_gtm_path_nm": {
+      "value": 12740.0,
+      "status": 1,
+      "message": "Проверка пройдена"
+    },
+    "V_vn_gtm_ost_vpy_nm": {
+      "value": 43420.259,
+      "status": 1,
+      "message": "Проверка пройдена"
+    },
+    "V_vn_gtm_ost_nm": {
+      "value": 56160.259,
+      "status": 1,
+      "message": "Проверка пройдена"
+    },
+    "Q_vn_gtm_total": {
+      "value": 677738.0,
+      "status": 1,
+      "message": "Проверка пройдена"
+    },
+    "Q_vn_gtm_oil": {
+      "value": 676130.0,
+      "status": 1,
+      "message": "Проверка пройдена"
+    },
+    "F_vn_gtm_total": {
+      "value": 700244.0,
+      "status": 1,
+      "message": "Проверка пройдена"
+    },
+    "V_vn_gtm_lost_oil": {
+      "value": 1.0843808000000001,
+      "status": 1,
+      "message": "Проверка пройдена"
+    },
+    "V_vn_gtm_lost_transport": {
+      "value": 115,
+      "status": 1,
+      "message": "Проверка пройдена"
+    },
+    "V_vn_gtm_lost": {
+      "value": 116.0843808,
+      "status": 1,
+      "message": "Проверка пройдена"
+    },
+    "G_vn_gtm_own": {
+      "value": 0.0,
+      "status": 1,
+      "message": "Проверка пройдена"
+    },
+    "G_vn_gtm_release_suzun": {
+      "value": 17050.0,
+      "status": 1,
+      "message": "Проверка пройдена"
+    },
+    "G_vn_gtm_release": {
+      "value": 17050.0,
+      "status": 1,
+      "message": "Проверка пройдена"
+    },
+    "V_vn_gtm_ost_np_km": {
+      "value": 2772.479,
+      "status": 1,
+      "message": "Проверка пройдена"
+    },
+    "V_vn_gtm_ost_texn_km": {
+      "value": 33588.79300000001,
+      "status": 1,
+      "message": "Проверка пройдена"
+    },
+    "V_vn_gtm_ost_dead_km": {
+      "value": 0.0,
+      "status": 1,
+      "message": "Проверка пройдена"
+    },
+    "V_vn_gtm_ost_rvs_km": {
+      "value": 33588.79300000001,
+      "status": 1,
+      "message": "Проверка пройдена"
+    },
+    "V_vn_gtm_ost_tov_km": {
+      "value": 0.0,
+      "status": 1,
+      "message": "Проверка пройдена"
+    },
+    "V_vn_gtm_ost_vpu_km": {
+      "value": 36361.27200000001,
+      "status": 1,
+      "message": "Проверка пройдена"
+    },
+    "V_vn_gtm_path_km": {
+      "value": -19873.097380800056,
+      "status": 1,
+      "message": "Проверка пройдена"
+    },
+    "V_vn_gtm_ost_km": {
+      "value": 16488.174619199955,
+      "status": 1,
+      "message": "Проверка пройдена"
+    },
+    "delta_V_vn_gtm_ost": {
+      "value": -39672.08438080004,
+      "status": 1,
+      "message": "Проверка пройдена"
+    },
     "V_vn_gtm_check": {
       "value": 0.0,
       "status": 1,
-      "message": null
+      "message": "Проверка пройдена"
     },
-    "V_suzun_gtm_ost_upn_nm": 10278.0,
-    "V_suzun_gtm_ost_texn_nm": 10278.299,
-    "V_suzun_gtm_ost_rvs_nm": 10278.299,
-    "V_suzun_gtm_ost_spy_nm": 28785.225,
-    "V_suzun_gtm_path_nm": 6470.0,
-    "V_suzun_gtm_ost_nm": 35255.225,
-    "Q_suzun_gtm_slu": 64916.0,
-    "Q_suzun_gtm_vslu ": 2325.0,
-    "Q_suzun_gtm_total": 67241.0,
-    "V_suzun_gtm_lost_oil": 0,
-    "G_suzun_gtm_mupn": 3505.9999999999986,
-    "G_suzun_gtm_own": 3505.9999999999986,
-    "G_suzun_gtm_buy": 17050.0,
-    "F_suzun_gtm_slu": 68957.299,
-    "F_suzun_gtm_vslu": 1000.0,
-    "F_suzun_gtm_vankor": 13542.968,
-    "F_suzun_gtm_total": 83500.26699999999,
-    "V_suzun_gtm_lost_slu": 43,
-    "V_suzun_gtm_lost_vslu": 1,
-    "V_suzun_gtm_lost_vankor": 2,
-    "V_suzun_gtm_lost": 46,
-    "V_suzun_gtm_ost_np_km": 18123.917,
-    "V_suzun_gtm_ost_app_km": 383.009,
-    "V_suzun_gtm_ost_dead_km": 0.0,
-    "V_suzun_gtm_ost_tov_km": 0.0,
-    "V_suzun_gtm_ost_upn_km": 3616.5649999999932,
-    "V_suzun_gtm_ost_tech_km": 3616.863999999993,
-    "V_suzun_gtm_ost_spu_km": 22123.789999999994,
-    "V_suzun_gtm_path_km": 10370.16800000002,
-    "V_suzun_gtm_ost_km": 32493.958000000013,
-    "delta_V_suzun_gtm_ost": -2761.2669999999853,
+    "V_suzun_gtm_ost_upn_nm": {
+      "value": 10278.0,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "V_suzun_gtm_ost_texn_nm": {
+      "value": 10278.299,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "V_suzun_gtm_ost_rvs_nm": {
+      "value": 10278.299,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "V_suzun_gtm_ost_spy_nm": {
+      "value": 28785.225,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "V_suzun_gtm_path_nm": {
+      "value": 6470.0,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "V_suzun_gtm_ost_nm": {
+      "value": 35255.225,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "Q_suzun_gtm_slu": {
+      "value": 64916.0,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "Q_suzun_gtm_vslu ": {
+      "value": 2325.0,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "Q_suzun_gtm_total": {
+      "value": 67241.0,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "V_suzun_gtm_lost_oil": {
+      "value": 0,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "G_suzun_gtm_mupn": {
+      "value": 3505.9999999999986,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "G_suzun_gtm_own": {
+      "value": 3505.9999999999986,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "G_suzun_gtm_buy": {
+      "value": 17050.0,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "F_suzun_gtm_slu": {
+      "value": 68957.299,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "F_suzun_gtm_vslu": {
+      "value": 1000.0,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "F_suzun_gtm_vankor": {
+      "value": 13542.968,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "F_suzun_gtm_total": {
+      "value": 83500.26699999999,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "V_suzun_gtm_lost_slu": {
+      "value": 43,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "V_suzun_gtm_lost_vslu": {
+      "value": 1,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "V_suzun_gtm_lost_vankor": {
+      "value": 2,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "V_suzun_gtm_lost": {
+      "value": 46,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "V_suzun_gtm_ost_np_km": {
+      "value": 18123.917,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "V_suzun_gtm_ost_app_km": {
+      "value": 383.009,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "V_suzun_gtm_ost_dead_km": {
+      "value": 0.0,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "V_suzun_gtm_ost_tov_km": {
+      "value": 0.0,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "V_suzun_gtm_ost_upn_km": {
+      "value": 3616.5649999999932,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "V_suzun_gtm_ost_tech_km": {
+      "value": 3616.863999999993,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "V_suzun_gtm_ost_spu_km": {
+      "value": 22123.789999999994,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "V_suzun_gtm_path_km": {
+      "value": 10370.16800000002,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "V_suzun_gtm_ost_km": {
+      "value": 32493.958000000013,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "delta_V_suzun_gtm_ost": {
+      "value": -2761.2669999999853,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
     "V_suzun_gtm_check": {
       "value": 0.0,
       "status": 2,
-      "message": null
+      "message": "Проверка не пройдена"
     },
-    "V_vo_gtm_ost_upn_lodochny_nm": 210.0,
-    "V_vo_gtm_ost_rvs_nm": 210.0,
-    "V_vo_gtm_path_nm": 1670.0,
-    "V_vo_gtm_ost_vpy_nm": 307.108,
-    "V_vo_gtm_ost_nm": 1977.108,
-    "Q_vo_gtm_oil": 23813.0,
-    "Q_vo_gtm_total": 23813.0,
-    "F_vo_gtm_total": 23990.478,
-    "V_vo_gtm_lost_oil": 0,
-    "V_vo_gtm_lost_transport": 0,
-    "V_vo_gtm_lost": 0.0,
-    "G_vo_gtm_own": 0.0,
-    "V_vo_gtm_ost_np_km": 10.051,
-    "V_vo_gtm_ost_app_km": 87.057,
-    "V_vo_gtm_ost_dead_km": 0.0,
-    "V_vo_gtm_ost_texn_km": 0.0,
-    "V_vo_gtm_ost_tov_km": 0.0,
-    "V_vo_gtm_ost_upn_lodochny_km": 123.0,
-    "V_vo_gtm_ost_rvs_km": 123.0,
-    "V_vo_gtm_ost_vpy_km": 220.108,
-    "V_vo_gtm_path_km": 1579.5220000000008,
-    "V_vo_gtm_ost_km": 1799.6300000000008,
-    "delta_V_vo_gtm_ost": -177.47799999999916,
+    "V_vo_gtm_ost_upn_lodochny_nm": {
+      "value": 210.0,
+      "status": 1,
+      "message": "Проверка не пройдена"
+    },
+    "V_vo_gtm_ost_rvs_nm": {
+      "value": 210.0,
+      "status": 1,
+      "message": "Проверка не пройдена"
+    },
+    "V_vo_gtm_path_nm": {
+      "value": 1670.0,
+      "status": 1,
+      "message": "Проверка не пройдена"
+    },
+    "V_vo_gtm_ost_vpy_nm": {
+      "value": 307.108,
+      "status": 1,
+      "message": "Проверка не пройдена"
+    },
+    "V_vo_gtm_ost_nm": {
+      "value": 1977.108,
+      "status": 1,
+      "message": "Проверка не пройдена"
+    },
+    "Q_vo_gtm_oil": {
+      "value": 23813.0,
+      "status": 1,
+      "message": "Проверка не пройдена"
+    },
+    "Q_vo_gtm_total": {
+      "value": 23813.0,
+      "status": 1,
+      "message": "Проверка не пройдена"
+    },
+    "F_vo_gtm_total": {
+      "value": 23990.478,
+      "status": 1,
+      "message": "Проверка не пройдена"
+    },
+    "V_vo_gtm_lost_oil": {
+      "value": 0,
+      "status": 1,
+      "message": "Проверка не пройдена"
+    },
+    "V_vo_gtm_lost_transport": {
+      "value": 0,
+      "status": 1,
+      "message": "Проверка не пройдена"
+    },
+    "V_vo_gtm_lost": {
+      "value": 0.0,
+      "status": 1,
+      "message": "Проверка не пройдена"
+    },
+    "G_vo_gtm_own": {
+      "value": 0.0,
+      "status": 1,
+      "message": "Проверка не пройдена"
+    },
+    "V_vo_gtm_ost_np_km": {
+      "value": 10.051,
+      "status": 1,
+      "message": "Проверка не пройдена"
+    },
+    "V_vo_gtm_ost_app_km": {
+      "value": 87.057,
+      "status": 1,
+      "message": "Проверка не пройдена"
+    },
+    "V_vo_gtm_ost_dead_km": {
+      "value": 0.0,
+      "status": 1,
+      "message": "Проверка не пройдена"
+    },
+    "V_vo_gtm_ost_texn_km": {
+      "value": 0.0,
+      "status": 1,
+      "message": "Проверка не пройдена"
+    },
+    "V_vo_gtm_ost_tov_km": {
+      "value": 0.0,
+      "status": 1,
+      "message": "Проверка не пройдена"
+    },
+    "V_vo_gtm_ost_upn_lodochny_km": {
+      "value": 123.0,
+      "status": 1,
+      "message": "Проверка не пройдена"
+    },
+    "V_vo_gtm_ost_rvs_km": {
+      "value": 123.0,
+      "status": 1,
+      "message": "Проверка не пройдена"
+    },
+    "V_vo_gtm_ost_vpy_km": {
+      "value": 220.108,
+      "status": 1,
+      "message": "Проверка не пройдена"
+    },
+    "V_vo_gtm_path_km": {
+      "value": 1579.5220000000008,
+      "status": 1,
+      "message": "Проверка не пройдена"
+    },
+    "V_vo_gtm_ost_km": {
+      "value": 1799.6300000000008,
+      "status": 1,
+      "message": "Проверка не пройдена"
+    },
+    "delta_V_vo_gtm_ost": {
+      "value": -177.47799999999916,
+      "status": 1,
+      "message": "Проверка не пройдена"
+    },
     "V_vo_gtm_check": {
       "value": 0.0,
       "status": 1,
-      "message": null
+      "message": "Проверка не пройдена"
     },
-    "V_lodochny_gtm_ost_upn_lodochny_nm": 2662.0,
-    "V_lodochny_gtm_ost_rvs_nm": 2662.0,
-    "V_lodochny_gtm_ost_nm": 9268.702000000001,
-    "Q_lodochny_gtm_oil": 111325.0,
-    "Q_lodochny_gtm_total": 111325.0,
-    "F_lodochny_gtm_total": 110365.549,
-    "V_lodochny_gtm_lost_oil": 0,
-    "V_lodochny_gtm_lost_transport": 10,
-    "V_lodochny_gtm_lost": 10,
-    "V_lodochny_gtm_ost_np_km": 1456.067,
-    "V_lodochny_gtm_ost_app_km": 714.635,
-    "V_lodochny_gtm_ost_dead_km": 0.0,
-    "V_lodochny_gtm_ost_upn_ichem_km": 0.0,
-    "V_lodochny_gtm_ost_upsv_yu_km": 0.0,
-    "V_lodochny_gtm_ost_tov_km": 0.0,
-    "V_lodochny_gtm_ost_rvs_clean_km": 0.0,
-    "V_lodochny_gtm_ost_upn_lodochny_km": 2563.7609999999977,
-    "V_lodochny_gtm_ost_texn_km": 2563.7609999999977,
-    "V_lodochny_gtm_ost_rvs_km": 2563.7609999999977,
-    "V_lodochny_gtm_path_km": 5483.690000000017,
-    "V_lodochny_gtm_ost_km": 10218.153000000015,
-    "delta_V_lodochny_gtm_ost": 949.4510000000137,
+    "V_lodochny_gtm_ost_upn_lodochny_nm": {
+      "value": 2662.0,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "V_lodochny_gtm_ost_rvs_nm": {
+      "value": 2662.0,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "V_lodochny_gtm_ost_nm": {
+      "value": 9268.702000000001,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "Q_lodochny_gtm_oil": {
+      "value": 111325.0,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "Q_lodochny_gtm_total": {
+      "value": 111325.0,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "F_lodochny_gtm_total": {
+      "value": 110365.549,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "V_lodochny_gtm_lost_oil": {
+      "value": 0,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "V_lodochny_gtm_lost_transport": {
+      "value": 10,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "V_lodochny_gtm_lost": {
+      "value": 10,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "V_lodochny_gtm_ost_np_km": {
+      "value": 1456.067,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "V_lodochny_gtm_ost_app_km": {
+      "value": 714.635,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "V_lodochny_gtm_ost_dead_km": {
+      "value": 0.0,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "V_lodochny_gtm_ost_upn_ichem_km": {
+      "value": 0.0,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "V_lodochny_gtm_ost_upsv_yu_km": {
+      "value": 0.0,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "V_lodochny_gtm_ost_tov_km": {
+      "value": 0.0,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "V_lodochny_gtm_ost_rvs_clean_km": {
+      "value": 0.0,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "V_lodochny_gtm_ost_upn_lodochny_km": {
+      "value": 2563.7609999999977,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "V_lodochny_gtm_ost_texn_km": {
+      "value": 2563.7609999999977,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "V_lodochny_gtm_ost_rvs_km": {
+      "value": 2563.7609999999977,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "V_lodochny_gtm_path_km": {
+      "value": 5483.690000000017,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "V_lodochny_gtm_ost_km": {
+      "value": 10218.153000000015,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "delta_V_lodochny_gtm_ost": {
+      "value": 949.4510000000137,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
     "V_lodochny_gtm_check": {
       "value": -1.4551915228366852e-11,
       "status": 2,
-      "message": null
+      "message": "Проверка не пройдена"
     },
-    "V_tagul_gtm_ost_rvs_nm": 0.0,
-    "V_tagul_gtm_ost_tpu_nm": 2992.661,
-    "V_tagul_gtm_path_nm": 7600.0,
-    "V_tagul_gtm_ost_nm": 10592.661,
-    "Q_tagul_gtm_oil": 204259.0,
-    "Q_tagul_gtm_total": 204259.0,
-    "F_tagul_gtm_total": 203849.09100000001,
-    "V_tagul_gtm_lost_oil": 6,
-    "V_tagul_gtm_lost_transport": 7,
-    "V_tagul_gtm_lost": 13,
-    "G_tagul_gtm_own": 0.0,
-    "G_tagul_gtm_release": 0.0,
-    "V_tagul_gtm_ost_texn_km": 0.0,
-    "V_tagul_gtm_ost_dead_km": 0.0,
-    "V_tagul_gtm_ost_rvs_clean_km": 0.0,
-    "V_tagul_gtm_ost_tov_km": 0.0,
-    "V_tagul_gtm_ost_rvs_km": 0.0,
-    "V_tagul_gtm_ost_tpu_km": 0.0,
-    "V_tagul_gtm_path_km": 10989.569999999978,
-    "V_tagul_gtm_ost_km": 10989.569999999978,
-    "delta_V_tagul_gtm_ost": 396.9089999999778,
+    "V_tagul_gtm_ost_rvs_nm": {
+      "value": 0.0,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "V_tagul_gtm_ost_tpu_nm": {
+      "value": 2992.661,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "V_tagul_gtm_path_nm": {
+      "value": 7600.0,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "V_tagul_gtm_ost_nm": {
+      "value": 10592.661,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "Q_tagul_gtm_oil": {
+      "value": 204259.0,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "Q_tagul_gtm_total": {
+      "value": 204259.0,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "F_tagul_gtm_total": {
+      "value": 203849.09100000001,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "V_tagul_gtm_lost_oil": {
+      "value": 6,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "V_tagul_gtm_lost_transport": {
+      "value": 7,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "V_tagul_gtm_lost": {
+      "value": 13,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "G_tagul_gtm_own": {
+      "value": 0.0,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "G_tagul_gtm_release": {
+      "value": 0.0,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "V_tagul_gtm_ost_texn_km": {
+      "value": 0.0,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "V_tagul_gtm_ost_dead_km": {
+      "value": 0.0,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "V_tagul_gtm_ost_rvs_clean_km": {
+      "value": 0.0,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "V_tagul_gtm_ost_tov_km": {
+      "value": 0.0,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "V_tagul_gtm_ost_rvs_km": {
+      "value": 0.0,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "V_tagul_gtm_ost_tpu_km": {
+      "value": 0.0,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "V_tagul_gtm_path_km": {
+      "value": 10989.569999999978,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "V_tagul_gtm_ost_km": {
+      "value": 10989.569999999978,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
+    "delta_V_tagul_gtm_ost": {
+      "value": 396.9089999999778,
+      "status": 2,
+      "message": "Проверка не пройдена"
+    },
     "V_tagul_gtm_check": {
       "value": 0.0,
       "status": 2,
-      "message": null
+      "message": "Проверка не пройдена"
     }
   },
   "days": [
@@ -2007,7 +2667,11 @@
         "message": "Проверка выполнения условий по наличию нефти на ЦПС выполнена"
       },
       "V_cppn_1": 36600.606225806456,
-      "V_lodochny_cps_upsv_yu": 45.51999999999998,
+      "V_lodochny_cps_upsv_yu": {
+        "value": 45.51999999999998,
+        "status": 1,
+        "message": "Проверка выполнения условий по наличию нефти Лодочного ЛУ в РП на ЦПС и УПСВ-ЮГ"
+      },
       "G_sikn": 26246.701999999997,
       "G_sikn_vankor": 22440.913774193545,
       "G_sikn_suzun": 2875.788225806452,
@@ -2114,11 +2778,11 @@
         "message": null
       },
       "G_kchng": 1420.0,
-      "G_gnps": 25630.25061290322,
+      "G_gnps": 10000000000000.0,
       "V_gnps": {
-        "value": 15241.451387096778,
-        "status": 1,
-        "message": "Проверка выполнения условий по наличию нефти на ГНПС выполнена"
+        "value": -9999999959128.299,
+        "status": 3,
+        "message": "Скорость опорожнения РП больше допустимой величины, необходимо либо уменьшить (путем ручного ввода нужного значения) откачку нефти с ГНПС (столбец BE), либо увеличить поступление нефти через СИКН-1208 [путем увеличения ручным вводом наличия нефти в РП УПСВ-Ю (столбец F), УПСВ-С (столбец G), ЦПС (столбец H) до нужных показателей]"
       },
       "V_nps_1": {
         "value": 4308.0,
@@ -2131,18 +2795,18 @@
         "message": "Наличие нефти в РП НПС-2 ниже минимального допустимого значения, необходимо уменьшить откачку нефти с НПС-1 на НПС-2 путем увеличения (ручным вводом) наличия нефти в РП НПС-2 до требуемого значения"
       },
       "V_knps": {
-        "value": 52451.6738064516,
-        "status": 1,
-        "message": "Проверка выполнения условий по наличию нефти на КНПС выполнена"
+        "value": 10000000025871.424,
+        "status": 3,
+        "message": "Скорость наполнения РП КНПС больше допустимой величины, необходимо увеличить (ручным вводом) сдачу нефти АО «ВН» (столбец BX) в магистральный нефтепровод через СИКН 1209 "
       },
-      "V_tstn": 75998.12519354839,
+      "V_tstn": 75048.125,
       "V_tstn_rn_vn": {
         "value": 35933.0,
         "status": 0,
         "message": null
       },
       "V_tstn_vn": {
-        "value": 10532.031964193548,
+        "value": 9582.031770645159,
         "status": 1,
         "message": "Проверка выполнения условий по наличию нефти АО «Ванкорнефть» на ЦТН"
       },
@@ -2197,45 +2861,89 @@
         "message": "Проверка выполнения условий по наличию нефти ООО «КЧНГ» (Русско-Реченское месторождение) на ЦТН"
       },
       "F_bp": {
-        "value": 42500.0,
+        "value": 42500,
         "status": 0,
         "message": null
       },
-      "F_bp_vn": 22600,
-      "F_bp_suzun": 2050,
+      "F_bp_vn": 22600.0,
+      "F_bp_suzun": 2050.0,
       "F_bp_suzun_vankor": 0.0,
-      "F_bp_suzun_vslu": 0,
-      "F_bp_tagul": 8550,
-      "F_bp_tagul_lpu": 3050,
-      "F_bp_tagul_tpu": 5500,
-      "F_bp_skn": 8400,
-      "F_bp_vo": 500,
-      "F_bp_tng": 0,
-      "F_bp_kchng": 400,
-      "F": 46600.0,
-      "F_vn": 22600.0,
-      "F_suzun": 2050.0,
-      "F_suzun_vankor": 0.0,
-      "F_suzun_vslu": 0.0,
-      "F_tagul": 9500.0,
-      "F_tagul_lpu": 3050.0,
-      "F_tagul_tpu": 6450.0,
-      "F_skn": 9850.0,
-      "F_vo": 850.0,
-      "F_tng": 350.0,
-      "F_kchng": 1400.0,
-      "Q_gnps": {
-        "value": 1228.9149699320685,
+      "F_bp_suzun_vslu": 0.0,
+      "F_bp_tagul": 8550.0,
+      "F_bp_tagul_lpu": 3050.0,
+      "F_bp_tagul_tpu": 5500.0,
+      "F_bp_skn": 8400.0,
+      "F_bp_vo": 500.0,
+      "F_bp_tng": 0.0,
+      "F_bp_kchng": 400.0,
+      "F": 47550.0,
+      "F_vn": {
+        "value": 23550.0,
+        "status": 3,
+        "message": "Не удалось скорректировать баланс за 1000 итераций. V_knps=10000000025871.42 (целевой [47047.17; 57502.10]), V_tstn_vn=9582.03 (целевой [9625.50; 11764.50])"
+      },
+      "F_suzun": {
+        "value": 2050.0,
         "status": 1,
-        "message": "Режим работы насосного оборудования 1-1-1"
+        "message": null
+      },
+      "F_suzun_vankor": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_suzun_vslu": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul": {
+        "value": 9500.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul_lpu": {
+        "value": 3050.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul_tpu": {
+        "value": 6450.0,
+        "status": 1,
+        "message": null
+      },
+      "F_skn": {
+        "value": 9850.0,
+        "status": 1,
+        "message": null
+      },
+      "F_vo": {
+        "value": 850.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tng": {
+        "value": 350.0,
+        "status": 1,
+        "message": null
+      },
+      "F_kchng": {
+        "value": 1400.0,
+        "status": 1,
+        "message": null
+      },
+      "Q_gnps": {
+        "value": 479478327579.59344,
+        "status": 3,
+        "message": "Расход нефти на насосы ГНПС больше максимально допустимого значения. Необходимо уменьшить (ручным вводом) откачку нефти с ГНПС (столбец BE) до нужного значения"
       },
       "Q_nps_1_2": {
-        "value": 1803.2410826844641,
-        "status": 1,
-        "message": "Режим работы насосного оборудования 1-1-1"
+        "value": 478927203640.8728,
+        "status": 3,
+        "message": "Расход нефти на насосы НПС-1, НПС-2 больше максимально допустимого значения. Необходимо уменьшить (ручным вводом) откачку нефти с ГНПС (столбец BE) до нужного значения"
       },
       "Q_knps": {
-        "value": 2239.523260284506,
+        "value": 2285.17877739331,
         "status": 1,
         "message": "Режим работы насосного оборудования 2-2-2. Рекомендуется рассмотреть возможность перераспределения перекачиваемой нефти по дням."
       }
@@ -2263,7 +2971,11 @@
         "message": "Проверка выполнения условий по наличию нефти на ЦПС выполнена"
       },
       "V_cppn_1": 36500.212451612904,
-      "V_lodochny_cps_upsv_yu": 84.27999999999997,
+      "V_lodochny_cps_upsv_yu": {
+        "value": 84.27999999999997,
+        "status": 1,
+        "message": "Проверка выполнения условий по наличию нефти Лодочного ЛУ в РП на ЦПС и УПСВ-ЮГ"
+      },
       "G_sikn": 25985.941999999995,
       "G_sikn_vankor": 22222.153774193543,
       "G_sikn_suzun": 2833.788225806452,
@@ -2370,11 +3082,11 @@
         "message": null
       },
       "G_kchng": 1420.0,
-      "G_gnps": 25630.25061290322,
+      "G_gnps": 25314.971838709684,
       "V_gnps": {
-        "value": 15597.142774193555,
-        "status": 1,
-        "message": "Проверка выполнения условий по наличию нефти на ГНПС выполнена"
+        "value": -9999999958457.33,
+        "status": 2,
+        "message": "Наличие нефти в РП ГНПС ниже минимального допустимого значения, необходимо либо уменьшить (путем ручного ввода нужного значения) откачку нефти с ГНПС (столбец BE), либо увеличить поступление нефти через СИКН-1208 [путем уменьшения ручным вводом наличия нефти в РП УПСВ-Ю (столбец F), УПСВ-С (столбец G), ЦПС (столбец H) до нужных показателей]"
       },
       "V_nps_1": {
         "value": 4308.0,
@@ -2387,18 +3099,18 @@
         "message": "Наличие нефти в РП НПС-2 ниже минимального допустимого значения, необходимо уменьшить откачку нефти с НПС-1 на НПС-2 путем увеличения (ручным вводом) наличия нефти в РП НПС-2 до требуемого значения"
       },
       "V_knps": {
-        "value": 52555.10761290321,
-        "status": 1,
-        "message": "Проверка выполнения условий по наличию нефти на КНПС выполнена"
+        "value": 10000000026109.58,
+        "status": 3,
+        "message": "Наличие нефти в РП КНПС выше максимально допустимого значения, необходимо увеличить (ручным вводом) сдачу нефти АО «ВН» (столбец BX) в магистральный нефтепровод через СИКН 1209 "
       },
-      "V_tstn": 76457.25038709676,
+      "V_tstn": 75957.25,
       "V_tstn_rn_vn": {
         "value": 35933.0,
         "status": 0,
         "message": null
       },
       "V_tstn_vn": {
-        "value": 10155.141598387081,
+        "value": 9655.141211290318,
         "status": 1,
         "message": "Проверка выполнения условий по наличию нефти АО «Ванкорнефть» на ЦТН"
       },
@@ -2453,45 +3165,89 @@
         "message": "Проверка выполнения условий по наличию нефти ООО «КЧНГ» (Русско-Реченское месторождение) на ЦТН"
       },
       "F_bp": {
-        "value": 42500.0,
+        "value": 42500,
         "status": 0,
         "message": null
       },
-      "F_bp_vn": 22600,
-      "F_bp_suzun": 2050,
+      "F_bp_vn": 22600.0,
+      "F_bp_suzun": 2050.0,
       "F_bp_suzun_vankor": 0.0,
-      "F_bp_suzun_vslu": 0,
-      "F_bp_tagul": 8550,
-      "F_bp_tagul_lpu": 3050,
-      "F_bp_tagul_tpu": 5500,
-      "F_bp_skn": 8400,
-      "F_bp_vo": 500,
-      "F_bp_tng": 0,
-      "F_bp_kchng": 400,
-      "F": 47600.0,
-      "F_vn": 22600.0,
-      "F_suzun": 2300.0,
-      "F_suzun_vankor": 0.0,
-      "F_suzun_vslu": 0.0,
-      "F_tagul": 10200.0,
-      "F_tagul_lpu": 3400.0,
-      "F_tagul_tpu": 6800.0,
-      "F_skn": 10200.0,
-      "F_vo": 900.0,
-      "F_tng": 0.0,
-      "F_kchng": 1400.0,
+      "F_bp_suzun_vslu": 0.0,
+      "F_bp_tagul": 8550.0,
+      "F_bp_tagul_lpu": 3050.0,
+      "F_bp_tagul_tpu": 5500.0,
+      "F_bp_skn": 8400.0,
+      "F_bp_vo": 500.0,
+      "F_bp_tng": 0.0,
+      "F_bp_kchng": 400.0,
+      "F": 47150.0,
+      "F_vn": {
+        "value": 22150.0,
+        "status": 3,
+        "message": "Не удалось скорректировать баланс за 1000 итераций. V_knps=10000000026109.58 (целевой [47047.17; 57502.10]), V_tstn_vn=9655.14 (целевой [9625.50; 11764.50])"
+      },
+      "F_suzun": {
+        "value": 2300.0,
+        "status": 1,
+        "message": null
+      },
+      "F_suzun_vankor": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_suzun_vslu": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul": {
+        "value": 10200.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul_lpu": {
+        "value": 3400.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul_tpu": {
+        "value": 6800.0,
+        "status": 1,
+        "message": null
+      },
+      "F_skn": {
+        "value": 10200.0,
+        "status": 1,
+        "message": null
+      },
+      "F_vo": {
+        "value": 900.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tng": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_kchng": {
+        "value": 1400.0,
+        "status": 1,
+        "message": null
+      },
       "Q_gnps": {
-        "value": 1228.9149699320685,
+        "value": 1213.7980359949024,
         "status": 1,
         "message": "Режим работы насосного оборудования 1-1-1"
       },
       "Q_nps_1_2": {
-        "value": 1796.1414658262263,
+        "value": 1781.041907675195,
         "status": 1,
         "message": "Режим работы насосного оборудования 1-1-1"
       },
       "Q_knps": {
-        "value": 2287.5816993464055,
+        "value": 2265.9554017685505,
         "status": 1,
         "message": "Режим работы насосного оборудования 2-2-2. Рекомендуется рассмотреть возможность перераспределения перекачиваемой нефти по дням."
       }
@@ -2519,7 +3275,11 @@
         "message": "Проверка выполнения условий по наличию нефти на ЦПС выполнена"
       },
       "V_cppn_1": 36399.81867741935,
-      "V_lodochny_cps_upsv_yu": 122.77999999999997,
+      "V_lodochny_cps_upsv_yu": {
+        "value": 122.77999999999997,
+        "status": 1,
+        "message": "Проверка выполнения условий по наличию нефти Лодочного ЛУ в РП на ЦПС и УПСВ-ЮГ"
+      },
       "G_sikn": 25843.681999999997,
       "G_sikn_vankor": 22084.893774193544,
       "G_sikn_suzun": 2828.788225806452,
@@ -2626,11 +3386,11 @@
         "message": null
       },
       "G_kchng": 1420.0,
-      "G_gnps": 25630.25061290322,
+      "G_gnps": 25314.971838709684,
       "V_gnps": {
-        "value": 15810.57416129033,
-        "status": 1,
-        "message": "Проверка выполнения условий по наличию нефти на ГНПС выполнена"
+        "value": -9999999957928.621,
+        "status": 2,
+        "message": "Наличие нефти в РП ГНПС ниже минимального допустимого значения, необходимо либо уменьшить (путем ручного ввода нужного значения) откачку нефти с ГНПС (столбец BE), либо увеличить поступление нефти через СИКН-1208 [путем уменьшения ручным вводом наличия нефти в РП УПСВ-Ю (столбец F), УПСВ-С (столбец G), ЦПС (столбец H) до нужных показателей]"
       },
       "V_nps_1": {
         "value": 4308.0,
@@ -2643,18 +3403,18 @@
         "message": "Наличие нефти в РП НПС-2 ниже минимального допустимого значения, необходимо уменьшить откачку нефти с НПС-1 на НПС-2 путем увеличения (ручным вводом) наличия нефти в РП НПС-2 до требуемого значения"
       },
       "V_knps": {
-        "value": 52397.801419354815,
-        "status": 1,
-        "message": "Проверка выполнения условий по наличию нефти на КНПС выполнена"
+        "value": 10000000026086.996,
+        "status": 3,
+        "message": "Наличие нефти в РП КНПС выше максимально допустимого значения, необходимо увеличить (ручным вводом) сдачу нефти АО «ВН» (столбец BX) в магистральный нефтепровод через СИКН 1209 "
       },
-      "V_tstn": 76513.37558064514,
+      "V_tstn": 76463.375,
       "V_tstn_rn_vn": {
         "value": 35933.0,
         "status": 0,
         "message": null
       },
       "V_tstn_vn": {
-        "value": 9641.007377580621,
+        "value": 9591.006796935484,
         "status": 1,
         "message": "Проверка выполнения условий по наличию нефти АО «Ванкорнефть» на ЦТН"
       },
@@ -2709,45 +3469,89 @@
         "message": "Проверка выполнения условий по наличию нефти ООО «КЧНГ» (Русско-Реченское месторождение) на ЦТН"
       },
       "F_bp": {
-        "value": 42500.0,
+        "value": 42500,
         "status": 0,
         "message": null
       },
-      "F_bp_vn": 22600,
-      "F_bp_suzun": 2050,
+      "F_bp_vn": 22600.0,
+      "F_bp_suzun": 2050.0,
       "F_bp_suzun_vankor": 0.0,
-      "F_bp_suzun_vslu": 0,
-      "F_bp_tagul": 8550,
-      "F_bp_tagul_lpu": 3050,
-      "F_bp_tagul_tpu": 5500,
-      "F_bp_skn": 8400,
-      "F_bp_vo": 500,
-      "F_bp_tng": 0,
-      "F_bp_kchng": 400,
-      "F": 47750.0,
-      "F_vn": 22600.0,
-      "F_suzun": 2300.0,
-      "F_suzun_vankor": 0.0,
-      "F_suzun_vslu": 0.0,
-      "F_tagul": 10300.0,
-      "F_tagul_lpu": 3600.0,
-      "F_tagul_tpu": 6700.0,
-      "F_skn": 10200.0,
-      "F_vo": 900.0,
-      "F_tng": 0.0,
-      "F_kchng": 1450.0,
+      "F_bp_suzun_vslu": 0.0,
+      "F_bp_tagul": 8550.0,
+      "F_bp_tagul_lpu": 3050.0,
+      "F_bp_tagul_tpu": 5500.0,
+      "F_bp_skn": 8400.0,
+      "F_bp_vo": 500.0,
+      "F_bp_tng": 0.0,
+      "F_bp_kchng": 400.0,
+      "F": 47300.0,
+      "F_vn": {
+        "value": 22150.0,
+        "status": 3,
+        "message": "Не удалось скорректировать баланс за 1000 итераций. V_knps=10000000026087.00 (целевой [47047.17; 57502.10]), V_tstn_vn=9591.01 (целевой [9625.50; 11764.50])"
+      },
+      "F_suzun": {
+        "value": 2300.0,
+        "status": 1,
+        "message": null
+      },
+      "F_suzun_vankor": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_suzun_vslu": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul": {
+        "value": 10300.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul_lpu": {
+        "value": 3600.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul_tpu": {
+        "value": 6700.0,
+        "status": 1,
+        "message": null
+      },
+      "F_skn": {
+        "value": 10200.0,
+        "status": 1,
+        "message": null
+      },
+      "F_vo": {
+        "value": 900.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tng": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_kchng": {
+        "value": 1450.0,
+        "status": 1,
+        "message": null
+      },
       "Q_gnps": {
-        "value": 1228.9149699320685,
+        "value": 1213.7980359949024,
         "status": 1,
         "message": "Режим работы насосного оборудования 1-1-1"
       },
       "Q_nps_1_2": {
-        "value": 1790.837825979483,
+        "value": 1775.7382678284514,
         "status": 1,
         "message": "Режим работы насосного оборудования 1-1-1"
       },
       "Q_knps": {
-        "value": 2294.79046520569,
+        "value": 2273.1641676278355,
         "status": 1,
         "message": "Режим работы насосного оборудования 2-2-2. Рекомендуется рассмотреть возможность перераспределения перекачиваемой нефти по дням."
       }
@@ -2775,7 +3579,11 @@
         "message": "Проверка выполнения условий по наличию нефти на ЦПС выполнена"
       },
       "V_cppn_1": 36299.42490322581,
-      "V_lodochny_cps_upsv_yu": 161.01999999999998,
+      "V_lodochny_cps_upsv_yu": {
+        "value": 161.01999999999998,
+        "status": 1,
+        "message": "Проверка выполнения условий по наличию нефти Лодочного ЛУ в РП на ЦПС и УПСВ-ЮГ"
+      },
       "G_sikn": 25728.422,
       "G_sikn_vankor": 21974.633774193546,
       "G_sikn_suzun": 2823.788225806452,
@@ -2882,11 +3690,11 @@
         "message": null
       },
       "G_kchng": 1420.0,
-      "G_gnps": 25630.25061290322,
+      "G_gnps": 25314.971838709684,
       "V_gnps": {
-        "value": 15908.745548387109,
-        "status": 1,
-        "message": "Проверка выполнения условий по наличию нефти на ГНПС выполнена"
+        "value": -9999999957515.172,
+        "status": 2,
+        "message": "Наличие нефти в РП ГНПС ниже минимального допустимого значения, необходимо либо уменьшить (путем ручного ввода нужного значения) откачку нефти с ГНПС (столбец BE), либо увеличить поступление нефти через СИКН-1208 [путем уменьшения ручным вводом наличия нефти в РП УПСВ-Ю (столбец F), УПСВ-С (столбец G), ЦПС (столбец H) до нужных показателей]"
       },
       "V_nps_1": {
         "value": 4308.0,
@@ -2899,18 +3707,18 @@
         "message": "Наличие нефти в РП НПС-2 ниже минимального допустимого значения, необходимо уменьшить откачку нефти с НПС-1 на НПС-2 путем увеличения (ручным вводом) наличия нефти в РП НПС-2 до требуемого значения"
       },
       "V_knps": {
-        "value": 52816.755225806424,
-        "status": 1,
-        "message": "Проверка выполнения условий по наличию нефти на КНПС выполнена"
+        "value": 10000000026190.672,
+        "status": 3,
+        "message": "Наличие нефти в РП КНПС выше максимально допустимого значения, необходимо увеличить (ручным вводом) сдачу нефти АО «ВН» (столбец BX) в магистральный нефтепровод через СИКН 1209 "
       },
-      "V_tstn": 77030.50077419353,
+      "V_tstn": 76980.5,
       "V_tstn_rn_vn": {
         "value": 35933.0,
         "status": 0,
         "message": null
       },
       "V_tstn_vn": {
-        "value": 9666.617636774168,
+        "value": 9616.616862580642,
         "status": 1,
         "message": "Проверка выполнения условий по наличию нефти АО «Ванкорнефть» на ЦТН"
       },
@@ -2965,40 +3773,84 @@
         "message": "Проверка выполнения условий по наличию нефти ООО «КЧНГ» (Русско-Реченское месторождение) на ЦТН"
       },
       "F_bp": {
-        "value": 42500.0,
+        "value": 42500,
         "status": 0,
         "message": null
       },
-      "F_bp_vn": 22600,
-      "F_bp_suzun": 2050,
+      "F_bp_vn": 22600.0,
+      "F_bp_suzun": 2050.0,
       "F_bp_suzun_vankor": 0.0,
-      "F_bp_suzun_vslu": 0,
-      "F_bp_tagul": 8550,
-      "F_bp_tagul_lpu": 3050,
-      "F_bp_tagul_tpu": 5500,
-      "F_bp_skn": 8400,
-      "F_bp_vo": 500,
-      "F_bp_tng": 0,
-      "F_bp_kchng": 400,
+      "F_bp_suzun_vslu": 0.0,
+      "F_bp_tagul": 8550.0,
+      "F_bp_tagul_lpu": 3050.0,
+      "F_bp_tagul_tpu": 5500.0,
+      "F_bp_skn": 8400.0,
+      "F_bp_vo": 500.0,
+      "F_bp_tng": 0.0,
+      "F_bp_kchng": 400.0,
       "F": 47150.0,
-      "F_vn": 21950.0,
-      "F_suzun": 2300.0,
-      "F_suzun_vankor": 0.0,
-      "F_suzun_vslu": 0.0,
-      "F_tagul": 10400.0,
-      "F_tagul_lpu": 3650.0,
-      "F_tagul_tpu": 6750.0,
-      "F_skn": 10200.0,
-      "F_vo": 900.0,
-      "F_tng": 0.0,
-      "F_kchng": 1400.0,
+      "F_vn": {
+        "value": 21950.0,
+        "status": 3,
+        "message": "Не удалось скорректировать баланс за 1000 итераций. V_knps=10000000026190.67 (целевой [47047.17; 57502.10]), V_tstn_vn=9616.62 (целевой [9625.50; 11764.50])"
+      },
+      "F_suzun": {
+        "value": 2300.0,
+        "status": 1,
+        "message": null
+      },
+      "F_suzun_vankor": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_suzun_vslu": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul": {
+        "value": 10400.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul_lpu": {
+        "value": 3650.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul_tpu": {
+        "value": 6750.0,
+        "status": 1,
+        "message": null
+      },
+      "F_skn": {
+        "value": 10200.0,
+        "status": 1,
+        "message": null
+      },
+      "F_vo": {
+        "value": 900.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tng": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_kchng": {
+        "value": 1400.0,
+        "status": 1,
+        "message": null
+      },
       "Q_gnps": {
-        "value": 1228.9149699320685,
+        "value": 1213.7980359949024,
         "status": 1,
         "message": "Режим работы насосного оборудования 1-1-1"
       },
       "Q_nps_1_2": {
-        "value": 1789.7008527994067,
+        "value": 1774.601294648375,
         "status": 1,
         "message": "Режим работы насосного оборудования 1-1-1"
       },
@@ -3031,7 +3883,11 @@
         "message": "Проверка выполнения условий по наличию нефти на ЦПС выполнена"
       },
       "V_cppn_1": 36199.031129032264,
-      "V_lodochny_cps_upsv_yu": 199.51999999999998,
+      "V_lodochny_cps_upsv_yu": {
+        "value": 199.51999999999998,
+        "status": 1,
+        "message": "Проверка выполнения условий по наличию нефти Лодочного ЛУ в РП на ЦПС и УПСВ-ЮГ"
+      },
       "G_sikn": 25670.681999999997,
       "G_sikn_vankor": 21951.893774193544,
       "G_sikn_suzun": 2788.788225806452,
@@ -3138,11 +3994,11 @@
         "message": null
       },
       "G_kchng": 1420.0,
-      "G_gnps": 25630.25061290322,
+      "G_gnps": 25314.971838709684,
       "V_gnps": {
-        "value": 15949.176935483883,
-        "status": 1,
-        "message": "Проверка выполнения условий по наличию нефти на ГНПС выполнена"
+        "value": -9999999957159.463,
+        "status": 2,
+        "message": "Наличие нефти в РП ГНПС ниже минимального допустимого значения, необходимо либо уменьшить (путем ручного ввода нужного значения) откачку нефти с ГНПС (столбец BE), либо увеличить поступление нефти через СИКН-1208 [путем уменьшения ручным вводом наличия нефти в РП УПСВ-Ю (столбец F), УПСВ-С (столбец G), ЦПС (столбец H) до нужных показателей]"
       },
       "V_nps_1": {
         "value": 4308.0,
@@ -3155,18 +4011,18 @@
         "message": "Наличие нефти в РП НПС-2 ниже минимального допустимого значения, необходимо уменьшить откачку нефти с НПС-1 на НПС-2 путем увеличения (ручным вводом) наличия нефти в РП НПС-2 до требуемого значения"
       },
       "V_knps": {
-        "value": 53284.44903225803,
-        "status": 1,
-        "message": "Проверка выполнения условий по наличию нефти на КНПС выполнена"
+        "value": 10000000026343.088,
+        "status": 3,
+        "message": "Наличие нефти в РП КНПС выше максимально допустимого значения, необходимо увеличить (ручным вводом) сдачу нефти АО «ВН» (столбец BX) в магистральный нефтепровод через СИКН 1209 "
       },
-      "V_tstn": 77538.62596774191,
+      "V_tstn": 77488.625,
       "V_tstn_rn_vn": {
         "value": 35933.0,
         "status": 0,
         "message": null
       },
       "V_tstn_vn": {
-        "value": 9669.481640967719,
+        "value": 9619.480673225804,
         "status": 1,
         "message": "Проверка выполнения условий по наличию нефти АО «Ванкорнефть» на ЦТН"
       },
@@ -3221,40 +4077,84 @@
         "message": "Проверка выполнения условий по наличию нефти ООО «КЧНГ» (Русско-Реченское месторождение) на ЦТН"
       },
       "F_bp": {
-        "value": 42500.0,
+        "value": 42500,
         "status": 0,
         "message": null
       },
-      "F_bp_vn": 22600,
-      "F_bp_suzun": 2050,
+      "F_bp_vn": 22600.0,
+      "F_bp_suzun": 2050.0,
       "F_bp_suzun_vankor": 0.0,
-      "F_bp_suzun_vslu": 0,
-      "F_bp_tagul": 8550,
-      "F_bp_tagul_lpu": 3050,
-      "F_bp_tagul_tpu": 5500,
-      "F_bp_skn": 8400,
-      "F_bp_vo": 500,
-      "F_bp_tng": 0,
-      "F_bp_kchng": 400,
+      "F_bp_suzun_vslu": 0.0,
+      "F_bp_tagul": 8550.0,
+      "F_bp_tagul_lpu": 3050.0,
+      "F_bp_tagul_tpu": 5500.0,
+      "F_bp_skn": 8400.0,
+      "F_bp_vo": 500.0,
+      "F_bp_tng": 0.0,
+      "F_bp_kchng": 400.0,
       "F": 47050.0,
-      "F_vn": 21950.0,
-      "F_suzun": 2300.0,
-      "F_suzun_vankor": 0.0,
-      "F_suzun_vslu": 0.0,
-      "F_tagul": 10350.0,
-      "F_tagul_lpu": 3700.0,
-      "F_tagul_tpu": 6650.0,
-      "F_skn": 10200.0,
-      "F_vo": 800.0,
-      "F_tng": 0.0,
-      "F_kchng": 1450.0,
+      "F_vn": {
+        "value": 21950.0,
+        "status": 3,
+        "message": "Не удалось скорректировать баланс за 1000 итераций. V_knps=10000000026343.09 (целевой [47047.17; 57502.10]), V_tstn_vn=9619.48 (целевой [9625.50; 11764.50])"
+      },
+      "F_suzun": {
+        "value": 2300.0,
+        "status": 1,
+        "message": null
+      },
+      "F_suzun_vankor": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_suzun_vslu": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul": {
+        "value": 10350.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul_lpu": {
+        "value": 3700.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul_tpu": {
+        "value": 6650.0,
+        "status": 1,
+        "message": null
+      },
+      "F_skn": {
+        "value": 10200.0,
+        "status": 1,
+        "message": null
+      },
+      "F_vo": {
+        "value": 800.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tng": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_kchng": {
+        "value": 1450.0,
+        "status": 1,
+        "message": null
+      },
       "Q_gnps": {
-        "value": 1228.9149699320685,
+        "value": 1213.7980359949024,
         "status": 1,
         "message": "Режим работы насосного оборудования 1-1-1"
       },
       "Q_nps_1_2": {
-        "value": 1787.2458719564947,
+        "value": 1772.146313805463,
         "status": 1,
         "message": "Режим работы насосного оборудования 1-1-1"
       },
@@ -3287,7 +4187,11 @@
         "message": "Проверка выполнения условий по наличию нефти на ЦПС выполнена"
       },
       "V_cppn_1": 36098.63735483871,
-      "V_lodochny_cps_upsv_yu": 236.20000000000005,
+      "V_lodochny_cps_upsv_yu": {
+        "value": 236.20000000000005,
+        "status": 1,
+        "message": "Проверка выполнения условий по наличию нефти Лодочного ЛУ в РП на ЦПС и УПСВ-ЮГ"
+      },
       "G_sikn": 25589.861999999997,
       "G_sikn_vankor": 21876.073774193545,
       "G_sikn_suzun": 2783.788225806452,
@@ -3394,11 +4298,11 @@
         "message": null
       },
       "G_kchng": 1420.0,
-      "G_gnps": 25630.25061290322,
+      "G_gnps": 25314.971838709684,
       "V_gnps": {
-        "value": 15908.788322580665,
-        "status": 1,
-        "message": "Проверка выполнения условий по наличию нефти на ГНПС выполнена"
+        "value": -9999999956884.574,
+        "status": 2,
+        "message": "Наличие нефти в РП ГНПС ниже минимального допустимого значения, необходимо либо уменьшить (путем ручного ввода нужного значения) откачку нефти с ГНПС (столбец BE), либо увеличить поступление нефти через СИКН-1208 [путем уменьшения ручным вводом наличия нефти в РП УПСВ-Ю (столбец F), УПСВ-С (столбец G), ЦПС (столбец H) до нужных показателей]"
       },
       "V_nps_1": {
         "value": 4308.0,
@@ -3411,18 +4315,18 @@
         "message": "Наличие нефти в РП НПС-2 ниже минимального допустимого значения, необходимо уменьшить откачку нефти с НПС-1 на НПС-2 путем увеличения (ручным вводом) наличия нефти в РП НПС-2 до требуемого значения"
       },
       "V_knps": {
-        "value": 51099.96283870964,
+        "value": 10000000023893.324,
         "status": 3,
-        "message": "Наличие нефти в РП КНПС ниже минимального допустимого значения, необходимо уменьшить (ручным вводом) сдачу нефти АО «ВН» (столбец BX) в магистральный нефтепровод через СИКН 1209 "
+        "message": "Наличие нефти в РП КНПС выше максимально допустимого значения, необходимо увеличить (ручным вводом) сдачу нефти АО «ВН» (столбец BX) в магистральный нефтепровод через СИКН 1209 "
       },
-      "V_tstn": 75313.7511612903,
+      "V_tstn": 75313.75,
       "V_tstn_rn_vn": {
         "value": 35933.0,
         "status": 0,
         "message": null
       },
       "V_tstn_vn": {
-        "value": 9646.52835016127,
+        "value": 9646.527188870967,
         "status": 1,
         "message": "Проверка выполнения условий по наличию нефти АО «Ванкорнефть» на ЦТН"
       },
@@ -3481,41 +4385,85 @@
         "status": 0,
         "message": null
       },
-      "F_bp_vn": 22600,
-      "F_bp_suzun": 2050,
-      "F_bp_suzun_vankor": 2700,
-      "F_bp_suzun_vslu": 0,
-      "F_bp_tagul": 8550,
-      "F_bp_tagul_lpu": 3050,
-      "F_bp_tagul_tpu": 5500,
-      "F_bp_skn": 8400,
-      "F_bp_vo": 500,
-      "F_bp_tng": 0,
-      "F_bp_kchng": 400,
-      "F": 49650.0,
-      "F_vn": 21900.0,
-      "F_suzun": 2250.0,
-      "F_suzun_vankor": 2700.0,
-      "F_suzun_vslu": 0.0,
-      "F_tagul": 10400.0,
-      "F_tagul_lpu": 3750.0,
-      "F_tagul_tpu": 6650.0,
-      "F_skn": 10200.0,
-      "F_vo": 800.0,
-      "F_tng": 0.0,
-      "F_kchng": 1400.0,
+      "F_bp_vn": 22600.0,
+      "F_bp_suzun": 2050.0,
+      "F_bp_suzun_vankor": 2700.0,
+      "F_bp_suzun_vslu": 0.0,
+      "F_bp_tagul": 8550.0,
+      "F_bp_tagul_lpu": 3050.0,
+      "F_bp_tagul_tpu": 5500.0,
+      "F_bp_skn": 8400.0,
+      "F_bp_vo": 500.0,
+      "F_bp_tng": 0.0,
+      "F_bp_kchng": 400.0,
+      "F": 49600.0,
+      "F_vn": {
+        "value": 21850.0,
+        "status": 3,
+        "message": "Не удалось скорректировать баланс за 1000 итераций. V_knps=10000000023893.32 (целевой [47047.17; 57502.10]), V_tstn_vn=9646.53 (целевой [9625.50; 11764.50])"
+      },
+      "F_suzun": {
+        "value": 2250.0,
+        "status": 1,
+        "message": null
+      },
+      "F_suzun_vankor": {
+        "value": 2700.0,
+        "status": 1,
+        "message": null
+      },
+      "F_suzun_vslu": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul": {
+        "value": 10400.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul_lpu": {
+        "value": 3750.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul_tpu": {
+        "value": 6650.0,
+        "status": 1,
+        "message": null
+      },
+      "F_skn": {
+        "value": 10200.0,
+        "status": 1,
+        "message": null
+      },
+      "F_vo": {
+        "value": 800.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tng": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_kchng": {
+        "value": 1400.0,
+        "status": 1,
+        "message": null
+      },
       "Q_gnps": {
-        "value": 1228.9149699320685,
+        "value": 1213.7980359949024,
         "status": 1,
         "message": "Режим работы насосного оборудования 1-1-1"
       },
       "Q_nps_1_2": {
-        "value": 1784.7468298109006,
+        "value": 1769.6472716598694,
         "status": 1,
         "message": "Режим работы насосного оборудования 1-1-1"
       },
       "Q_knps": {
-        "value": 2386.1014994232987,
+        "value": 2383.698577470204,
         "status": 1,
         "message": "Режим работы насосного оборудования 2-2-2. Рекомендуется рассмотреть возможность перераспределения перекачиваемой нефти по дням."
       }
@@ -3543,7 +4491,11 @@
         "message": "Проверка выполнения условий по наличию нефти на ЦПС выполнена"
       },
       "V_cppn_1": 35998.24358064516,
-      "V_lodochny_cps_upsv_yu": 257.8000000000002,
+      "V_lodochny_cps_upsv_yu": {
+        "value": 257.8000000000002,
+        "status": 1,
+        "message": "Проверка выполнения условий по наличию нефти Лодочного ЛУ в РП на ЦПС и УПСВ-ЮГ"
+      },
       "G_sikn": 25459.781999999996,
       "G_sikn_vankor": 21750.993774193543,
       "G_sikn_suzun": 2778.788225806452,
@@ -3650,11 +4602,11 @@
         "message": null
       },
       "G_kchng": 1420.0,
-      "G_gnps": 25630.25061290322,
+      "G_gnps": 25314.971838709684,
       "V_gnps": {
-        "value": 15738.319709677446,
-        "status": 1,
-        "message": "Проверка выполнения условий по наличию нефти на ГНПС выполнена"
+        "value": -9999999956739.766,
+        "status": 2,
+        "message": "Наличие нефти в РП ГНПС ниже минимального допустимого значения, необходимо либо уменьшить (путем ручного ввода нужного значения) откачку нефти с ГНПС (столбец BE), либо увеличить поступление нефти через СИКН-1208 [путем уменьшения ручным вводом наличия нефти в РП УПСВ-Ю (столбец F), УПСВ-С (столбец G), ЦПС (столбец H) до нужных показателей]"
       },
       "V_nps_1": {
         "value": 4308.0,
@@ -3667,18 +4619,18 @@
         "message": "Наличие нефти в РП НПС-2 ниже минимального допустимого значения, необходимо уменьшить откачку нефти с НПС-1 на НПС-2 путем увеличения (ручным вводом) наличия нефти в РП НПС-2 до требуемого значения"
       },
       "V_knps": {
-        "value": 51808.55664516125,
+        "value": 10000000024286.64,
         "status": 3,
-        "message": "Наличие нефти в РП КНПС ниже минимального допустимого значения, необходимо уменьшить (ручным вводом) сдачу нефти АО «ВН» (столбец BX) в магистральный нефтепровод через СИКН 1209 "
+        "message": "Наличие нефти в РП КНПС выше максимально допустимого значения, необходимо увеличить (ручным вводом) сдачу нефти АО «ВН» (столбец BX) в магистральный нефтепровод через СИКН 1209 "
       },
-      "V_tstn": 75851.87635483869,
+      "V_tstn": 75851.875,
       "V_tstn_rn_vn": {
         "value": 35933.0,
         "status": 0,
         "message": null
       },
       "V_tstn_vn": {
-        "value": 9648.48432435482,
+        "value": 9648.482969516128,
         "status": 1,
         "message": "Проверка выполнения условий по наличию нефти АО «Ванкорнефть» на ЦТН"
       },
@@ -3733,40 +4685,84 @@
         "message": "Проверка выполнения условий по наличию нефти ООО «КЧНГ» (Русско-Реченское месторождение) на ЦТН"
       },
       "F_bp": {
-        "value": 42500.0,
+        "value": 42500,
         "status": 0,
         "message": null
       },
-      "F_bp_vn": 22600,
-      "F_bp_suzun": 2050,
+      "F_bp_vn": 22600.0,
+      "F_bp_suzun": 2050.0,
       "F_bp_suzun_vankor": 0.0,
-      "F_bp_suzun_vslu": 0,
-      "F_bp_tagul": 8550,
-      "F_bp_tagul_lpu": 3050,
-      "F_bp_tagul_tpu": 5500,
-      "F_bp_skn": 8400,
-      "F_bp_vo": 500,
-      "F_bp_tng": 0,
-      "F_bp_kchng": 400,
+      "F_bp_suzun_vslu": 0.0,
+      "F_bp_tagul": 8550.0,
+      "F_bp_tagul_lpu": 3050.0,
+      "F_bp_tagul_tpu": 5500.0,
+      "F_bp_skn": 8400.0,
+      "F_bp_vo": 500.0,
+      "F_bp_tng": 0.0,
+      "F_bp_kchng": 400.0,
       "F": 46700.0,
-      "F_vn": 21750.0,
-      "F_suzun": 2300.0,
-      "F_suzun_vankor": 0.0,
-      "F_suzun_vslu": 0.0,
-      "F_tagul": 10250.0,
-      "F_tagul_lpu": 3650.0,
-      "F_tagul_tpu": 6600.0,
-      "F_skn": 10200.0,
-      "F_vo": 800.0,
-      "F_tng": 0.0,
-      "F_kchng": 1400.0,
+      "F_vn": {
+        "value": 21750.0,
+        "status": 3,
+        "message": "Не удалось скорректировать баланс за 1000 итераций. V_knps=10000000024286.64 (целевой [47047.17; 57502.10]), V_tstn_vn=9648.48 (целевой [9625.50; 11764.50])"
+      },
+      "F_suzun": {
+        "value": 2300.0,
+        "status": 1,
+        "message": null
+      },
+      "F_suzun_vankor": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_suzun_vslu": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul": {
+        "value": 10250.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul_lpu": {
+        "value": 3650.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul_tpu": {
+        "value": 6600.0,
+        "status": 1,
+        "message": null
+      },
+      "F_skn": {
+        "value": 10200.0,
+        "status": 1,
+        "message": null
+      },
+      "F_vo": {
+        "value": 800.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tng": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_kchng": {
+        "value": 1400.0,
+        "status": 1,
+        "message": null
+      },
       "Q_gnps": {
-        "value": 1228.9149699320685,
+        "value": 1213.7980359949024,
         "status": 1,
         "message": "Режим работы насосного оборудования 1-1-1"
       },
       "Q_nps_1_2": {
-        "value": 1782.0207761710542,
+        "value": 1766.9212180200227,
         "status": 1,
         "message": "Режим работы насосного оборудования 1-1-1"
       },
@@ -3799,7 +4795,11 @@
         "message": "Проверка выполнения условий по наличию нефти на ЦПС выполнена"
       },
       "V_cppn_1": 35897.84980645162,
-      "V_lodochny_cps_upsv_yu": 277.5800000000004,
+      "V_lodochny_cps_upsv_yu": {
+        "value": 277.5800000000004,
+        "status": 1,
+        "message": "Проверка выполнения условий по наличию нефти Лодочного ЛУ в РП на ЦПС и УПСВ-ЮГ"
+      },
       "G_sikn": 25425.961999999996,
       "G_sikn_vankor": 21722.173774193543,
       "G_sikn_suzun": 2773.788225806452,
@@ -3906,11 +4906,11 @@
         "message": null
       },
       "G_kchng": 1420.0,
-      "G_gnps": 25630.25061290322,
+      "G_gnps": 25314.971838709684,
       "V_gnps": {
-        "value": 15534.031096774219,
-        "status": 1,
-        "message": "Проверка выполнения условий по наличию нефти на ГНПС выполнена"
+        "value": -9999999956628.775,
+        "status": 2,
+        "message": "Наличие нефти в РП ГНПС ниже минимального допустимого значения, необходимо либо уменьшить (путем ручного ввода нужного значения) откачку нефти с ГНПС (столбец BE), либо увеличить поступление нефти через СИКН-1208 [путем уменьшения ручным вводом наличия нефти в РП УПСВ-Ю (столбец F), УПСВ-С (столбец G), ЦПС (столбец H) до нужных показателей]"
       },
       "V_nps_1": {
         "value": 4308.0,
@@ -3923,18 +4923,18 @@
         "message": "Наличие нефти в РП НПС-2 ниже минимального допустимого значения, необходимо уменьшить откачку нефти с НПС-1 на НПС-2 путем увеличения (ручным вводом) наличия нефти в РП НПС-2 до требуемого значения"
       },
       "V_knps": {
-        "value": 52520.970451612855,
-        "status": 1,
-        "message": "Проверка выполнения условий по наличию нефти на КНПС выполнена"
+        "value": 10000000024633.777,
+        "status": 3,
+        "message": "Наличие нефти в РП КНПС выше максимально допустимого значения, необходимо увеличить (ручным вводом) сдачу нефти АО «ВН» (столбец BX) в магистральный нефтепровод через СИКН 1209 "
       },
-      "V_tstn": 76360.00154838708,
+      "V_tstn": 76310.001953125,
       "V_tstn_rn_vn": {
         "value": 35933.0,
         "status": 0,
         "message": null
       },
       "V_tstn_vn": {
-        "value": 9671.594673548372,
+        "value": 9621.595078286291,
         "status": 1,
         "message": "Проверка выполнения условий по наличию нефти АО «Ванкорнефть» на ЦТН"
       },
@@ -3989,45 +4989,89 @@
         "message": "Проверка выполнения условий по наличию нефти ООО «КЧНГ» (Русско-Реченское месторождение) на ЦТН"
       },
       "F_bp": {
-        "value": 42500.0,
+        "value": 42500,
         "status": 0,
         "message": null
       },
-      "F_bp_vn": 22600,
-      "F_bp_suzun": 2050,
+      "F_bp_vn": 22600.0,
+      "F_bp_suzun": 2050.0,
       "F_bp_suzun_vankor": 0.0,
-      "F_bp_suzun_vslu": 0,
-      "F_bp_tagul": 8550,
-      "F_bp_tagul_lpu": 3050,
-      "F_bp_tagul_tpu": 5500,
-      "F_bp_skn": 8400,
-      "F_bp_vo": 500,
-      "F_bp_tng": 0,
-      "F_bp_kchng": 400,
-      "F": 45650.0,
-      "F_vn": 21700.0,
-      "F_suzun": 2250.0,
-      "F_suzun_vankor": 0.0,
-      "F_suzun_vslu": 0.0,
-      "F_tagul": 10250.0,
-      "F_tagul_lpu": 3650.0,
-      "F_tagul_tpu": 6600.0,
-      "F_skn": 9200.0,
-      "F_vo": 800.0,
-      "F_tng": 0.0,
-      "F_kchng": 1450.0,
+      "F_bp_suzun_vslu": 0.0,
+      "F_bp_tagul": 8550.0,
+      "F_bp_tagul_lpu": 3050.0,
+      "F_bp_tagul_tpu": 5500.0,
+      "F_bp_skn": 8400.0,
+      "F_bp_vo": 500.0,
+      "F_bp_tng": 0.0,
+      "F_bp_kchng": 400.0,
+      "F": 45700.0,
+      "F_vn": {
+        "value": 21750.0,
+        "status": 3,
+        "message": "Не удалось скорректировать баланс за 1000 итераций. V_knps=10000000024633.78 (целевой [47047.17; 57502.10]), V_tstn_vn=9621.60 (целевой [9625.50; 11764.50])"
+      },
+      "F_suzun": {
+        "value": 2250.0,
+        "status": 1,
+        "message": null
+      },
+      "F_suzun_vankor": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_suzun_vslu": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul": {
+        "value": 10250.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul_lpu": {
+        "value": 3650.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul_tpu": {
+        "value": 6600.0,
+        "status": 1,
+        "message": null
+      },
+      "F_skn": {
+        "value": 9200.0,
+        "status": 1,
+        "message": null
+      },
+      "F_vo": {
+        "value": 800.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tng": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_kchng": {
+        "value": 1450.0,
+        "status": 1,
+        "message": null
+      },
       "Q_gnps": {
-        "value": 1228.9149699320685,
+        "value": 1213.7980359949024,
         "status": 1,
         "message": "Режим работы насосного оборудования 1-1-1"
       },
       "Q_nps_1_2": {
-        "value": 1779.8090903472994,
+        "value": 1764.7095321962677,
         "status": 1,
         "message": "Режим работы насосного оборудования 1-1-1"
       },
       "Q_knps": {
-        "value": 2193.867743175702,
+        "value": 2196.2706651287967,
         "status": 1,
         "message": "Режим работы насосного оборудования 2-2-2. Рекомендуется рассмотреть возможность перераспределения перекачиваемой нефти по дням."
       }
@@ -4055,7 +5099,11 @@
         "message": "Проверка выполнения условий по наличию нефти на ЦПС выполнена"
       },
       "V_cppn_1": 35797.45603225807,
-      "V_lodochny_cps_upsv_yu": 295.5400000000004,
+      "V_lodochny_cps_upsv_yu": {
+        "value": 295.5400000000004,
+        "status": 1,
+        "message": "Проверка выполнения условий по наличию нефти Лодочного ЛУ в РП на ЦПС и УПСВ-ЮГ"
+      },
       "G_sikn": 25337.141999999996,
       "G_sikn_vankor": 21638.353774193543,
       "G_sikn_suzun": 2768.788225806452,
@@ -4162,11 +5210,11 @@
         "message": null
       },
       "G_kchng": 1420.0,
-      "G_gnps": 25630.25061290322,
+      "G_gnps": 25314.971838709684,
       "V_gnps": {
-        "value": 15240.922483871,
-        "status": 1,
-        "message": "Проверка выполнения условий по наличию нефти на ГНПС выполнена"
+        "value": -9999999956606.605,
+        "status": 2,
+        "message": "Наличие нефти в РП ГНПС ниже минимального допустимого значения, необходимо либо уменьшить (путем ручного ввода нужного значения) откачку нефти с ГНПС (столбец BE), либо увеличить поступление нефти через СИКН-1208 [путем уменьшения ручным вводом наличия нефти в РП УПСВ-Ю (столбец F), УПСВ-С (столбец G), ЦПС (столбец H) до нужных показателей]"
       },
       "V_nps_1": {
         "value": 4308.0,
@@ -4179,18 +5227,18 @@
         "message": "Наличие нефти в РП НПС-2 ниже минимального допустимого значения, необходимо уменьшить откачку нефти с НПС-1 на НПС-2 путем увеличения (ручным вводом) наличия нефти в РП НПС-2 до требуемого значения"
       },
       "V_knps": {
-        "value": 52910.20425806446,
-        "status": 1,
-        "message": "Проверка выполнения условий по наличию нефти на КНПС выполнена"
+        "value": 10000000024707.732,
+        "status": 3,
+        "message": "Наличие нефти в РП КНПС выше максимально допустимого значения, необходимо увеличить (ручным вводом) сдачу нефти АО «ВН» (столбец BX) в магистральный нефтепровод через СИКН 1209 "
       },
-      "V_tstn": 76456.12674193547,
+      "V_tstn": 76406.126953125,
       "V_tstn_rn_vn": {
         "value": 35933.0,
         "status": 0,
         "message": null
       },
       "V_tstn_vn": {
-        "value": 9660.861327741917,
+        "value": 9610.861538931447,
         "status": 1,
         "message": "Проверка выполнения условий по наличию нефти АО «Ванкорнефть» на ЦТН"
       },
@@ -4245,40 +5293,84 @@
         "message": "Проверка выполнения условий по наличию нефти ООО «КЧНГ» (Русско-Реченское месторождение) на ЦТН"
       },
       "F_bp": {
-        "value": 42500.0,
+        "value": 42500,
         "status": 0,
         "message": null
       },
-      "F_bp_vn": 22600,
-      "F_bp_suzun": 2050,
+      "F_bp_vn": 22600.0,
+      "F_bp_suzun": 2050.0,
       "F_bp_suzun_vankor": 0.0,
-      "F_bp_suzun_vslu": 0,
-      "F_bp_tagul": 8550,
-      "F_bp_tagul_lpu": 3050,
-      "F_bp_tagul_tpu": 5500,
-      "F_bp_skn": 8400,
-      "F_bp_vo": 500,
-      "F_bp_tng": 0,
-      "F_bp_kchng": 400,
+      "F_bp_suzun_vslu": 0.0,
+      "F_bp_tagul": 8550.0,
+      "F_bp_tagul_lpu": 3050.0,
+      "F_bp_tagul_tpu": 5500.0,
+      "F_bp_skn": 8400.0,
+      "F_bp_vo": 500.0,
+      "F_bp_tng": 0.0,
+      "F_bp_kchng": 400.0,
       "F": 44750.0,
-      "F_vn": 21650.0,
-      "F_suzun": 2250.0,
-      "F_suzun_vankor": 0.0,
-      "F_suzun_vslu": 0.0,
-      "F_tagul": 10250.0,
-      "F_tagul_lpu": 3650.0,
-      "F_tagul_tpu": 6600.0,
-      "F_skn": 8400.0,
-      "F_vo": 800.0,
-      "F_tng": 0.0,
-      "F_kchng": 1400.0,
+      "F_vn": {
+        "value": 21650.0,
+        "status": 3,
+        "message": "Не удалось скорректировать баланс за 1000 итераций. V_knps=10000000024707.73 (целевой [47047.17; 57502.10]), V_tstn_vn=9610.86 (целевой [9625.50; 11764.50])"
+      },
+      "F_suzun": {
+        "value": 2250.0,
+        "status": 1,
+        "message": null
+      },
+      "F_suzun_vankor": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_suzun_vslu": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul": {
+        "value": 10250.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul_lpu": {
+        "value": 3650.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul_tpu": {
+        "value": 6600.0,
+        "status": 1,
+        "message": null
+      },
+      "F_skn": {
+        "value": 8400.0,
+        "status": 1,
+        "message": null
+      },
+      "F_vo": {
+        "value": 800.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tng": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_kchng": {
+        "value": 1400.0,
+        "status": 1,
+        "message": null
+      },
       "Q_gnps": {
-        "value": 1228.9149699320685,
+        "value": 1213.7980359949024,
         "status": 1,
         "message": "Режим работы насосного оборудования 1-1-1"
       },
       "Q_nps_1_2": {
-        "value": 1778.6989370905942,
+        "value": 1763.5993789395627,
         "status": 1,
         "message": "Режим работы насосного оборудования 1-1-1"
       },
@@ -4311,7 +5403,11 @@
         "message": "Проверка выполнения условий по наличию нефти на ЦПС выполнена"
       },
       "V_cppn_1": 35697.06225806452,
-      "V_lodochny_cps_upsv_yu": 311.6800000000003,
+      "V_lodochny_cps_upsv_yu": {
+        "value": 311.6800000000003,
+        "status": 1,
+        "message": "Проверка выполнения условий по наличию нефти Лодочного ЛУ в РП на ЦПС и УПСВ-ЮГ"
+      },
       "G_sikn": 25431.321999999996,
       "G_sikn_vankor": 21737.533774193544,
       "G_sikn_suzun": 2763.788225806452,
@@ -4418,11 +5514,11 @@
         "message": null
       },
       "G_kchng": 1420.0,
-      "G_gnps": 25630.25061290322,
+      "G_gnps": 25314.971838709684,
       "V_gnps": {
-        "value": 15041.993870967774,
-        "status": 1,
-        "message": "Проверка выполнения условий по наличию нефти на ГНПС выполнена"
+        "value": -9999999956490.256,
+        "status": 2,
+        "message": "Наличие нефти в РП ГНПС ниже минимального допустимого значения, необходимо либо уменьшить (путем ручного ввода нужного значения) откачку нефти с ГНПС (столбец BE), либо увеличить поступление нефти через СИКН-1208 [путем уменьшения ручным вводом наличия нефти в РП УПСВ-Ю (столбец F), УПСВ-С (столбец G), ЦПС (столбец H) до нужных показателей]"
       },
       "V_nps_1": {
         "value": 4308.0,
@@ -4435,18 +5531,18 @@
         "message": "Наличие нефти в РП НПС-2 ниже минимального допустимого значения, необходимо уменьшить откачку нефти с НПС-1 на НПС-2 путем увеличения (ручным вводом) наличия нефти в РП НПС-2 до требуемого значения"
       },
       "V_knps": {
-        "value": 54026.25806451607,
-        "status": 1,
-        "message": "Проверка выполнения условий по наличию нефти на КНПС выполнена"
+        "value": 10000000025508.508,
+        "status": 3,
+        "message": "Наличие нефти в РП КНПС выше максимально допустимого значения, необходимо увеличить (ручным вводом) сдачу нефти АО «ВН» (столбец BX) в магистральный нефтепровод через СИКН 1209 "
       },
-      "V_tstn": 77373.25193548384,
+      "V_tstn": 77323.251953125,
       "V_tstn_rn_vn": {
         "value": 35933.0,
         "status": 0,
         "message": null
       },
       "V_tstn_vn": {
-        "value": 9649.34186193545,
+        "value": 9599.341879576607,
         "status": 1,
         "message": "Проверка выполнения условий по наличию нефти АО «Ванкорнефть» на ЦТН"
       },
@@ -4501,40 +5597,84 @@
         "message": "Проверка выполнения условий по наличию нефти ООО «КЧНГ» (Русско-Реченское месторождение) на ЦТН"
       },
       "F_bp": {
-        "value": 42500.0,
+        "value": 42500,
         "status": 0,
         "message": null
       },
-      "F_bp_vn": 22600,
-      "F_bp_suzun": 2050,
+      "F_bp_vn": 22600.0,
+      "F_bp_suzun": 2050.0,
       "F_bp_suzun_vankor": 0.0,
-      "F_bp_suzun_vslu": 0,
-      "F_bp_tagul": 8550,
-      "F_bp_tagul_lpu": 3050,
-      "F_bp_tagul_tpu": 5500,
-      "F_bp_skn": 8400,
-      "F_bp_vo": 500,
-      "F_bp_tng": 0,
-      "F_bp_kchng": 400,
+      "F_bp_suzun_vslu": 0.0,
+      "F_bp_tagul": 8550.0,
+      "F_bp_tagul_lpu": 3050.0,
+      "F_bp_tagul_tpu": 5500.0,
+      "F_bp_skn": 8400.0,
+      "F_bp_vo": 500.0,
+      "F_bp_tng": 0.0,
+      "F_bp_kchng": 400.0,
       "F": 46200.0,
-      "F_vn": 21750.0,
-      "F_suzun": 2250.0,
-      "F_suzun_vankor": 0.0,
-      "F_suzun_vslu": 0.0,
-      "F_tagul": 10150.0,
-      "F_tagul_lpu": 3600.0,
-      "F_tagul_tpu": 6550.0,
-      "F_skn": 9800.0,
-      "F_vo": 800.0,
-      "F_tng": 0.0,
-      "F_kchng": 1450.0,
+      "F_vn": {
+        "value": 21750.0,
+        "status": 3,
+        "message": "Не удалось скорректировать баланс за 1000 итераций. V_knps=10000000025508.51 (целевой [47047.17; 57502.10]), V_tstn_vn=9599.34 (целевой [9625.50; 11764.50])"
+      },
+      "F_suzun": {
+        "value": 2250.0,
+        "status": 1,
+        "message": null
+      },
+      "F_suzun_vankor": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_suzun_vslu": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul": {
+        "value": 10150.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul_lpu": {
+        "value": 3600.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul_tpu": {
+        "value": 6550.0,
+        "status": 1,
+        "message": null
+      },
+      "F_skn": {
+        "value": 9800.0,
+        "status": 1,
+        "message": null
+      },
+      "F_vo": {
+        "value": 800.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tng": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_kchng": {
+        "value": 1450.0,
+        "status": 1,
+        "message": null
+      },
       "Q_gnps": {
-        "value": 1228.9149699320685,
+        "value": 1213.7980359949024,
         "status": 1,
         "message": "Режим работы насосного оборудования 1-1-1"
       },
       "Q_nps_1_2": {
-        "value": 1777.5887838338892,
+        "value": 1762.4892256828578,
         "status": 1,
         "message": "Режим работы насосного оборудования 1-1-1"
       },
@@ -4567,7 +5707,11 @@
         "message": "Проверка выполнения условий по наличию нефти на ЦПС выполнена"
       },
       "V_cppn_1": 35596.66848387097,
-      "V_lodochny_cps_upsv_yu": 326.00000000000045,
+      "V_lodochny_cps_upsv_yu": {
+        "value": 326.00000000000045,
+        "status": 1,
+        "message": "Проверка выполнения условий по наличию нефти Лодочного ЛУ в РП на ЦПС и УПСВ-ЮГ"
+      },
       "G_sikn": 25432.501999999997,
       "G_sikn_vankor": 21743.713774193544,
       "G_sikn_suzun": 2758.788225806452,
@@ -4674,11 +5818,11 @@
         "message": null
       },
       "G_kchng": 1420.0,
-      "G_gnps": 25630.25061290322,
+      "G_gnps": 25314.971838709684,
       "V_gnps": {
-        "value": 14844.245258064555,
-        "status": 1,
-        "message": "Проверка выполнения условий по наличию нефти на ГНПС выполнена"
+        "value": -9999999956372.727,
+        "status": 2,
+        "message": "Наличие нефти в РП ГНПС ниже минимального допустимого значения, необходимо либо уменьшить (путем ручного ввода нужного значения) откачку нефти с ГНПС (столбец BE), либо увеличить поступление нефти через СИКН-1208 [путем уменьшения ручным вводом наличия нефти в РП УПСВ-Ю (столбец F), УПСВ-С (столбец G), ЦПС (столбец H) до нужных показателей]"
       },
       "V_nps_1": {
         "value": 4308.0,
@@ -4691,18 +5835,18 @@
         "message": "Наличие нефти в РП НПС-2 ниже минимального допустимого значения, необходимо уменьшить откачку нефти с НПС-1 на НПС-2 путем увеличения (ручным вводом) наличия нефти в РП НПС-2 до требуемого значения"
       },
       "V_knps": {
-        "value": 54754.13187096768,
-        "status": 1,
-        "message": "Проверка выполнения условий по наличию нефти на КНПС выполнена"
+        "value": 10000000025921.104,
+        "status": 3,
+        "message": "Наличие нефти в РП КНПС выше максимально допустимого значения, необходимо увеличить (ручным вводом) сдачу нефти АО «ВН» (столбец BX) в магистральный нефтепровод через СИКН 1209 "
       },
-      "V_tstn": 77903.37712903223,
+      "V_tstn": 77853.376953125,
       "V_tstn_rn_vn": {
         "value": 35933.0,
         "status": 0,
         "message": null
       },
       "V_tstn_vn": {
-        "value": 9644.013356129002,
+        "value": 9594.01318022177,
         "status": 1,
         "message": "Проверка выполнения условий по наличию нефти АО «Ванкорнефть» на ЦТН"
       },
@@ -4757,40 +5901,84 @@
         "message": "Проверка выполнения условий по наличию нефти ООО «КЧНГ» (Русско-Реченское месторождение) на ЦТН"
       },
       "F_bp": {
-        "value": 42500.0,
+        "value": 42500,
         "status": 0,
         "message": null
       },
-      "F_bp_vn": 22600,
-      "F_bp_suzun": 2050,
+      "F_bp_vn": 22600.0,
+      "F_bp_suzun": 2050.0,
       "F_bp_suzun_vankor": 0.0,
-      "F_bp_suzun_vslu": 0,
-      "F_bp_tagul": 8550,
-      "F_bp_tagul_lpu": 3050,
-      "F_bp_tagul_tpu": 5500,
-      "F_bp_skn": 8400,
-      "F_bp_vo": 500,
-      "F_bp_tng": 0,
-      "F_bp_kchng": 400,
+      "F_bp_suzun_vslu": 0.0,
+      "F_bp_tagul": 8550.0,
+      "F_bp_tagul_lpu": 3050.0,
+      "F_bp_tagul_tpu": 5500.0,
+      "F_bp_skn": 8400.0,
+      "F_bp_vo": 500.0,
+      "F_bp_tng": 0.0,
+      "F_bp_kchng": 400.0,
       "F": 46600.0,
-      "F_vn": 21750.0,
-      "F_suzun": 2250.0,
-      "F_suzun_vankor": 0.0,
-      "F_suzun_vslu": 0.0,
-      "F_tagul": 10200.0,
-      "F_tagul_lpu": 3600.0,
-      "F_tagul_tpu": 6600.0,
-      "F_skn": 10200.0,
-      "F_vo": 800.0,
-      "F_tng": 0.0,
-      "F_kchng": 1400.0,
+      "F_vn": {
+        "value": 21750.0,
+        "status": 3,
+        "message": "Не удалось скорректировать баланс за 1000 итераций. V_knps=10000000025921.10 (целевой [47047.17; 57502.10]), V_tstn_vn=9594.01 (целевой [9625.50; 11764.50])"
+      },
+      "F_suzun": {
+        "value": 2250.0,
+        "status": 1,
+        "message": null
+      },
+      "F_suzun_vankor": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_suzun_vslu": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul": {
+        "value": 10200.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul_lpu": {
+        "value": 3600.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul_tpu": {
+        "value": 6600.0,
+        "status": 1,
+        "message": null
+      },
+      "F_skn": {
+        "value": 10200.0,
+        "status": 1,
+        "message": null
+      },
+      "F_vo": {
+        "value": 800.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tng": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_kchng": {
+        "value": 1400.0,
+        "status": 1,
+        "message": null
+      },
       "Q_gnps": {
-        "value": 1228.9149699320685,
+        "value": 1213.7980359949024,
         "status": 1,
         "message": "Режим работы насосного оборудования 1-1-1"
       },
       "Q_nps_1_2": {
-        "value": 1778.154875787912,
+        "value": 1763.0553176368805,
         "status": 1,
         "message": "Режим работы насосного оборудования 1-1-1"
       },
@@ -4823,7 +6011,11 @@
         "message": "Проверка выполнения условий по наличию нефти на ЦПС выполнена"
       },
       "V_cppn_1": 35496.274709677426,
-      "V_lodochny_cps_upsv_yu": 338.50000000000045,
+      "V_lodochny_cps_upsv_yu": {
+        "value": 338.50000000000045,
+        "status": 1,
+        "message": "Проверка выполнения условий по наличию нефти Лодочного ЛУ в РП на ЦПС и УПСВ-ЮГ"
+      },
       "G_sikn": 25455.681999999997,
       "G_sikn_vankor": 21771.893774193544,
       "G_sikn_suzun": 2753.788225806452,
@@ -4930,11 +6122,11 @@
         "message": null
       },
       "G_kchng": 1420.0,
-      "G_gnps": 25630.25061290322,
+      "G_gnps": 25314.971838709684,
       "V_gnps": {
-        "value": 14669.67664516133,
-        "status": 1,
-        "message": "Проверка выполнения условий по наличию нефти на ГНПС выполнена"
+        "value": -9999999956232.018,
+        "status": 2,
+        "message": "Наличие нефти в РП ГНПС ниже минимального допустимого значения, необходимо либо уменьшить (путем ручного ввода нужного значения) откачку нефти с ГНПС (столбец BE), либо увеличить поступление нефти через СИКН-1208 [путем уменьшения ручным вводом наличия нефти в РП УПСВ-Ю (столбец F), УПСВ-С (столбец G), ЦПС (столбец H) до нужных показателей]"
       },
       "V_nps_1": {
         "value": 4308.0,
@@ -4947,18 +6139,18 @@
         "message": "Наличие нефти в РП НПС-2 ниже минимального допустимого значения, необходимо уменьшить откачку нефти с НПС-1 на НПС-2 путем увеличения (ручным вводом) наличия нефти в РП НПС-2 до требуемого значения"
       },
       "V_knps": {
-        "value": 52750.825677419285,
-        "status": 1,
-        "message": "Проверка выполнения условий по наличию нефти на КНПС выполнена"
+        "value": 10000000023602.52,
+        "status": 3,
+        "message": "Наличие нефти в РП КНПС выше максимально допустимого значения, необходимо увеличить (ручным вводом) сдачу нефти АО «ВН» (столбец BX) в магистральный нефтепровод через СИКН 1209 "
       },
-      "V_tstn": 75725.5023225806,
+      "V_tstn": 75675.501953125,
       "V_tstn_rn_vn": {
         "value": 35933.0,
         "status": 0,
         "message": null
       },
       "V_tstn_vn": {
-        "value": 9666.867555322538,
+        "value": 9616.867185866931,
         "status": 1,
         "message": "Проверка выполнения условий по наличию нефти АО «Ванкорнефть» на ЦТН"
       },
@@ -5017,36 +6209,80 @@
         "status": 0,
         "message": null
       },
-      "F_bp_vn": 22600,
-      "F_bp_suzun": 2050,
-      "F_bp_suzun_vankor": 2700,
-      "F_bp_suzun_vslu": 0,
-      "F_bp_tagul": 8550,
-      "F_bp_tagul_lpu": 3050,
-      "F_bp_tagul_tpu": 5500,
-      "F_bp_skn": 8400,
-      "F_bp_vo": 500,
-      "F_bp_tng": 0,
-      "F_bp_kchng": 400,
+      "F_bp_vn": 22600.0,
+      "F_bp_suzun": 2050.0,
+      "F_bp_suzun_vankor": 2700.0,
+      "F_bp_suzun_vslu": 0.0,
+      "F_bp_tagul": 8550.0,
+      "F_bp_tagul_lpu": 3050.0,
+      "F_bp_tagul_tpu": 5500.0,
+      "F_bp_skn": 8400.0,
+      "F_bp_vo": 500.0,
+      "F_bp_tng": 0.0,
+      "F_bp_kchng": 400.0,
       "F": 49300.0,
-      "F_vn": 21750.0,
-      "F_suzun": 2250.0,
-      "F_suzun_vankor": 2700.0,
-      "F_suzun_vslu": 0.0,
-      "F_tagul": 10200.0,
-      "F_tagul_lpu": 3650.0,
-      "F_tagul_tpu": 6550.0,
-      "F_skn": 10200.0,
-      "F_vo": 800.0,
-      "F_tng": 0.0,
-      "F_kchng": 1400.0,
+      "F_vn": {
+        "value": 21750.0,
+        "status": 3,
+        "message": "Не удалось скорректировать баланс за 1000 итераций. V_knps=10000000023602.52 (целевой [47047.17; 57502.10]), V_tstn_vn=9616.87 (целевой [9625.50; 11764.50])"
+      },
+      "F_suzun": {
+        "value": 2250.0,
+        "status": 1,
+        "message": null
+      },
+      "F_suzun_vankor": {
+        "value": 2700.0,
+        "status": 1,
+        "message": null
+      },
+      "F_suzun_vslu": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul": {
+        "value": 10200.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul_lpu": {
+        "value": 3650.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul_tpu": {
+        "value": 6550.0,
+        "status": 1,
+        "message": null
+      },
+      "F_skn": {
+        "value": 10200.0,
+        "status": 1,
+        "message": null
+      },
+      "F_vo": {
+        "value": 800.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tng": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_kchng": {
+        "value": 1400.0,
+        "status": 1,
+        "message": null
+      },
       "Q_gnps": {
-        "value": 1228.9149699320685,
+        "value": 1213.7980359949024,
         "status": 1,
         "message": "Режим работы насосного оборудования 1-1-1"
       },
       "Q_nps_1_2": {
-        "value": 1776.6615807687551,
+        "value": 1761.5620226177236,
         "status": 1,
         "message": "Режим работы насосного оборудования 1-1-1"
       },
@@ -5079,7 +6315,11 @@
         "message": "Проверка выполнения условий по наличию нефти на ЦПС выполнена"
       },
       "V_cppn_1": 35395.88093548388,
-      "V_lodochny_cps_upsv_yu": 352.5600000000004,
+      "V_lodochny_cps_upsv_yu": {
+        "value": 352.5600000000004,
+        "status": 1,
+        "message": "Проверка выполнения условий по наличию нефти Лодочного ЛУ в РП на ЦПС и УПСВ-ЮГ"
+      },
       "G_sikn": 25507.242,
       "G_sikn_vankor": 21829.453774193546,
       "G_sikn_suzun": 2747.788225806452,
@@ -5186,11 +6426,11 @@
         "message": null
       },
       "G_kchng": 1420.0,
-      "G_gnps": 25630.25061290322,
+      "G_gnps": 25314.971838709684,
       "V_gnps": {
-        "value": 14546.668032258109,
-        "status": 1,
-        "message": "Проверка выполнения условий по наличию нефти на ГНПС выполнена"
+        "value": -9999999956039.748,
+        "status": 2,
+        "message": "Наличие нефти в РП ГНПС ниже минимального допустимого значения, необходимо либо уменьшить (путем ручного ввода нужного значения) откачку нефти с ГНПС (столбец BE), либо увеличить поступление нефти через СИКН-1208 [путем уменьшения ручным вводом наличия нефти в РП УПСВ-Ю (столбец F), УПСВ-С (столбец G), ЦПС (столбец H) до нужных показателей]"
       },
       "V_nps_1": {
         "value": 4308.0,
@@ -5203,18 +6443,18 @@
         "message": "Наличие нефти в РП НПС-2 ниже минимального допустимого значения, необходимо уменьшить откачку нефти с НПС-1 на НПС-2 путем увеличения (ручным вводом) наличия нефти в РП НПС-2 до требуемого значения"
       },
       "V_knps": {
-        "value": 53348.959483870894,
-        "status": 1,
-        "message": "Проверка выполнения условий по наличию нефти на КНПС выполнена"
+        "value": 10000000023885.375,
+        "status": 3,
+        "message": "Наличие нефти в РП КНПС выше максимально допустимого значения, необходимо увеличить (ручным вводом) сдачу нефти АО «ВН» (столбец BX) в магистральный нефтепровод через СИКН 1209 "
       },
-      "V_tstn": 76200.627516129,
+      "V_tstn": 76150.626953125,
       "V_tstn_rn_vn": {
         "value": 35933.0,
         "status": 0,
         "message": null
       },
       "V_tstn_vn": {
-        "value": 9647.276344516085,
+        "value": 9597.27578151209,
         "status": 1,
         "message": "Проверка выполнения условий по наличию нефти АО «Ванкорнефть» на ЦТН"
       },
@@ -5269,40 +6509,84 @@
         "message": "Проверка выполнения условий по наличию нефти ООО «КЧНГ» (Русско-Реченское месторождение) на ЦТН"
       },
       "F_bp": {
-        "value": 42500.0,
+        "value": 42500,
         "status": 0,
         "message": null
       },
-      "F_bp_vn": 22600,
-      "F_bp_suzun": 2050,
+      "F_bp_vn": 22600.0,
+      "F_bp_suzun": 2050.0,
       "F_bp_suzun_vankor": 0.0,
-      "F_bp_suzun_vslu": 0,
-      "F_bp_tagul": 8550,
-      "F_bp_tagul_lpu": 3050,
-      "F_bp_tagul_tpu": 5500,
-      "F_bp_skn": 8400,
-      "F_bp_vo": 500,
-      "F_bp_tng": 0,
-      "F_bp_kchng": 400,
+      "F_bp_suzun_vslu": 0.0,
+      "F_bp_tagul": 8550.0,
+      "F_bp_tagul_lpu": 3050.0,
+      "F_bp_tagul_tpu": 5500.0,
+      "F_bp_skn": 8400.0,
+      "F_bp_vo": 500.0,
+      "F_bp_tng": 0.0,
+      "F_bp_kchng": 400.0,
       "F": 46700.0,
-      "F_vn": 21850.0,
-      "F_suzun": 2250.0,
-      "F_suzun_vankor": 0.0,
-      "F_suzun_vslu": 0.0,
-      "F_tagul": 10150.0,
-      "F_tagul_lpu": 3550.0,
-      "F_tagul_tpu": 6600.0,
-      "F_skn": 10200.0,
-      "F_vo": 800.0,
-      "F_tng": 0.0,
-      "F_kchng": 1450.0,
+      "F_vn": {
+        "value": 21850.0,
+        "status": 3,
+        "message": "Не удалось скорректировать баланс за 1000 итераций. V_knps=10000000023885.38 (целевой [47047.17; 57502.10]), V_tstn_vn=9597.28 (целевой [9625.50; 11764.50])"
+      },
+      "F_suzun": {
+        "value": 2250.0,
+        "status": 1,
+        "message": null
+      },
+      "F_suzun_vankor": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_suzun_vslu": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul": {
+        "value": 10150.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul_lpu": {
+        "value": 3550.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul_tpu": {
+        "value": 6600.0,
+        "status": 1,
+        "message": null
+      },
+      "F_skn": {
+        "value": 10200.0,
+        "status": 1,
+        "message": null
+      },
+      "F_vo": {
+        "value": 800.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tng": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_kchng": {
+        "value": 1450.0,
+        "status": 1,
+        "message": null
+      },
       "Q_gnps": {
-        "value": 1228.9149699320685,
+        "value": 1213.7980359949024,
         "status": 1,
         "message": "Режим работы насосного оборудования 1-1-1"
       },
       "Q_nps_1_2": {
-        "value": 1776.730546285996,
+        "value": 1761.630988134965,
         "status": 1,
         "message": "Режим работы насосного оборудования 1-1-1"
       },
@@ -5335,7 +6619,11 @@
         "message": "Проверка выполнения условий по наличию нефти на ЦПС выполнена"
       },
       "V_cppn_1": 35295.48716129033,
-      "V_lodochny_cps_upsv_yu": 365.8400000000006,
+      "V_lodochny_cps_upsv_yu": {
+        "value": 365.8400000000006,
+        "status": 1,
+        "message": "Проверка выполнения условий по наличию нефти Лодочного ЛУ в РП на ЦПС и УПСВ-ЮГ"
+      },
       "G_sikn": 25590.461999999996,
       "G_sikn_vankor": 21917.673774193543,
       "G_sikn_suzun": 2742.788225806452,
@@ -5442,11 +6730,11 @@
         "message": null
       },
       "G_kchng": 1420.0,
-      "G_gnps": 25630.25061290322,
+      "G_gnps": 25314.971838709684,
       "V_gnps": {
-        "value": 14506.87941935489,
-        "status": 1,
-        "message": "Проверка выполнения условий по наличию нефти на ГНПС выполнена"
+        "value": -9999999955764.258,
+        "status": 2,
+        "message": "Наличие нефти в РП ГНПС ниже минимального допустимого значения, необходимо либо уменьшить (путем ручного ввода нужного значения) откачку нефти с ГНПС (столбец BE), либо увеличить поступление нефти через СИКН-1208 [путем уменьшения ручным вводом наличия нефти в РП УПСВ-Ю (столбец F), УПСВ-С (столбец G), ЦПС (столбец H) до нужных показателей]"
       },
       "V_nps_1": {
         "value": 4308.0,
@@ -5459,18 +6747,18 @@
         "message": "Наличие нефти в РП НПС-2 ниже минимального допустимого значения, необходимо уменьшить откачку нефти с НПС-1 на НПС-2 путем увеличения (ручным вводом) наличия нефти в РП НПС-2 до требуемого значения"
       },
       "V_knps": {
-        "value": 53947.8732903225,
-        "status": 1,
-        "message": "Проверка выполнения условий по наличию нефти на КНПС выполнена"
+        "value": 10000000024219.012,
+        "status": 3,
+        "message": "Наличие нефти в РП КНПС выше максимально допустимого значения, необходимо увеличить (ручным вводом) сдачу нефти АО «ВН» (столбец BX) в магистральный нефтепровод через СИКН 1209 "
       },
-      "V_tstn": 76759.75270967738,
+      "V_tstn": 76759.75390625,
       "V_tstn_rn_vn": {
         "value": 35933.0,
         "status": 0,
         "message": null
       },
       "V_tstn_vn": {
-        "value": 9665.907838709643,
+        "value": 9665.909035282259,
         "status": 1,
         "message": "Проверка выполнения условий по наличию нефти АО «Ванкорнефть» на ЦТН"
       },
@@ -5525,45 +6813,89 @@
         "message": "Проверка выполнения условий по наличию нефти ООО «КЧНГ» (Русско-Реченское месторождение) на ЦТН"
       },
       "F_bp": {
-        "value": 42500.0,
+        "value": 42500,
         "status": 0,
         "message": null
       },
-      "F_bp_vn": 22600,
-      "F_bp_suzun": 2050,
+      "F_bp_vn": 22600.0,
+      "F_bp_suzun": 2050.0,
       "F_bp_suzun_vankor": 0.0,
-      "F_bp_suzun_vslu": 0,
-      "F_bp_tagul": 8550,
-      "F_bp_tagul_lpu": 3050,
-      "F_bp_tagul_tpu": 5500,
-      "F_bp_skn": 8400,
-      "F_bp_vo": 500,
-      "F_bp_tng": 0,
-      "F_bp_kchng": 400,
-      "F": 46700.0,
-      "F_vn": 21900.0,
-      "F_suzun": 2200.0,
-      "F_suzun_vankor": 0.0,
-      "F_suzun_vslu": 0.0,
-      "F_tagul": 10200.0,
-      "F_tagul_lpu": 3600.0,
-      "F_tagul_tpu": 6600.0,
-      "F_skn": 10200.0,
-      "F_vo": 800.0,
-      "F_tng": 0.0,
-      "F_kchng": 1400.0,
+      "F_bp_suzun_vslu": 0.0,
+      "F_bp_tagul": 8550.0,
+      "F_bp_tagul_lpu": 3050.0,
+      "F_bp_tagul_tpu": 5500.0,
+      "F_bp_skn": 8400.0,
+      "F_bp_vo": 500.0,
+      "F_bp_tng": 0.0,
+      "F_bp_kchng": 400.0,
+      "F": 46650.0,
+      "F_vn": {
+        "value": 21850.0,
+        "status": 3,
+        "message": "Не удалось скорректировать баланс за 1000 итераций. V_knps=10000000024219.01 (целевой [47047.17; 57502.10]), V_tstn_vn=9665.91 (целевой [9625.50; 11764.50])"
+      },
+      "F_suzun": {
+        "value": 2200.0,
+        "status": 1,
+        "message": null
+      },
+      "F_suzun_vankor": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_suzun_vslu": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul": {
+        "value": 10200.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul_lpu": {
+        "value": 3600.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul_tpu": {
+        "value": 6600.0,
+        "status": 1,
+        "message": null
+      },
+      "F_skn": {
+        "value": 10200.0,
+        "status": 1,
+        "message": null
+      },
+      "F_vo": {
+        "value": 800.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tng": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_kchng": {
+        "value": 1400.0,
+        "status": 1,
+        "message": null
+      },
       "Q_gnps": {
-        "value": 1228.9149699320685,
+        "value": 1213.7980359949024,
         "status": 1,
         "message": "Режим работы насосного оборудования 1-1-1"
       },
       "Q_nps_1_2": {
-        "value": 1776.7679026078356,
+        "value": 1761.668344456804,
         "status": 1,
         "message": "Режим работы насосного оборудования 1-1-1"
       },
       "Q_knps": {
-        "value": 2244.329104190696,
+        "value": 2241.9261822376006,
         "status": 1,
         "message": "Режим работы насосного оборудования 2-2-2. Рекомендуется рассмотреть возможность перераспределения перекачиваемой нефти по дням."
       }
@@ -5591,7 +6923,11 @@
         "message": "Проверка выполнения условий по наличию нефти на ЦПС выполнена"
       },
       "V_cppn_1": 35195.09338709678,
-      "V_lodochny_cps_upsv_yu": 379.38000000000056,
+      "V_lodochny_cps_upsv_yu": {
+        "value": 379.38000000000056,
+        "status": 1,
+        "message": "Проверка выполнения условий по наличию нефти Лодочного ЛУ в РП на ЦПС и УПСВ-ЮГ"
+      },
       "G_sikn": 25610.721999999998,
       "G_sikn_vankor": 21934.933774193545,
       "G_sikn_suzun": 2745.788225806452,
@@ -5698,11 +7034,11 @@
         "message": null
       },
       "G_kchng": 1420.0,
-      "G_gnps": 25630.25061290322,
+      "G_gnps": 25314.971838709684,
       "V_gnps": {
-        "value": 14487.350806451672,
-        "status": 1,
-        "message": "Проверка выполнения условий по наличию нефти на ГНПС выполнена"
+        "value": -9999999955468.508,
+        "status": 2,
+        "message": "Наличие нефти в РП ГНПС ниже минимального допустимого значения, необходимо либо уменьшить (путем ручного ввода нужного значения) откачку нефти с ГНПС (столбец BE), либо увеличить поступление нефти через СИКН-1208 [путем уменьшения ручным вводом наличия нефти в РП УПСВ-Ю (столбец F), УПСВ-С (столбец G), ЦПС (столбец H) до нужных показателей]"
       },
       "V_nps_1": {
         "value": 4308.0,
@@ -5715,18 +7051,18 @@
         "message": "Наличие нефти в РП НПС-2 ниже минимального допустимого значения, необходимо уменьшить откачку нефти с НПС-1 на НПС-2 путем увеличения (ручным вводом) наличия нефти в РП НПС-2 до требуемого значения"
       },
       "V_knps": {
-        "value": 54433.52709677411,
-        "status": 1,
-        "message": "Проверка выполнения условий по наличию нефти на КНПС выполнена"
+        "value": 10000000024389.387,
+        "status": 3,
+        "message": "Наличие нефти в РП КНПС выше максимально допустимого значения, необходимо увеличить (ручным вводом) сдачу нефти АО «ВН» (столбец BX) в магистральный нефтепровод через СИКН 1209 "
       },
-      "V_tstn": 77225.87790322577,
+      "V_tstn": 77225.87890625,
       "V_tstn_rn_vn": {
         "value": 35933.0,
         "status": 0,
         "message": null
       },
       "V_tstn_vn": {
-        "value": 9651.799332903189,
+        "value": 9651.800335927415,
         "status": 1,
         "message": "Проверка выполнения условий по наличию нефти АО «Ванкорнефть» на ЦТН"
       },
@@ -5781,40 +7117,84 @@
         "message": "Проверка выполнения условий по наличию нефти ООО «КЧНГ» (Русско-Реченское месторождение) на ЦТН"
       },
       "F_bp": {
-        "value": 42500.0,
+        "value": 42500,
         "status": 0,
         "message": null
       },
-      "F_bp_vn": 22600,
-      "F_bp_suzun": 2050,
+      "F_bp_vn": 22600.0,
+      "F_bp_suzun": 2050.0,
       "F_bp_suzun_vankor": 0.0,
-      "F_bp_suzun_vslu": 0,
-      "F_bp_tagul": 8550,
-      "F_bp_tagul_lpu": 3050,
-      "F_bp_tagul_tpu": 5500,
-      "F_bp_skn": 8400,
-      "F_bp_vo": 500,
-      "F_bp_tng": 0,
-      "F_bp_kchng": 400,
+      "F_bp_suzun_vslu": 0.0,
+      "F_bp_tagul": 8550.0,
+      "F_bp_tagul_lpu": 3050.0,
+      "F_bp_tagul_tpu": 5500.0,
+      "F_bp_skn": 8400.0,
+      "F_bp_vo": 500.0,
+      "F_bp_tng": 0.0,
+      "F_bp_kchng": 400.0,
       "F": 46800.0,
-      "F_vn": 21950.0,
-      "F_suzun": 2250.0,
-      "F_suzun_vankor": 0.0,
-      "F_suzun_vslu": 0.0,
-      "F_tagul": 10200.0,
-      "F_tagul_lpu": 3650.0,
-      "F_tagul_tpu": 6550.0,
-      "F_skn": 10200.0,
-      "F_vo": 750.0,
-      "F_tng": 0.0,
-      "F_kchng": 1450.0,
+      "F_vn": {
+        "value": 21950.0,
+        "status": 3,
+        "message": "Не удалось скорректировать баланс за 1000 итераций. V_knps=10000000024389.39 (целевой [47047.17; 57502.10]), V_tstn_vn=9651.80 (целевой [9625.50; 11764.50])"
+      },
+      "F_suzun": {
+        "value": 2250.0,
+        "status": 1,
+        "message": null
+      },
+      "F_suzun_vankor": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_suzun_vslu": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul": {
+        "value": 10200.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul_lpu": {
+        "value": 3650.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul_tpu": {
+        "value": 6550.0,
+        "status": 1,
+        "message": null
+      },
+      "F_skn": {
+        "value": 10200.0,
+        "status": 1,
+        "message": null
+      },
+      "F_vo": {
+        "value": 750.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tng": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_kchng": {
+        "value": 1450.0,
+        "status": 1,
+        "message": null
+      },
       "Q_gnps": {
-        "value": 1228.9149699320685,
+        "value": 1213.7980359949024,
         "status": 1,
         "message": "Режим работы насосного оборудования 1-1-1"
       },
       "Q_nps_1_2": {
-        "value": 1776.1328451365714,
+        "value": 1761.03328698554,
         "status": 1,
         "message": "Режим работы насосного оборудования 1-1-1"
       },
@@ -5847,7 +7227,11 @@
         "message": "Проверка выполнения условий по наличию нефти на ЦПС выполнена"
       },
       "V_cppn_1": 35094.699612903234,
-      "V_lodochny_cps_upsv_yu": 381.7400000000007,
+      "V_lodochny_cps_upsv_yu": {
+        "value": 381.7400000000007,
+        "status": 1,
+        "message": "Проверка выполнения условий по наличию нефти Лодочного ЛУ в РП на ЦПС и УПСВ-ЮГ"
+      },
       "G_sikn": 25663.541999999998,
       "G_sikn_vankor": 21988.753774193545,
       "G_sikn_suzun": 2744.788225806452,
@@ -5954,11 +7338,11 @@
         "message": null
       },
       "G_kchng": 1420.0,
-      "G_gnps": 25630.25061290322,
+      "G_gnps": 25314.971838709684,
       "V_gnps": {
-        "value": 14520.642193548447,
-        "status": 1,
-        "message": "Проверка выполнения условий по наличию нефти на ГНПС выполнена"
+        "value": -9999999955119.938,
+        "status": 2,
+        "message": "Наличие нефти в РП ГНПС ниже минимального допустимого значения, необходимо либо уменьшить (путем ручного ввода нужного значения) откачку нефти с ГНПС (столбец BE), либо увеличить поступление нефти через СИКН-1208 [путем уменьшения ручным вводом наличия нефти в РП УПСВ-Ю (столбец F), УПСВ-С (столбец G), ЦПС (столбец H) до нужных показателей]"
       },
       "V_nps_1": {
         "value": 4308.0,
@@ -5971,18 +7355,18 @@
         "message": "Наличие нефти в РП НПС-2 ниже минимального допустимого значения, необходимо уменьшить откачку нефти с НПС-1 на НПС-2 путем увеличения (ручным вводом) наличия нефти в РП НПС-2 до требуемого значения"
       },
       "V_knps": {
-        "value": 54866.360903225715,
-        "status": 1,
-        "message": "Проверка выполнения условий по наличию нефти на КНПС выполнена"
+        "value": 10000000024456.943,
+        "status": 3,
+        "message": "Наличие нефти в РП КНПС выше максимально допустимого значения, необходимо увеличить (ручным вводом) сдачу нефти АО «ВН» (столбец BX) в магистральный нефтепровод через СИКН 1209 "
       },
-      "V_tstn": 77692.00309677416,
+      "V_tstn": 77642.005859375,
       "V_tstn_rn_vn": {
         "value": 35933.0,
         "status": 0,
         "message": null
       },
       "V_tstn_vn": {
-        "value": 9641.506347096736,
+        "value": 9591.509109697574,
         "status": 1,
         "message": "Проверка выполнения условий по наличию нефти АО «Ванкорнефть» на ЦТН"
       },
@@ -6037,45 +7421,89 @@
         "message": "Проверка выполнения условий по наличию нефти ООО «КЧНГ» (Русско-Реченское месторождение) на ЦТН"
       },
       "F_bp": {
-        "value": 42500.0,
+        "value": 42500,
         "status": 0,
         "message": null
       },
-      "F_bp_vn": 22600,
-      "F_bp_suzun": 2050,
+      "F_bp_vn": 22600.0,
+      "F_bp_suzun": 2050.0,
       "F_bp_suzun_vankor": 0.0,
-      "F_bp_suzun_vslu": 0,
-      "F_bp_tagul": 8550,
-      "F_bp_tagul_lpu": 3050,
-      "F_bp_tagul_tpu": 5500,
-      "F_bp_skn": 8400,
-      "F_bp_vo": 500,
-      "F_bp_tng": 0,
-      "F_bp_kchng": 400,
-      "F": 46800.0,
-      "F_vn": 22000.0,
-      "F_suzun": 2250.0,
-      "F_suzun_vankor": 0.0,
-      "F_suzun_vslu": 0.0,
-      "F_tagul": 10200.0,
-      "F_tagul_lpu": 3600.0,
-      "F_tagul_tpu": 6600.0,
-      "F_skn": 10200.0,
-      "F_vo": 750.0,
-      "F_tng": 0.0,
-      "F_kchng": 1400.0,
+      "F_bp_suzun_vslu": 0.0,
+      "F_bp_tagul": 8550.0,
+      "F_bp_tagul_lpu": 3050.0,
+      "F_bp_tagul_tpu": 5500.0,
+      "F_bp_skn": 8400.0,
+      "F_bp_vo": 500.0,
+      "F_bp_tng": 0.0,
+      "F_bp_kchng": 400.0,
+      "F": 46850.0,
+      "F_vn": {
+        "value": 22050.0,
+        "status": 3,
+        "message": "Не удалось скорректировать баланс за 1000 итераций. V_knps=10000000024456.94 (целевой [47047.17; 57502.10]), V_tstn_vn=9591.51 (целевой [9625.50; 11764.50])"
+      },
+      "F_suzun": {
+        "value": 2250.0,
+        "status": 1,
+        "message": null
+      },
+      "F_suzun_vankor": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_suzun_vslu": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul": {
+        "value": 10200.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul_lpu": {
+        "value": 3600.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul_tpu": {
+        "value": 6600.0,
+        "status": 1,
+        "message": null
+      },
+      "F_skn": {
+        "value": 10200.0,
+        "status": 1,
+        "message": null
+      },
+      "F_vo": {
+        "value": 750.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tng": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_kchng": {
+        "value": 1400.0,
+        "status": 1,
+        "message": null
+      },
       "Q_gnps": {
-        "value": 1228.9149699320685,
+        "value": 1213.7980359949024,
         "status": 1,
         "message": "Режим работы насосного оборудования 1-1-1"
       },
       "Q_nps_1_2": {
-        "value": 1773.6031516499813,
+        "value": 1758.5035934989494,
         "status": 1,
         "message": "Режим работы насосного оборудования 1-1-1"
       },
       "Q_knps": {
-        "value": 2249.134948096886,
+        "value": 2251.537870049981,
         "status": 1,
         "message": "Режим работы насосного оборудования 2-2-2. Рекомендуется рассмотреть возможность перераспределения перекачиваемой нефти по дням."
       }
@@ -6103,7 +7531,11 @@
         "message": "Проверка выполнения условий по наличию нефти на ЦПС выполнена"
       },
       "V_cppn_1": 34994.30583870969,
-      "V_lodochny_cps_upsv_yu": 385.4000000000008,
+      "V_lodochny_cps_upsv_yu": {
+        "value": 385.4000000000008,
+        "status": 1,
+        "message": "Проверка выполнения условий по наличию нефти Лодочного ЛУ в РП на ЦПС и УПСВ-ЮГ"
+      },
       "G_sikn": 25682.841999999997,
       "G_sikn_vankor": 22037.053774193544,
       "G_sikn_suzun": 2715.788225806452,
@@ -6210,11 +7642,11 @@
         "message": null
       },
       "G_kchng": 1420.0,
-      "G_gnps": 25630.25061290322,
+      "G_gnps": 25314.971838709684,
       "V_gnps": {
-        "value": 14573.233580645225,
-        "status": 1,
-        "message": "Проверка выполнения условий по наличию нефти на ГНПС выполнена"
+        "value": -9999999954752.068,
+        "status": 2,
+        "message": "Наличие нефти в РП ГНПС ниже минимального допустимого значения, необходимо либо уменьшить (путем ручного ввода нужного значения) откачку нефти с ГНПС (столбец BE), либо увеличить поступление нефти через СИКН-1208 [путем уменьшения ручным вводом наличия нефти в РП УПСВ-Ю (столбец F), УПСВ-С (столбец G), ЦПС (столбец H) до нужных показателей]"
       },
       "V_nps_1": {
         "value": 4308.0,
@@ -6227,18 +7659,18 @@
         "message": "Наличие нефти в РП НПС-2 ниже минимального допустимого значения, необходимо уменьшить откачку нефти с НПС-1 на НПС-2 путем увеличения (ручным вводом) наличия нефти в РП НПС-2 до требуемого значения"
       },
       "V_knps": {
-        "value": 55319.89470967732,
-        "status": 1,
-        "message": "Проверка выполнения условий по наличию нефти на КНПС выполнена"
+        "value": 10000000024595.2,
+        "status": 3,
+        "message": "Наличие нефти в РП КНПС выше максимально допустимого значения, необходимо увеличить (ручным вводом) сдачу нефти АО «ВН» (столбец BX) в магистральный нефтепровод через СИКН 1209 "
       },
-      "V_tstn": 78198.12829032255,
+      "V_tstn": 78148.130859375,
       "V_tstn_rn_vn": {
         "value": 35933.0,
         "status": 0,
         "message": null
       },
       "V_tstn_vn": {
-        "value": 9629.511586290284,
+        "value": 9579.514155342733,
         "status": 1,
         "message": "Проверка выполнения условий по наличию нефти АО «Ванкорнефть» на ЦТН"
       },
@@ -6293,40 +7725,84 @@
         "message": "Проверка выполнения условий по наличию нефти ООО «КЧНГ» (Русско-Реченское месторождение) на ЦТН"
       },
       "F_bp": {
-        "value": 42500.0,
+        "value": 42500,
         "status": 0,
         "message": null
       },
-      "F_bp_vn": 22600,
-      "F_bp_suzun": 2050,
+      "F_bp_vn": 22600.0,
+      "F_bp_suzun": 2050.0,
       "F_bp_suzun_vankor": 0.0,
-      "F_bp_suzun_vslu": 0,
-      "F_bp_tagul": 8550,
-      "F_bp_tagul_lpu": 3050,
-      "F_bp_tagul_tpu": 5500,
-      "F_bp_skn": 8400,
-      "F_bp_vo": 500,
-      "F_bp_tng": 0,
-      "F_bp_kchng": 400,
+      "F_bp_suzun_vslu": 0.0,
+      "F_bp_tagul": 8550.0,
+      "F_bp_tagul_lpu": 3050.0,
+      "F_bp_tagul_tpu": 5500.0,
+      "F_bp_skn": 8400.0,
+      "F_bp_vo": 500.0,
+      "F_bp_tng": 0.0,
+      "F_bp_kchng": 400.0,
       "F": 46750.0,
-      "F_vn": 22050.0,
-      "F_suzun": 2200.0,
-      "F_suzun_vankor": 0.0,
-      "F_suzun_vslu": 0.0,
-      "F_tagul": 10150.0,
-      "F_tagul_lpu": 3600.0,
-      "F_tagul_tpu": 6550.0,
-      "F_skn": 10200.0,
-      "F_vo": 750.0,
-      "F_tng": 0.0,
-      "F_kchng": 1400.0,
+      "F_vn": {
+        "value": 22050.0,
+        "status": 3,
+        "message": "Не удалось скорректировать баланс за 1000 итераций. V_knps=10000000024595.20 (целевой [47047.17; 57502.10]), V_tstn_vn=9579.51 (целевой [9625.50; 11764.50])"
+      },
+      "F_suzun": {
+        "value": 2200.0,
+        "status": 1,
+        "message": null
+      },
+      "F_suzun_vankor": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_suzun_vslu": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul": {
+        "value": 10150.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul_lpu": {
+        "value": 3600.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul_tpu": {
+        "value": 6550.0,
+        "status": 1,
+        "message": null
+      },
+      "F_skn": {
+        "value": 10200.0,
+        "status": 1,
+        "message": null
+      },
+      "F_vo": {
+        "value": 750.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tng": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_kchng": {
+        "value": 1400.0,
+        "status": 1,
+        "message": null
+      },
       "Q_gnps": {
-        "value": 1228.9149699320685,
+        "value": 1213.7980359949024,
         "status": 1,
         "message": "Режим работы насосного оборудования 1-1-1"
       },
       "Q_nps_1_2": {
-        "value": 1772.1998949450006,
+        "value": 1757.100336793969,
         "status": 1,
         "message": "Режим работы насосного оборудования 1-1-1"
       },
@@ -6359,7 +7835,11 @@
         "message": "Проверка выполнения условий по наличию нефти на ЦПС выполнена"
       },
       "V_cppn_1": 34893.91206451614,
-      "V_lodochny_cps_upsv_yu": 387.2400000000007,
+      "V_lodochny_cps_upsv_yu": {
+        "value": 387.2400000000007,
+        "status": 1,
+        "message": "Проверка выполнения условий по наличию нефти Лодочного ЛУ в РП на ЦПС и УПСВ-ЮГ"
+      },
       "G_sikn": 25729.021999999997,
       "G_sikn_vankor": 22083.233774193544,
       "G_sikn_suzun": 2715.788225806452,
@@ -6466,11 +7946,11 @@
         "message": null
       },
       "G_kchng": 1420.0,
-      "G_gnps": 25630.25061290322,
+      "G_gnps": 25314.971838709684,
       "V_gnps": {
-        "value": 14672.004967742003,
-        "status": 1,
-        "message": "Проверка выполнения условий по наличию нефти на ГНПС выполнена"
+        "value": -9999999954338.02,
+        "status": 2,
+        "message": "Наличие нефти в РП ГНПС ниже минимального допустимого значения, необходимо либо уменьшить (путем ручного ввода нужного значения) откачку нефти с ГНПС (столбец BE), либо увеличить поступление нефти через СИКН-1208 [путем уменьшения ручным вводом наличия нефти в РП УПСВ-Ю (столбец F), УПСВ-С (столбец G), ЦПС (столбец H) до нужных показателей]"
       },
       "V_nps_1": {
         "value": 4308.0,
@@ -6483,18 +7963,18 @@
         "message": "Наличие нефти в РП НПС-2 ниже минимального допустимого значения, необходимо уменьшить откачку нефти с НПС-1 на НПС-2 путем увеличения (ручным вводом) наличия нефти в РП НПС-2 до требуемого значения"
       },
       "V_knps": {
-        "value": 53064.24851612892,
-        "status": 1,
-        "message": "Проверка выполнения условий по наличию нефти на КНПС выполнена"
+        "value": 10000000022024.275,
+        "status": 3,
+        "message": "Наличие нефти в РП КНПС выше максимально допустимого значения, необходимо увеличить (ручным вводом) сдачу нефти АО «ВН» (столбец BX) в магистральный нефтепровод через СИКН 1209 "
       },
-      "V_tstn": 76041.25348387093,
+      "V_tstn": 75991.255859375,
       "V_tstn_rn_vn": {
         "value": 35933.0,
         "status": 0,
         "message": null
       },
       "V_tstn_vn": {
-        "value": 9663.666720483818,
+        "value": 9613.669095987892,
         "status": 1,
         "message": "Проверка выполнения условий по наличию нефти АО «Ванкорнефть» на ЦТН"
       },
@@ -6553,36 +8033,80 @@
         "status": 0,
         "message": null
       },
-      "F_bp_vn": 22600,
-      "F_bp_suzun": 2050,
-      "F_bp_suzun_vankor": 2700,
-      "F_bp_suzun_vslu": 0,
-      "F_bp_tagul": 8550,
-      "F_bp_tagul_lpu": 3050,
-      "F_bp_tagul_tpu": 5500,
-      "F_bp_skn": 8400,
-      "F_bp_vo": 500,
-      "F_bp_tng": 0,
-      "F_bp_kchng": 400,
+      "F_bp_vn": 22600.0,
+      "F_bp_suzun": 2050.0,
+      "F_bp_suzun_vankor": 2700.0,
+      "F_bp_suzun_vslu": 0.0,
+      "F_bp_tagul": 8550.0,
+      "F_bp_tagul_lpu": 3050.0,
+      "F_bp_tagul_tpu": 5500.0,
+      "F_bp_skn": 8400.0,
+      "F_bp_vo": 500.0,
+      "F_bp_tng": 0.0,
+      "F_bp_kchng": 400.0,
       "F": 48450.0,
-      "F_vn": 22050.0,
-      "F_suzun": 2200.0,
-      "F_suzun_vankor": 2700.0,
-      "F_suzun_vslu": 0.0,
-      "F_tagul": 10100.0,
-      "F_tagul_lpu": 3550.0,
-      "F_tagul_tpu": 6550.0,
-      "F_skn": 9200.0,
-      "F_vo": 750.0,
-      "F_tng": 0.0,
-      "F_kchng": 1450.0,
+      "F_vn": {
+        "value": 22050.0,
+        "status": 3,
+        "message": "Не удалось скорректировать баланс за 1000 итераций. V_knps=10000000022024.28 (целевой [47047.17; 57502.10]), V_tstn_vn=9613.67 (целевой [9625.50; 11764.50])"
+      },
+      "F_suzun": {
+        "value": 2200.0,
+        "status": 1,
+        "message": null
+      },
+      "F_suzun_vankor": {
+        "value": 2700.0,
+        "status": 1,
+        "message": null
+      },
+      "F_suzun_vslu": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul": {
+        "value": 10100.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul_lpu": {
+        "value": 3550.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul_tpu": {
+        "value": 6550.0,
+        "status": 1,
+        "message": null
+      },
+      "F_skn": {
+        "value": 9200.0,
+        "status": 1,
+        "message": null
+      },
+      "F_vo": {
+        "value": 750.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tng": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_kchng": {
+        "value": 1450.0,
+        "status": 1,
+        "message": null
+      },
       "Q_gnps": {
-        "value": 1228.9149699320685,
+        "value": 1213.7980359949024,
         "status": 1,
         "message": "Режим работы насосного оборудования 1-1-1"
       },
       "Q_nps_1_2": {
-        "value": 1771.7602397725866,
+        "value": 1756.660681621555,
         "status": 1,
         "message": "Режим работы насосного оборудования 1-1-1"
       },
@@ -6615,7 +8139,11 @@
         "message": "Проверка выполнения условий по наличию нефти на ЦПС выполнена"
       },
       "V_cppn_1": 34793.51829032259,
-      "V_lodochny_cps_upsv_yu": 387.2600000000007,
+      "V_lodochny_cps_upsv_yu": {
+        "value": 387.2600000000007,
+        "status": 1,
+        "message": "Проверка выполнения условий по наличию нефти Лодочного ЛУ в РП на ЦПС и УПСВ-ЮГ"
+      },
       "G_sikn": 25739.201999999997,
       "G_sikn_vankor": 22091.413774193545,
       "G_sikn_suzun": 2717.788225806452,
@@ -6722,11 +8250,11 @@
         "message": null
       },
       "G_kchng": 1420.0,
-      "G_gnps": 25630.25061290322,
+      "G_gnps": 25314.971838709684,
       "V_gnps": {
-        "value": 14780.956354838781,
-        "status": 1,
-        "message": "Проверка выполнения условий по наличию нефти на ГНПС выполнена"
+        "value": -9999999953913.791,
+        "status": 2,
+        "message": "Наличие нефти в РП ГНПС ниже минимального допустимого значения, необходимо либо уменьшить (путем ручного ввода нужного значения) откачку нефти с ГНПС (столбец BE), либо увеличить поступление нефти через СИКН-1208 [путем уменьшения ручным вводом наличия нефти в РП УПСВ-Ю (столбец F), УПСВ-С (столбец G), ЦПС (столбец H) до нужных показателей]"
       },
       "V_nps_1": {
         "value": 4308.0,
@@ -6739,18 +8267,18 @@
         "message": "Наличие нефти в РП НПС-2 ниже минимального допустимого значения, необходимо уменьшить откачку нефти с НПС-1 на НПС-2 путем увеличения (ручным вводом) наличия нефти в РП НПС-2 до требуемого значения"
       },
       "V_knps": {
-        "value": 53068.422322580525,
-        "status": 1,
-        "message": "Проверка выполнения условий по наличию нефти на КНПС выполнена"
+        "value": 10000000021763.172,
+        "status": 3,
+        "message": "Наличие нефти в РП КНПС выше максимально допустимого значения, необходимо увеличить (ручным вводом) сдачу нефти АО «ВН» (столбец BX) в магистральный нефтепровод через СИКН 1209 "
       },
-      "V_tstn": 76154.3786774193,
+      "V_tstn": 76154.380859375,
       "V_tstn_rn_vn": {
         "value": 35933.0,
         "status": 0,
         "message": null
       },
       "V_tstn_vn": {
-        "value": 9655.980864677354,
+        "value": 9655.983046633055,
         "status": 1,
         "message": "Проверка выполнения условий по наличию нефти АО «Ванкорнефть» на ЦТН"
       },
@@ -6805,45 +8333,89 @@
         "message": "Проверка выполнения условий по наличию нефти ООО «КЧНГ» (Русско-Реченское месторождение) на ЦТН"
       },
       "F_bp": {
-        "value": 42500.0,
+        "value": 42500,
         "status": 0,
         "message": null
       },
-      "F_bp_vn": 22600,
-      "F_bp_suzun": 2050,
+      "F_bp_vn": 22600.0,
+      "F_bp_suzun": 2050.0,
       "F_bp_suzun_vankor": 0.0,
-      "F_bp_suzun_vslu": 0,
-      "F_bp_tagul": 8550,
-      "F_bp_tagul_lpu": 3050,
-      "F_bp_tagul_tpu": 5500,
-      "F_bp_skn": 8400,
-      "F_bp_vo": 500,
-      "F_bp_tng": 0,
-      "F_bp_kchng": 400,
-      "F": 44950.0,
-      "F_vn": 22100.0,
-      "F_suzun": 2200.0,
-      "F_suzun_vankor": 0.0,
-      "F_suzun_vslu": 0.0,
-      "F_tagul": 10150.0,
-      "F_tagul_lpu": 3650.0,
-      "F_tagul_tpu": 6500.0,
-      "F_skn": 8400.0,
-      "F_vo": 700.0,
-      "F_tng": 0.0,
-      "F_kchng": 1400.0,
+      "F_bp_suzun_vslu": 0.0,
+      "F_bp_tagul": 8550.0,
+      "F_bp_tagul_lpu": 3050.0,
+      "F_bp_tagul_tpu": 5500.0,
+      "F_bp_skn": 8400.0,
+      "F_bp_vo": 500.0,
+      "F_bp_tng": 0.0,
+      "F_bp_kchng": 400.0,
+      "F": 44900.0,
+      "F_vn": {
+        "value": 22050.0,
+        "status": 3,
+        "message": "Не удалось скорректировать баланс за 1000 итераций. V_knps=10000000021763.17 (целевой [47047.17; 57502.10]), V_tstn_vn=9655.98 (целевой [9625.50; 11764.50])"
+      },
+      "F_suzun": {
+        "value": 2200.0,
+        "status": 1,
+        "message": null
+      },
+      "F_suzun_vankor": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_suzun_vslu": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul": {
+        "value": 10150.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul_lpu": {
+        "value": 3650.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul_tpu": {
+        "value": 6500.0,
+        "status": 1,
+        "message": null
+      },
+      "F_skn": {
+        "value": 8400.0,
+        "status": 1,
+        "message": null
+      },
+      "F_vo": {
+        "value": 700.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tng": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_kchng": {
+        "value": 1400.0,
+        "status": 1,
+        "message": null
+      },
       "Q_gnps": {
-        "value": 1228.9149699320685,
+        "value": 1213.7980359949024,
         "status": 1,
         "message": "Режим работы насосного оборудования 1-1-1"
       },
       "Q_nps_1_2": {
-        "value": 1769.8359102706709,
+        "value": 1754.7363521196394,
         "status": 1,
         "message": "Режим работы насосного оборудования 1-1-1"
       },
       "Q_knps": {
-        "value": 2160.226835832372,
+        "value": 2157.8239138792774,
         "status": 1,
         "message": "Режим работы насосного оборудования 2-2-2. Рекомендуется рассмотреть возможность перераспределения перекачиваемой нефти по дням."
       }
@@ -6871,7 +8443,11 @@
         "message": "Проверка выполнения условий по наличию нефти на ЦПС выполнена"
       },
       "V_cppn_1": 34693.12451612904,
-      "V_lodochny_cps_upsv_yu": 385.4600000000007,
+      "V_lodochny_cps_upsv_yu": {
+        "value": 385.4600000000007,
+        "status": 1,
+        "message": "Проверка выполнения условий по наличию нефти Лодочного ЛУ в РП на ЦПС и УПСВ-ЮГ"
+      },
       "G_sikn": 25739.381999999998,
       "G_sikn_vankor": 22096.593774193545,
       "G_sikn_suzun": 2712.788225806452,
@@ -6978,11 +8554,11 @@
         "message": null
       },
       "G_kchng": 1420.0,
-      "G_gnps": 25630.25061290322,
+      "G_gnps": 25314.971838709684,
       "V_gnps": {
-        "value": 14890.08774193556,
-        "status": 1,
-        "message": "Проверка выполнения условий по наличию нефти на ГНПС выполнена"
+        "value": -9999999953489.38,
+        "status": 2,
+        "message": "Наличие нефти в РП ГНПС ниже минимального допустимого значения, необходимо либо уменьшить (путем ручного ввода нужного значения) откачку нефти с ГНПС (столбец BE), либо увеличить поступление нефти через СИКН-1208 [путем уменьшения ручным вводом наличия нефти в РП УПСВ-Ю (столбец F), УПСВ-С (столбец G), ЦПС (столбец H) до нужных показателей]"
       },
       "V_nps_1": {
         "value": 4308.0,
@@ -6995,18 +8571,18 @@
         "message": "Наличие нефти в РП НПС-2 ниже минимального допустимого значения, необходимо уменьшить откачку нефти с НПС-1 на НПС-2 путем увеличения (ручным вводом) наличия нефти в РП НПС-2 до требуемого значения"
       },
       "V_knps": {
-        "value": 53855.416129032135,
-        "status": 1,
-        "message": "Проверка выполнения условий по наличию нефти на КНПС выполнена"
+        "value": 10000000022184.889,
+        "status": 3,
+        "message": "Наличие нефти в РП КНПС выше максимально допустимого значения, необходимо увеличить (ручным вводом) сдачу нефти АО «ВН» (столбец BX) в магистральный нефтепровод через СИКН 1209 "
       },
-      "V_tstn": 77050.50387096769,
+      "V_tstn": 77000.5078125,
       "V_tstn_rn_vn": {
         "value": 35933.0,
         "status": 0,
         "message": null
       },
       "V_tstn_vn": {
-        "value": 9653.505183870902,
+        "value": 9603.509125403214,
         "status": 1,
         "message": "Проверка выполнения условий по наличию нефти АО «Ванкорнефть» на ЦТН"
       },
@@ -7061,45 +8637,89 @@
         "message": "Проверка выполнения условий по наличию нефти ООО «КЧНГ» (Русско-Реченское месторождение) на ЦТН"
       },
       "F_bp": {
-        "value": 42500.0,
+        "value": 42500,
         "status": 0,
         "message": null
       },
-      "F_bp_vn": 22600,
-      "F_bp_suzun": 2050,
+      "F_bp_vn": 22600.0,
+      "F_bp_suzun": 2050.0,
       "F_bp_suzun_vankor": 0.0,
-      "F_bp_suzun_vslu": 0,
-      "F_bp_tagul": 8550,
-      "F_bp_tagul_lpu": 3050,
-      "F_bp_tagul_tpu": 5500,
-      "F_bp_skn": 8400,
-      "F_bp_vo": 500,
-      "F_bp_tng": 0,
-      "F_bp_kchng": 400,
-      "F": 46150.0,
-      "F_vn": 22100.0,
-      "F_suzun": 2200.0,
-      "F_suzun_vankor": 0.0,
-      "F_suzun_vslu": 0.0,
-      "F_tagul": 10100.0,
-      "F_tagul_lpu": 3600.0,
-      "F_tagul_tpu": 6500.0,
-      "F_skn": 9600.0,
-      "F_vo": 700.0,
-      "F_tng": 0.0,
-      "F_kchng": 1450.0,
+      "F_bp_suzun_vslu": 0.0,
+      "F_bp_tagul": 8550.0,
+      "F_bp_tagul_lpu": 3050.0,
+      "F_bp_tagul_tpu": 5500.0,
+      "F_bp_skn": 8400.0,
+      "F_bp_vo": 500.0,
+      "F_bp_tng": 0.0,
+      "F_bp_kchng": 400.0,
+      "F": 46200.0,
+      "F_vn": {
+        "value": 22150.0,
+        "status": 3,
+        "message": "Не удалось скорректировать баланс за 1000 итераций. V_knps=10000000022184.89 (целевой [47047.17; 57502.10]), V_tstn_vn=9603.51 (целевой [9625.50; 11764.50])"
+      },
+      "F_suzun": {
+        "value": 2200.0,
+        "status": 1,
+        "message": null
+      },
+      "F_suzun_vankor": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_suzun_vslu": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul": {
+        "value": 10100.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul_lpu": {
+        "value": 3600.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul_tpu": {
+        "value": 6500.0,
+        "status": 1,
+        "message": null
+      },
+      "F_skn": {
+        "value": 9600.0,
+        "status": 1,
+        "message": null
+      },
+      "F_vo": {
+        "value": 700.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tng": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_kchng": {
+        "value": 1450.0,
+        "status": 1,
+        "message": null
+      },
       "Q_gnps": {
-        "value": 1228.9149699320685,
+        "value": 1213.7980359949024,
         "status": 1,
         "message": "Режим работы насосного оборудования 1-1-1"
       },
       "Q_nps_1_2": {
-        "value": 1769.0131133358047,
+        "value": 1753.9135551847737,
         "status": 1,
         "message": "Режим работы насосного оборудования 1-1-1"
       },
       "Q_knps": {
-        "value": 2217.8969627066513,
+        "value": 2220.299884659746,
         "status": 1,
         "message": "Режим работы насосного оборудования 2-2-2. Рекомендуется рассмотреть возможность перераспределения перекачиваемой нефти по дням."
       }
@@ -7127,7 +8747,11 @@
         "message": "Проверка выполнения условий по наличию нефти на ЦПС выполнена"
       },
       "V_cppn_1": 34592.7307419355,
-      "V_lodochny_cps_upsv_yu": 355.8400000000006,
+      "V_lodochny_cps_upsv_yu": {
+        "value": 355.8400000000006,
+        "status": 1,
+        "message": "Проверка выполнения условий по наличию нефти Лодочного ЛУ в РП на ЦПС и УПСВ-ЮГ"
+      },
       "G_sikn": 25703.561999999998,
       "G_sikn_vankor": 22066.773774193545,
       "G_sikn_suzun": 2706.788225806452,
@@ -7234,11 +8858,11 @@
         "message": null
       },
       "G_kchng": 1420.0,
-      "G_gnps": 25630.25061290322,
+      "G_gnps": 25314.971838709684,
       "V_gnps": {
-        "value": 14963.39912903234,
-        "status": 1,
-        "message": "Проверка выполнения условий по наличию нефти на ГНПС выполнена"
+        "value": -9999999953100.791,
+        "status": 2,
+        "message": "Наличие нефти в РП ГНПС ниже минимального допустимого значения, необходимо либо уменьшить (путем ручного ввода нужного значения) откачку нефти с ГНПС (столбец BE), либо увеличить поступление нефти через СИКН-1208 [путем уменьшения ручным вводом наличия нефти в РП УПСВ-Ю (столбец F), УПСВ-С (столбец G), ЦПС (столбец H) до нужных показателей]"
       },
       "V_nps_1": {
         "value": 4308.0,
@@ -7251,18 +8875,18 @@
         "message": "Наличие нефти в РП НПС-2 ниже минимального допустимого значения, необходимо уменьшить откачку нефти с НПС-1 на НПС-2 путем увеличения (ручным вводом) наличия нефти в РП НПС-2 до требуемого значения"
       },
       "V_knps": {
-        "value": 53356.229935483745,
-        "status": 1,
-        "message": "Проверка выполнения условий по наличию нефти на КНПС выполнена"
+        "value": 10000000021370.424,
+        "status": 3,
+        "message": "Наличие нефти в РП КНПС выше максимально допустимого значения, необходимо увеличить (ручным вводом) сдачу нефти АО «ВН» (столбец BX) в магистральный нефтепровод через СИКН 1209 "
       },
-      "V_tstn": 76624.62906451608,
+      "V_tstn": 76574.6328125,
       "V_tstn_rn_vn": {
         "value": 35933.0,
         "status": 0,
         "message": null
       },
       "V_tstn_vn": {
-        "value": 9671.20972806445,
+        "value": 9621.213476048373,
         "status": 1,
         "message": "Проверка выполнения условий по наличию нефти АО «Ванкорнефть» на ЦТН"
       },
@@ -7317,40 +8941,84 @@
         "message": "Проверка выполнения условий по наличию нефти ООО «КЧНГ» (Русско-Реченское месторождение) на ЦТН"
       },
       "F_bp": {
-        "value": 43500.0,
+        "value": 43500,
         "status": 0,
         "message": null
       },
-      "F_bp_vn": 22600,
-      "F_bp_suzun": 2050,
+      "F_bp_vn": 22600.0,
+      "F_bp_suzun": 2050.0,
       "F_bp_suzun_vankor": 0.0,
-      "F_bp_suzun_vslu": 1000,
-      "F_bp_tagul": 8550,
-      "F_bp_tagul_lpu": 3050,
-      "F_bp_tagul_tpu": 5500,
-      "F_bp_skn": 8400,
-      "F_bp_vo": 500,
-      "F_bp_tng": 0,
-      "F_bp_kchng": 400,
+      "F_bp_suzun_vslu": 1000.0,
+      "F_bp_tagul": 8550.0,
+      "F_bp_tagul_lpu": 3050.0,
+      "F_bp_tagul_tpu": 5500.0,
+      "F_bp_skn": 8400.0,
+      "F_bp_vo": 500.0,
+      "F_bp_tng": 0.0,
+      "F_bp_kchng": 400.0,
       "F": 47350.0,
-      "F_vn": 22050.0,
-      "F_suzun": 2200.0,
-      "F_suzun_vankor": 0.0,
-      "F_suzun_vslu": 1000.0,
-      "F_tagul": 10000.0,
-      "F_tagul_lpu": 3500.0,
-      "F_tagul_tpu": 6500.0,
-      "F_skn": 10000.0,
-      "F_vo": 700.0,
-      "F_tng": 0.0,
-      "F_kchng": 1400.0,
+      "F_vn": {
+        "value": 22050.0,
+        "status": 3,
+        "message": "Не удалось скорректировать баланс за 1000 итераций. V_knps=10000000021370.42 (целевой [47047.17; 57502.10]), V_tstn_vn=9621.21 (целевой [9625.50; 11764.50])"
+      },
+      "F_suzun": {
+        "value": 2200.0,
+        "status": 1,
+        "message": null
+      },
+      "F_suzun_vankor": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_suzun_vslu": {
+        "value": 1000.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul": {
+        "value": 10000.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul_lpu": {
+        "value": 3500.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul_tpu": {
+        "value": 6500.0,
+        "status": 1,
+        "message": null
+      },
+      "F_skn": {
+        "value": 10000.0,
+        "status": 1,
+        "message": null
+      },
+      "F_vo": {
+        "value": 700.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tng": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_kchng": {
+        "value": 1400.0,
+        "status": 1,
+        "message": null
+      },
       "Q_gnps": {
-        "value": 1228.9149699320685,
+        "value": 1213.7980359949024,
         "status": 1,
         "message": "Режим работы насосного оборудования 1-1-1"
       },
       "Q_nps_1_2": {
-        "value": 1764.8857186997895,
+        "value": 1749.786160548758,
         "status": 1,
         "message": "Режим работы насосного оборудования 1-1-1"
       },
@@ -7383,7 +9051,11 @@
         "message": "Проверка выполнения условий по наличию нефти на ЦПС выполнена"
       },
       "V_cppn_1": 34492.33696774195,
-      "V_lodochny_cps_upsv_yu": 327.0000000000007,
+      "V_lodochny_cps_upsv_yu": {
+        "value": 327.0000000000007,
+        "status": 1,
+        "message": "Проверка выполнения условий по наличию нефти Лодочного ЛУ в РП на ЦПС и УПСВ-ЮГ"
+      },
       "G_sikn": 25678.341999999997,
       "G_sikn_vankor": 22046.553774193544,
       "G_sikn_suzun": 2701.788225806452,
@@ -7490,11 +9162,11 @@
         "message": null
       },
       "G_kchng": 1420.0,
-      "G_gnps": 25630.25061290322,
+      "G_gnps": 25314.971838709684,
       "V_gnps": {
-        "value": 15011.490516129117,
-        "status": 1,
-        "message": "Проверка выполнения условий по наличию нефти на ГНПС выполнена"
+        "value": -9999999952737.422,
+        "status": 2,
+        "message": "Наличие нефти в РП ГНПС ниже минимального допустимого значения, необходимо либо уменьшить (путем ручного ввода нужного значения) откачку нефти с ГНПС (столбец BE), либо увеличить поступление нефти через СИКН-1208 [путем уменьшения ручным вводом наличия нефти в РП УПСВ-Ю (столбец F), УПСВ-С (столбец G), ЦПС (столбец H) до нужных показателей]"
       },
       "V_nps_1": {
         "value": 4308.0,
@@ -7507,18 +9179,18 @@
         "message": "Наличие нефти в РП НПС-2 ниже минимального допустимого значения, необходимо уменьшить откачку нефти с НПС-1 на НПС-2 путем увеличения (ручным вводом) наличия нефти в РП НПС-2 до требуемого значения"
       },
       "V_knps": {
-        "value": 53800.26374193535,
-        "status": 1,
-        "message": "Проверка выполнения условий по наличию нефти на КНПС выполнена"
+        "value": 10000000021499.18,
+        "status": 3,
+        "message": "Наличие нефти в РП КНПС выше максимально допустимого значения, необходимо увеличить (ручным вводом) сдачу нефти АО «ВН» (столбец BX) в магистральный нефтепровод через СИКН 1209 "
       },
-      "V_tstn": 77116.75425806447,
+      "V_tstn": 77066.7578125,
       "V_tstn_rn_vn": {
         "value": 35933.0,
         "status": 0,
         "message": null
       },
       "V_tstn_vn": {
-        "value": 9668.698752258008,
+        "value": 9618.702306693542,
         "status": 1,
         "message": "Проверка выполнения условий по наличию нефти АО «Ванкорнефть» на ЦТН"
       },
@@ -7573,40 +9245,84 @@
         "message": "Проверка выполнения условий по наличию нефти ООО «КЧНГ» (Русско-Реченское месторождение) на ЦТН"
       },
       "F_bp": {
-        "value": 42500.0,
+        "value": 42500,
         "status": 0,
         "message": null
       },
-      "F_bp_vn": 22600,
-      "F_bp_suzun": 2050,
+      "F_bp_vn": 22600.0,
+      "F_bp_suzun": 2050.0,
       "F_bp_suzun_vankor": 0.0,
-      "F_bp_suzun_vslu": 0,
-      "F_bp_tagul": 8550,
-      "F_bp_tagul_lpu": 3050,
-      "F_bp_tagul_tpu": 5500,
-      "F_bp_skn": 8400,
-      "F_bp_vo": 500,
-      "F_bp_tng": 0,
-      "F_bp_kchng": 400,
+      "F_bp_suzun_vslu": 0.0,
+      "F_bp_tagul": 8550.0,
+      "F_bp_tagul_lpu": 3050.0,
+      "F_bp_tagul_tpu": 5500.0,
+      "F_bp_skn": 8400.0,
+      "F_bp_vo": 500.0,
+      "F_bp_tng": 0.0,
+      "F_bp_kchng": 400.0,
       "F": 46400.0,
-      "F_vn": 22050.0,
-      "F_suzun": 2200.0,
-      "F_suzun_vankor": 0.0,
-      "F_suzun_vslu": 0.0,
-      "F_tagul": 10050.0,
-      "F_tagul_lpu": 3550.0,
-      "F_tagul_tpu": 6500.0,
-      "F_skn": 10000.0,
-      "F_vo": 700.0,
-      "F_tng": 0.0,
-      "F_kchng": 1400.0,
+      "F_vn": {
+        "value": 22050.0,
+        "status": 3,
+        "message": "Не удалось скорректировать баланс за 1000 итераций. V_knps=10000000021499.18 (целевой [47047.17; 57502.10]), V_tstn_vn=9618.70 (целевой [9625.50; 11764.50])"
+      },
+      "F_suzun": {
+        "value": 2200.0,
+        "status": 1,
+        "message": null
+      },
+      "F_suzun_vankor": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_suzun_vslu": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul": {
+        "value": 10050.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul_lpu": {
+        "value": 3550.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul_tpu": {
+        "value": 6500.0,
+        "status": 1,
+        "message": null
+      },
+      "F_skn": {
+        "value": 10000.0,
+        "status": 1,
+        "message": null
+      },
+      "F_vo": {
+        "value": 700.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tng": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_kchng": {
+        "value": 1400.0,
+        "status": 1,
+        "message": null
+      },
       "Q_gnps": {
-        "value": 1228.9149699320685,
+        "value": 1213.7980359949024,
         "status": 1,
         "message": "Режим работы насосного оборудования 1-1-1"
       },
       "Q_nps_1_2": {
-        "value": 1764.5610060561119,
+        "value": 1749.46144790508,
         "status": 1,
         "message": "Режим работы насосного оборудования 1-1-1"
       },
@@ -7639,7 +9355,11 @@
         "message": "Проверка выполнения условий по наличию нефти на ЦПС выполнена"
       },
       "V_cppn_1": 34391.943193548395,
-      "V_lodochny_cps_upsv_yu": 298.16000000000076,
+      "V_lodochny_cps_upsv_yu": {
+        "value": 298.16000000000076,
+        "status": 1,
+        "message": "Проверка выполнения условий по наличию нефти Лодочного ЛУ в РП на ЦПС и УПСВ-ЮГ"
+      },
       "G_sikn": 25653.341999999997,
       "G_sikn_vankor": 22026.553774193544,
       "G_sikn_suzun": 2696.788225806452,
@@ -7746,11 +9466,11 @@
         "message": null
       },
       "G_kchng": 1420.0,
-      "G_gnps": 25630.25061290322,
+      "G_gnps": 25314.971838709684,
       "V_gnps": {
-        "value": 15034.581903225895,
-        "status": 1,
-        "message": "Проверка выполнения условий по наличию нефти на ГНПС выполнена"
+        "value": -9999999952399.053,
+        "status": 2,
+        "message": "Наличие нефти в РП ГНПС ниже минимального допустимого значения, необходимо либо уменьшить (путем ручного ввода нужного значения) откачку нефти с ГНПС (столбец BE), либо увеличить поступление нефти через СИКН-1208 [путем уменьшения ручным вводом наличия нефти в РП УПСВ-Ю (столбец F), УПСВ-С (столбец G), ЦПС (столбец H) до нужных показателей]"
       },
       "V_nps_1": {
         "value": 4308.0,
@@ -7763,18 +9483,18 @@
         "message": "Наличие нефти в РП НПС-2 ниже минимального допустимого значения, необходимо уменьшить откачку нефти с НПС-1 на НПС-2 путем увеличения (ручным вводом) наличия нефти в РП НПС-2 до требуемого значения"
       },
       "V_knps": {
-        "value": 54292.29754838695,
-        "status": 1,
-        "message": "Проверка выполнения условий по наличию нефти на КНПС выполнена"
+        "value": 10000000021675.936,
+        "status": 3,
+        "message": "Наличие нефти в РП КНПС выше максимально допустимого значения, необходимо увеличить (ручным вводом) сдачу нефти АО «ВН» (столбец BX) в магистральный нефтепровод через СИКН 1209 "
       },
-      "V_tstn": 77631.87945161285,
+      "V_tstn": 77581.8828125,
       "V_tstn_rn_vn": {
         "value": 35933.0,
         "status": 0,
         "message": null
       },
       "V_tstn_vn": {
-        "value": 9646.185071451551,
+        "value": 9596.188432338697,
         "status": 1,
         "message": "Проверка выполнения условий по наличию нефти АО «Ванкорнефть» на ЦТН"
       },
@@ -7829,40 +9549,84 @@
         "message": "Проверка выполнения условий по наличию нефти ООО «КЧНГ» (Русско-Реченское месторождение) на ЦТН"
       },
       "F_bp": {
-        "value": 42500.0,
+        "value": 42500,
         "status": 0,
         "message": null
       },
-      "F_bp_vn": 22600,
-      "F_bp_suzun": 2050,
+      "F_bp_vn": 22600.0,
+      "F_bp_suzun": 2050.0,
       "F_bp_suzun_vankor": 0.0,
-      "F_bp_suzun_vslu": 0,
-      "F_bp_tagul": 8550,
-      "F_bp_tagul_lpu": 3050,
-      "F_bp_tagul_tpu": 5500,
-      "F_bp_skn": 8400,
-      "F_bp_vo": 500,
-      "F_bp_tng": 0,
-      "F_bp_kchng": 400,
+      "F_bp_suzun_vslu": 0.0,
+      "F_bp_tagul": 8550.0,
+      "F_bp_tagul_lpu": 3050.0,
+      "F_bp_tagul_tpu": 5500.0,
+      "F_bp_skn": 8400.0,
+      "F_bp_vo": 500.0,
+      "F_bp_tng": 0.0,
+      "F_bp_kchng": 400.0,
       "F": 46350.0,
-      "F_vn": 22050.0,
-      "F_suzun": 2150.0,
-      "F_suzun_vankor": 0.0,
-      "F_suzun_vslu": 0.0,
-      "F_tagul": 10000.0,
-      "F_tagul_lpu": 3500.0,
-      "F_tagul_tpu": 6500.0,
-      "F_skn": 10000.0,
-      "F_vo": 700.0,
-      "F_tng": 0.0,
-      "F_kchng": 1450.0,
+      "F_vn": {
+        "value": 22050.0,
+        "status": 3,
+        "message": "Не удалось скорректировать баланс за 1000 итераций. V_knps=10000000021675.94 (целевой [47047.17; 57502.10]), V_tstn_vn=9596.19 (целевой [9625.50; 11764.50])"
+      },
+      "F_suzun": {
+        "value": 2150.0,
+        "status": 1,
+        "message": null
+      },
+      "F_suzun_vankor": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_suzun_vslu": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul": {
+        "value": 10000.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul_lpu": {
+        "value": 3500.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul_tpu": {
+        "value": 6500.0,
+        "status": 1,
+        "message": null
+      },
+      "F_skn": {
+        "value": 10000.0,
+        "status": 1,
+        "message": null
+      },
+      "F_vo": {
+        "value": 700.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tng": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_kchng": {
+        "value": 1450.0,
+        "status": 1,
+        "message": null
+      },
       "Q_gnps": {
-        "value": 1228.9149699320685,
+        "value": 1213.7980359949024,
         "status": 1,
         "message": "Режим работы насосного оборудования 1-1-1"
       },
       "Q_nps_1_2": {
-        "value": 1764.4652206154988,
+        "value": 1749.365662464467,
         "status": 1,
         "message": "Режим работы насосного оборудования 1-1-1"
       },
@@ -7895,7 +9659,11 @@
         "message": "Проверка выполнения условий по наличию нефти на ЦПС выполнена"
       },
       "V_cppn_1": 34291.54941935485,
-      "V_lodochny_cps_upsv_yu": 269.06000000000085,
+      "V_lodochny_cps_upsv_yu": {
+        "value": 269.06000000000085,
+        "status": 1,
+        "message": "Проверка выполнения условий по наличию нефти Лодочного ЛУ в РП на ЦПС и УПСВ-ЮГ"
+      },
       "G_sikn": 25619.082,
       "G_sikn_vankor": 21997.293774193546,
       "G_sikn_suzun": 2691.788225806452,
@@ -8002,11 +9770,11 @@
         "message": null
       },
       "G_kchng": 1420.0,
-      "G_gnps": 25630.25061290322,
+      "G_gnps": 25314.971838709684,
       "V_gnps": {
-        "value": 15023.413290322678,
-        "status": 1,
-        "message": "Проверка выполнения условий по наличию нефти на ГНПС выполнена"
+        "value": -9999999952094.943,
+        "status": 2,
+        "message": "Наличие нефти в РП ГНПС ниже минимального допустимого значения, необходимо либо уменьшить (путем ручного ввода нужного значения) откачку нефти с ГНПС (столбец BE), либо увеличить поступление нефти через СИКН-1208 [путем уменьшения ручным вводом наличия нефти в РП УПСВ-Ю (столбец F), УПСВ-С (столбец G), ЦПС (столбец H) до нужных показателей]"
       },
       "V_nps_1": {
         "value": 4308.0,
@@ -8019,18 +9787,18 @@
         "message": "Наличие нефти в РП НПС-2 ниже минимального допустимого значения, необходимо уменьшить откачку нефти с НПС-1 на НПС-2 путем увеличения (ручным вводом) наличия нефти в РП НПС-2 до требуемого значения"
       },
       "V_knps": {
-        "value": 52081.59135483856,
+        "value": 10000000019199.951,
         "status": 3,
-        "message": "Наличие нефти в РП КНПС ниже минимального допустимого значения, необходимо уменьшить (ручным вводом) сдачу нефти АО «ВН» (столбец BX) в магистральный нефтепровод через СИКН 1209 "
+        "message": "Наличие нефти в РП КНПС выше максимально допустимого значения, необходимо увеличить (ручным вводом) сдачу нефти АО «ВН» (столбец BX) в магистральный нефтепровод через СИКН 1209 "
       },
-      "V_tstn": 75410.00464516124,
+      "V_tstn": 75410.0078125,
       "V_tstn_rn_vn": {
         "value": 35933.0,
         "status": 0,
         "message": null
       },
       "V_tstn_vn": {
-        "value": 9644.4113906451,
+        "value": 9644.414557983857,
         "status": 1,
         "message": "Проверка выполнения условий по наличию нефти АО «Ванкорнефть» на ЦТН"
       },
@@ -8089,41 +9857,85 @@
         "status": 0,
         "message": null
       },
-      "F_bp_vn": 22600,
-      "F_bp_suzun": 2050,
-      "F_bp_suzun_vankor": 2700,
-      "F_bp_suzun_vslu": 0,
-      "F_bp_tagul": 8550,
-      "F_bp_tagul_lpu": 3050,
-      "F_bp_tagul_tpu": 5500,
-      "F_bp_skn": 8400,
-      "F_bp_vo": 500,
-      "F_bp_tng": 0,
-      "F_bp_kchng": 400,
-      "F": 49050.0,
-      "F_vn": 22000.0,
-      "F_suzun": 2200.0,
-      "F_suzun_vankor": 2700.0,
-      "F_suzun_vslu": 0.0,
-      "F_tagul": 10050.0,
-      "F_tagul_lpu": 3500.0,
-      "F_tagul_tpu": 6550.0,
-      "F_skn": 10000.0,
-      "F_vo": 700.0,
-      "F_tng": 0.0,
-      "F_kchng": 1400.0,
+      "F_bp_vn": 22600.0,
+      "F_bp_suzun": 2050.0,
+      "F_bp_suzun_vankor": 2700.0,
+      "F_bp_suzun_vslu": 0.0,
+      "F_bp_tagul": 8550.0,
+      "F_bp_tagul_lpu": 3050.0,
+      "F_bp_tagul_tpu": 5500.0,
+      "F_bp_skn": 8400.0,
+      "F_bp_vo": 500.0,
+      "F_bp_tng": 0.0,
+      "F_bp_kchng": 400.0,
+      "F": 49000.0,
+      "F_vn": {
+        "value": 21950.0,
+        "status": 3,
+        "message": "Не удалось скорректировать баланс за 1000 итераций. V_knps=10000000019199.95 (целевой [47047.17; 57502.10]), V_tstn_vn=9644.41 (целевой [9625.50; 11764.50])"
+      },
+      "F_suzun": {
+        "value": 2200.0,
+        "status": 1,
+        "message": null
+      },
+      "F_suzun_vankor": {
+        "value": 2700.0,
+        "status": 1,
+        "message": null
+      },
+      "F_suzun_vslu": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul": {
+        "value": 10050.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul_lpu": {
+        "value": 3500.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul_tpu": {
+        "value": 6550.0,
+        "status": 1,
+        "message": null
+      },
+      "F_skn": {
+        "value": 10000.0,
+        "status": 1,
+        "message": null
+      },
+      "F_vo": {
+        "value": 700.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tng": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_kchng": {
+        "value": 1400.0,
+        "status": 1,
+        "message": null
+      },
       "Q_gnps": {
-        "value": 1228.9149699320685,
+        "value": 1213.7980359949024,
         "status": 1,
         "message": "Режим работы насосного оборудования 1-1-1"
       },
       "Q_nps_1_2": {
-        "value": 1764.3339945618584,
+        "value": 1749.2344364108274,
         "status": 1,
         "message": "Режим работы насосного оборудования 1-1-1"
       },
       "Q_knps": {
-        "value": 2357.266435986159,
+        "value": 2354.8635140330643,
         "status": 1,
         "message": "Режим работы насосного оборудования 2-2-2. Рекомендуется рассмотреть возможность перераспределения перекачиваемой нефти по дням."
       }
@@ -8151,7 +9963,11 @@
         "message": "Проверка выполнения условий по наличию нефти на ЦПС выполнена"
       },
       "V_cppn_1": 34191.15564516131,
-      "V_lodochny_cps_upsv_yu": 243.34000000000106,
+      "V_lodochny_cps_upsv_yu": {
+        "value": 243.34000000000106,
+        "status": 1,
+        "message": "Проверка выполнения условий по наличию нефти Лодочного ЛУ в РП на ЦПС и УПСВ-ЮГ"
+      },
       "G_sikn": 25595.461999999996,
       "G_sikn_vankor": 21978.673774193543,
       "G_sikn_suzun": 2686.788225806452,
@@ -8258,11 +10074,11 @@
         "message": null
       },
       "G_kchng": 1420.0,
-      "G_gnps": 25630.25061290322,
+      "G_gnps": 25314.971838709684,
       "V_gnps": {
-        "value": 14988.624677419451,
-        "status": 1,
-        "message": "Проверка выполнения условий по наличию нефти на ГНПС выполнена"
+        "value": -9999999951814.453,
+        "status": 2,
+        "message": "Наличие нефти в РП ГНПС ниже минимального допустимого значения, необходимо либо уменьшить (путем ручного ввода нужного значения) откачку нефти с ГНПС (столбец BE), либо увеличить поступление нефти через СИКН-1208 [путем уменьшения ручным вводом наличия нефти в РП УПСВ-Ю (столбец F), УПСВ-С (столбец G), ЦПС (столбец H) до нужных показателей]"
       },
       "V_nps_1": {
         "value": 4308.0,
@@ -8275,18 +10091,18 @@
         "message": "Наличие нефти в РП НПС-2 ниже минимального допустимого значения, необходимо уменьшить откачку нефти с НПС-1 на НПС-2 путем увеличения (ручным вводом) наличия нефти в РП НПС-2 до требуемого значения"
       },
       "V_knps": {
-        "value": 52683.505161290166,
-        "status": 1,
-        "message": "Проверка выполнения условий по наличию нефти на КНПС выполнена"
+        "value": 10000000019486.588,
+        "status": 3,
+        "message": "Наличие нефти в РП КНПС выше максимально допустимого значения, необходимо увеличить (ручным вводом) сдачу нефти АО «ВН» (столбец BX) в магистральный нефтепровод через СИКН 1209 "
       },
-      "V_tstn": 75977.12983870962,
+      "V_tstn": 75977.134765625,
       "V_tstn_rn_vn": {
         "value": 35933.0,
         "status": 0,
         "message": null
       },
       "V_tstn_vn": {
-        "value": 9674.017709838632,
+        "value": 9674.022636754014,
         "status": 1,
         "message": "Проверка выполнения условий по наличию нефти АО «Ванкорнефть» на ЦТН"
       },
@@ -8341,40 +10157,84 @@
         "message": "Проверка выполнения условий по наличию нефти ООО «КЧНГ» (Русско-Реченское месторождение) на ЦТН"
       },
       "F_bp": {
-        "value": 42500.0,
+        "value": 42500,
         "status": 0,
         "message": null
       },
-      "F_bp_vn": 22600,
-      "F_bp_suzun": 2050,
+      "F_bp_vn": 22600.0,
+      "F_bp_suzun": 2050.0,
       "F_bp_suzun_vankor": 0.0,
-      "F_bp_suzun_vslu": 0,
-      "F_bp_tagul": 8550,
-      "F_bp_tagul_lpu": 3050,
-      "F_bp_tagul_tpu": 5500,
-      "F_bp_skn": 8400,
-      "F_bp_vo": 500,
-      "F_bp_tng": 0,
-      "F_bp_kchng": 400,
+      "F_bp_suzun_vslu": 0.0,
+      "F_bp_tagul": 8550.0,
+      "F_bp_tagul_lpu": 3050.0,
+      "F_bp_tagul_tpu": 5500.0,
+      "F_bp_skn": 8400.0,
+      "F_bp_vo": 500.0,
+      "F_bp_tng": 0.0,
+      "F_bp_kchng": 400.0,
       "F": 46250.0,
-      "F_vn": 21950.0,
-      "F_suzun": 2150.0,
-      "F_suzun_vankor": 0.0,
-      "F_suzun_vslu": 0.0,
-      "F_tagul": 10000.0,
-      "F_tagul_lpu": 3500.0,
-      "F_tagul_tpu": 6500.0,
-      "F_skn": 10000.0,
-      "F_vo": 700.0,
-      "F_tng": 0.0,
-      "F_kchng": 1450.0,
+      "F_vn": {
+        "value": 21950.0,
+        "status": 3,
+        "message": "Не удалось скорректировать баланс за 1000 итераций. V_knps=10000000019486.59 (целевой [47047.17; 57502.10]), V_tstn_vn=9674.02 (целевой [9625.50; 11764.50])"
+      },
+      "F_suzun": {
+        "value": 2150.0,
+        "status": 1,
+        "message": null
+      },
+      "F_suzun_vankor": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_suzun_vslu": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul": {
+        "value": 10000.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul_lpu": {
+        "value": 3500.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul_tpu": {
+        "value": 6500.0,
+        "status": 1,
+        "message": null
+      },
+      "F_skn": {
+        "value": 10000.0,
+        "status": 1,
+        "message": null
+      },
+      "F_vo": {
+        "value": 700.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tng": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_kchng": {
+        "value": 1450.0,
+        "status": 1,
+        "message": null
+      },
       "Q_gnps": {
-        "value": 1228.9149699320685,
+        "value": 1213.7980359949024,
         "status": 1,
         "message": "Режим работы насосного оборудования 1-1-1"
       },
       "Q_nps_1_2": {
-        "value": 1764.938400692127,
+        "value": 1749.8388425410951,
         "status": 1,
         "message": "Режим работы насосного оборудования 1-1-1"
       },
@@ -8407,7 +10267,11 @@
         "message": "Проверка выполнения условий по наличию нефти на ЦПС выполнена"
       },
       "V_cppn_1": 34090.761870967755,
-      "V_lodochny_cps_upsv_yu": 220.48000000000093,
+      "V_lodochny_cps_upsv_yu": {
+        "value": 220.48000000000093,
+        "status": 1,
+        "message": "Проверка выполнения условий по наличию нефти Лодочного ЛУ в РП на ЦПС и УПСВ-ЮГ"
+      },
       "G_sikn": 25632.321999999996,
       "G_sikn_vankor": 22012.533774193544,
       "G_sikn_suzun": 2689.788225806452,
@@ -8514,11 +10378,11 @@
         "message": null
       },
       "G_kchng": 1420.0,
-      "G_gnps": 25630.25061290322,
+      "G_gnps": 25314.971838709684,
       "V_gnps": {
-        "value": 14990.696064516225,
-        "status": 1,
-        "message": "Проверка выполнения условий по наличию нефти на ГНПС выполнена"
+        "value": -9999999951497.104,
+        "status": 2,
+        "message": "Наличие нефти в РП ГНПС ниже минимального допустимого значения, необходимо либо уменьшить (путем ручного ввода нужного значения) откачку нефти с ГНПС (столбец BE), либо увеличить поступление нефти через СИКН-1208 [путем уменьшения ручным вводом наличия нефти в РП УПСВ-Ю (столбец F), УПСВ-С (столбец G), ЦПС (столбец H) до нужных показателей]"
       },
       "V_nps_1": {
         "value": 4308.0,
@@ -8531,18 +10395,18 @@
         "message": "Наличие нефти в РП НПС-2 ниже минимального допустимого значения, необходимо уменьшить откачку нефти с НПС-1 на НПС-2 путем увеличения (ручным вводом) наличия нефти в РП НПС-2 до требуемого значения"
       },
       "V_knps": {
-        "value": 53098.558967741774,
-        "status": 1,
-        "message": "Проверка выполнения условий по наличию нефти на КНПС выполнена"
+        "value": 10000000019586.363,
+        "status": 3,
+        "message": "Наличие нефти в РП КНПС выше максимально допустимого значения, необходимо увеличить (ручным вводом) сдачу нефти АО «ВН» (столбец BX) в магистральный нефтепровод через СИКН 1209 "
       },
-      "V_tstn": 76394.25503225799,
+      "V_tstn": 76394.259765625,
       "V_tstn_rn_vn": {
         "value": 35933.0,
         "status": 0,
         "message": null
       },
       "V_tstn_vn": {
-        "value": 9637.493989032168,
+        "value": 9637.498722399176,
         "status": 1,
         "message": "Проверка выполнения условий по наличию нефти АО «Ванкорнефть» на ЦТН"
       },
@@ -8597,40 +10461,84 @@
         "message": "Проверка выполнения условий по наличию нефти ООО «КЧНГ» (Русско-Реченское месторождение) на ЦТН"
       },
       "F_bp": {
-        "value": 42500.0,
+        "value": 42500,
         "status": 0,
         "message": null
       },
-      "F_bp_vn": 22600,
-      "F_bp_suzun": 2050,
+      "F_bp_vn": 22600.0,
+      "F_bp_suzun": 2050.0,
       "F_bp_suzun_vankor": 0.0,
-      "F_bp_suzun_vslu": 0,
-      "F_bp_tagul": 8550,
-      "F_bp_tagul_lpu": 3050,
-      "F_bp_tagul_tpu": 5500,
-      "F_bp_skn": 8400,
-      "F_bp_vo": 500,
-      "F_bp_tng": 0,
-      "F_bp_kchng": 400,
+      "F_bp_suzun_vslu": 0.0,
+      "F_bp_tagul": 8550.0,
+      "F_bp_tagul_lpu": 3050.0,
+      "F_bp_tagul_tpu": 5500.0,
+      "F_bp_skn": 8400.0,
+      "F_bp_vo": 500.0,
+      "F_bp_tng": 0.0,
+      "F_bp_kchng": 400.0,
       "F": 46650.0,
-      "F_vn": 22050.0,
-      "F_suzun": 2200.0,
-      "F_suzun_vankor": 0.0,
-      "F_suzun_vslu": 0.0,
-      "F_tagul": 10100.0,
-      "F_tagul_lpu": 3550.0,
-      "F_tagul_tpu": 6550.0,
-      "F_skn": 10200.0,
-      "F_vo": 700.0,
-      "F_tng": 0.0,
-      "F_kchng": 1400.0,
+      "F_vn": {
+        "value": 22050.0,
+        "status": 3,
+        "message": "Не удалось скорректировать баланс за 1000 итераций. V_knps=10000000019586.36 (целевой [47047.17; 57502.10]), V_tstn_vn=9637.50 (целевой [9625.50; 11764.50])"
+      },
+      "F_suzun": {
+        "value": 2200.0,
+        "status": 1,
+        "message": null
+      },
+      "F_suzun_vankor": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_suzun_vslu": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul": {
+        "value": 10100.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul_lpu": {
+        "value": 3550.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul_tpu": {
+        "value": 6550.0,
+        "status": 1,
+        "message": null
+      },
+      "F_skn": {
+        "value": 10200.0,
+        "status": 1,
+        "message": null
+      },
+      "F_vo": {
+        "value": 700.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tng": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_kchng": {
+        "value": 1400.0,
+        "status": 1,
+        "message": null
+      },
       "Q_gnps": {
-        "value": 1228.9149699320685,
+        "value": 1213.7980359949024,
         "status": 1,
         "message": "Режим работы насосного оборудования 1-1-1"
       },
       "Q_nps_1_2": {
-        "value": 1765.5677110369543,
+        "value": 1750.4681528859228,
         "status": 1,
         "message": "Режим работы насосного оборудования 1-1-1"
       },
@@ -8663,7 +10571,11 @@
         "message": "Проверка выполнения условий по наличию нефти на ЦПС выполнена"
       },
       "V_cppn_1": 33990.368096774204,
-      "V_lodochny_cps_upsv_yu": 197.88000000000102,
+      "V_lodochny_cps_upsv_yu": {
+        "value": 197.88000000000102,
+        "status": 1,
+        "message": "Проверка выполнения условий по наличию нефти Лодочного ЛУ в РП на ЦПС и УПСВ-ЮГ"
+      },
       "G_sikn": 25633.582,
       "G_sikn_vankor": 22006.793774193546,
       "G_sikn_suzun": 2696.788225806452,
@@ -8770,11 +10682,11 @@
         "message": null
       },
       "G_kchng": 1420.0,
-      "G_gnps": 25630.25061290322,
+      "G_gnps": 25314.971838709684,
       "V_gnps": {
-        "value": 14994.027451613008,
-        "status": 1,
-        "message": "Проверка выполнения условий по наличию нефти на ГНПС выполнена"
+        "value": -9999999951178.494,
+        "status": 2,
+        "message": "Наличие нефти в РП ГНПС ниже минимального допустимого значения, необходимо либо уменьшить (путем ручного ввода нужного значения) откачку нефти с ГНПС (столбец BE), либо увеличить поступление нефти через СИКН-1208 [путем уменьшения ручным вводом наличия нефти в РП УПСВ-Ю (столбец F), УПСВ-С (столбец G), ЦПС (столбец H) до нужных показателей]"
       },
       "V_nps_1": {
         "value": 4308.0,
@@ -8787,18 +10699,18 @@
         "message": "Наличие нефти в РП НПС-2 ниже минимального допустимого значения, необходимо уменьшить откачку нефти с НПС-1 на НПС-2 путем увеличения (ручным вводом) наличия нефти в РП НПС-2 до требуемого значения"
       },
       "V_knps": {
-        "value": 53628.35277419338,
-        "status": 1,
-        "message": "Проверка выполнения условий по наличию нефти на КНПС выполнена"
+        "value": 10000000019750.879,
+        "status": 3,
+        "message": "Наличие нефти в РП КНПС выше максимально допустимого значения, необходимо увеличить (ручным вводом) сдачу нефти АО «ВН» (столбец BX) в магистральный нефтепровод через СИКН 1209 "
       },
-      "V_tstn": 76927.38022580638,
+      "V_tstn": 76877.384765625,
       "V_tstn_rn_vn": {
         "value": 35933.0,
         "status": 0,
         "message": null
       },
       "V_tstn_vn": {
-        "value": 9645.22578822572,
+        "value": 9595.23032804434,
         "status": 1,
         "message": "Проверка выполнения условий по наличию нефти АО «Ванкорнефть» на ЦТН"
       },
@@ -8853,45 +10765,89 @@
         "message": "Проверка выполнения условий по наличию нефти ООО «КЧНГ» (Русско-Реченское месторождение) на ЦТН"
       },
       "F_bp": {
-        "value": 42500.0,
+        "value": 42500,
         "status": 0,
         "message": null
       },
-      "F_bp_vn": 22600,
-      "F_bp_suzun": 2050,
+      "F_bp_vn": 22600.0,
+      "F_bp_suzun": 2050.0,
       "F_bp_suzun_vankor": 0.0,
-      "F_bp_suzun_vslu": 0,
-      "F_bp_tagul": 8550,
-      "F_bp_tagul_lpu": 3050,
-      "F_bp_tagul_tpu": 5500,
-      "F_bp_skn": 8400,
-      "F_bp_vo": 500,
-      "F_bp_tng": 0,
-      "F_bp_kchng": 400,
-      "F": 46550.0,
-      "F_vn": 22000.0,
-      "F_suzun": 2200.0,
-      "F_suzun_vankor": 0.0,
-      "F_suzun_vslu": 0.0,
-      "F_tagul": 10050.0,
-      "F_tagul_lpu": 3500.0,
-      "F_tagul_tpu": 6550.0,
-      "F_skn": 10200.0,
-      "F_vo": 700.0,
-      "F_tng": 0.0,
-      "F_kchng": 1400.0,
+      "F_bp_suzun_vslu": 0.0,
+      "F_bp_tagul": 8550.0,
+      "F_bp_tagul_lpu": 3050.0,
+      "F_bp_tagul_tpu": 5500.0,
+      "F_bp_skn": 8400.0,
+      "F_bp_vo": 500.0,
+      "F_bp_tng": 0.0,
+      "F_bp_kchng": 400.0,
+      "F": 46600.0,
+      "F_vn": {
+        "value": 22050.0,
+        "status": 3,
+        "message": "Не удалось скорректировать баланс за 1000 итераций. V_knps=10000000019750.88 (целевой [47047.17; 57502.10]), V_tstn_vn=9595.23 (целевой [9625.50; 11764.50])"
+      },
+      "F_suzun": {
+        "value": 2200.0,
+        "status": 1,
+        "message": null
+      },
+      "F_suzun_vankor": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_suzun_vslu": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul": {
+        "value": 10050.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul_lpu": {
+        "value": 3500.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul_tpu": {
+        "value": 6550.0,
+        "status": 1,
+        "message": null
+      },
+      "F_skn": {
+        "value": 10200.0,
+        "status": 1,
+        "message": null
+      },
+      "F_vo": {
+        "value": 700.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tng": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_kchng": {
+        "value": 1400.0,
+        "status": 1,
+        "message": null
+      },
       "Q_gnps": {
-        "value": 1228.9149699320685,
+        "value": 1213.7980359949024,
         "status": 1,
         "message": "Режим работы насосного оборудования 1-1-1"
       },
       "Q_nps_1_2": {
-        "value": 1766.2736497342723,
+        "value": 1751.1740915832413,
         "status": 1,
         "message": "Режим работы насосного оборудования 1-1-1"
       },
       "Q_knps": {
-        "value": 2237.120338331411,
+        "value": 2239.523260284506,
         "status": 1,
         "message": "Режим работы насосного оборудования 2-2-2. Рекомендуется рассмотреть возможность перераспределения перекачиваемой нефти по дням."
       }
@@ -8919,7 +10875,11 @@
         "message": "Проверка выполнения условий по наличию нефти на ЦПС выполнена"
       },
       "V_cppn_1": 33889.97432258066,
-      "V_lodochny_cps_upsv_yu": 175.8000000000011,
+      "V_lodochny_cps_upsv_yu": {
+        "value": 175.8000000000011,
+        "status": 1,
+        "message": "Проверка выполнения условий по наличию нефти Лодочного ЛУ в РП на ЦПС и УПСВ-ЮГ"
+      },
       "G_sikn": 25618.101999999995,
       "G_sikn_vankor": 21986.313774193542,
       "G_sikn_suzun": 2701.788225806452,
@@ -9026,11 +10986,11 @@
         "message": null
       },
       "G_kchng": 1420.0,
-      "G_gnps": 25630.25061290322,
+      "G_gnps": 25314.971838709684,
       "V_gnps": {
-        "value": 14981.878838709781,
-        "status": 1,
-        "message": "Проверка выполнения условий по наличию нефти на ГНПС выполнена"
+        "value": -9999999950875.365,
+        "status": 2,
+        "message": "Наличие нефти в РП ГНПС ниже минимального допустимого значения, необходимо либо уменьшить (путем ручного ввода нужного значения) откачку нефти с ГНПС (столбец BE), либо увеличить поступление нефти через СИКН-1208 [путем уменьшения ручным вводом наличия нефти в РП УПСВ-Ю (столбец F), УПСВ-С (столбец G), ЦПС (столбец H) до нужных показателей]"
       },
       "V_nps_1": {
         "value": 4308.0,
@@ -9043,18 +11003,18 @@
         "message": "Наличие нефти в РП НПС-2 ниже минимального допустимого значения, необходимо уменьшить откачку нефти с НПС-1 на НПС-2 путем увеличения (ручным вводом) наличия нефти в РП НПС-2 до требуемого значения"
       },
       "V_knps": {
-        "value": 54156.62658064499,
-        "status": 1,
-        "message": "Проверка выполнения условий по наличию нефти на КНПС выполнена"
+        "value": 10000000020013.875,
+        "status": 3,
+        "message": "Наличие нефти в РП КНПС выше максимально допустимого значения, необходимо увеличить (ручным вводом) сдачу нефти АО «ВН» (столбец BX) в магистральный нефтепровод через СИКН 1209 "
       },
-      "V_tstn": 77443.50541935477,
+      "V_tstn": 77443.509765625,
       "V_tstn_rn_vn": {
         "value": 35933.0,
         "status": 0,
         "message": null
       },
       "V_tstn_vn": {
-        "value": 9632.451962419267,
+        "value": 9632.456308689498,
         "status": 1,
         "message": "Проверка выполнения условий по наличию нефти АО «Ванкорнефть» на ЦТН"
       },
@@ -9109,45 +11069,89 @@
         "message": "Проверка выполнения условий по наличию нефти ООО «КЧНГ» (Русско-Реченское месторождение) на ЦТН"
       },
       "F_bp": {
-        "value": 42500.0,
+        "value": 42500,
         "status": 0,
         "message": null
       },
-      "F_bp_vn": 22600,
-      "F_bp_suzun": 2050,
+      "F_bp_vn": 22600.0,
+      "F_bp_suzun": 2050.0,
       "F_bp_suzun_vankor": 0.0,
-      "F_bp_suzun_vslu": 0,
-      "F_bp_tagul": 8550,
-      "F_bp_tagul_lpu": 3050,
-      "F_bp_tagul_tpu": 5500,
-      "F_bp_skn": 8400,
-      "F_bp_vo": 500,
-      "F_bp_tng": 0,
-      "F_bp_kchng": 400,
-      "F": 45550.0,
-      "F_vn": 22000.0,
-      "F_suzun": 2150.0,
-      "F_suzun_vankor": 0.0,
-      "F_suzun_vslu": 0.0,
-      "F_tagul": 10000.0,
-      "F_tagul_lpu": 3450.0,
-      "F_tagul_tpu": 6550.0,
-      "F_skn": 9200.0,
-      "F_vo": 750.0,
-      "F_tng": 0.0,
-      "F_kchng": 1450.0,
+      "F_bp_suzun_vslu": 0.0,
+      "F_bp_tagul": 8550.0,
+      "F_bp_tagul_lpu": 3050.0,
+      "F_bp_tagul_tpu": 5500.0,
+      "F_bp_skn": 8400.0,
+      "F_bp_vo": 500.0,
+      "F_bp_tng": 0.0,
+      "F_bp_kchng": 400.0,
+      "F": 45500.0,
+      "F_vn": {
+        "value": 21950.0,
+        "status": 3,
+        "message": "Не удалось скорректировать баланс за 1000 итераций. V_knps=10000000020013.88 (целевой [47047.17; 57502.10]), V_tstn_vn=9632.46 (целевой [9625.50; 11764.50])"
+      },
+      "F_suzun": {
+        "value": 2150.0,
+        "status": 1,
+        "message": null
+      },
+      "F_suzun_vankor": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_suzun_vslu": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul": {
+        "value": 10000.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul_lpu": {
+        "value": 3450.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul_tpu": {
+        "value": 6550.0,
+        "status": 1,
+        "message": null
+      },
+      "F_skn": {
+        "value": 9200.0,
+        "status": 1,
+        "message": null
+      },
+      "F_vo": {
+        "value": 750.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tng": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_kchng": {
+        "value": 1450.0,
+        "status": 1,
+        "message": null
+      },
       "Q_gnps": {
-        "value": 1228.9149699320685,
+        "value": 1213.7980359949024,
         "status": 1,
         "message": "Режим работы насосного оборудования 1-1-1"
       },
       "Q_nps_1_2": {
-        "value": 1766.200852799406,
+        "value": 1751.101294648375,
         "status": 1,
         "message": "Режим работы насосного оборудования 1-1-1"
       },
       "Q_knps": {
-        "value": 2189.0618992695117,
+        "value": 2186.658977316417,
         "status": 1,
         "message": "Режим работы насосного оборудования 2-2-2. Рекомендуется рассмотреть возможность перераспределения перекачиваемой нефти по дням."
       }
@@ -9175,7 +11179,11 @@
         "message": "Проверка выполнения условий по наличию нефти на ЦПС выполнена"
       },
       "V_cppn_1": 33789.580548387115,
-      "V_lodochny_cps_upsv_yu": 155.02000000000112,
+      "V_lodochny_cps_upsv_yu": {
+        "value": 155.02000000000112,
+        "status": 1,
+        "message": "Проверка выполнения условий по наличию нефти Лодочного ЛУ в РП на ЦПС и УПСВ-ЮГ"
+      },
       "G_sikn": 25588.402,
       "G_sikn_vankor": 21951.613774193545,
       "G_sikn_suzun": 2706.788225806452,
@@ -9282,11 +11290,11 @@
         "message": null
       },
       "G_kchng": 1420.0,
-      "G_gnps": 25630.25061290322,
+      "G_gnps": 25314.971838709684,
       "V_gnps": {
-        "value": 14940.030225806557,
-        "status": 1,
-        "message": "Проверка выполнения условий по наличию нефти на ГНПС выполнена"
+        "value": -9999999950601.936,
+        "status": 2,
+        "message": "Наличие нефти в РП ГНПС ниже минимального допустимого значения, необходимо либо уменьшить (путем ручного ввода нужного значения) откачку нефти с ГНПС (столбец BE), либо увеличить поступление нефти через СИКН-1208 [путем уменьшения ручным вводом наличия нефти в РП УПСВ-Ю (столбец F), УПСВ-С (столбец G), ЦПС (столбец H) до нужных показателей]"
       },
       "V_nps_1": {
         "value": 4308.0,
@@ -9299,18 +11307,18 @@
         "message": "Наличие нефти в РП НПС-2 ниже минимального допустимого значения, необходимо уменьшить откачку нефти с НПС-1 на НПС-2 путем увеличения (ручным вводом) наличия нефти в РП НПС-2 до требуемого значения"
       },
       "V_knps": {
-        "value": 54330.600387096594,
-        "status": 1,
-        "message": "Проверка выполнения условий по наличию нефти на КНПС выполнена"
+        "value": 10000000019850.762,
+        "status": 3,
+        "message": "Наличие нефти в РП КНПС выше максимально допустимого значения, необходимо увеличить (ручным вводом) сдачу нефти АО «ВН» (столбец BX) в магистральный нефтепровод через СИКН 1209 "
       },
-      "V_tstn": 77575.63061290316,
+      "V_tstn": 77553.826171875,
       "V_tstn_rn_vn": {
         "value": 35933.0,
         "status": 0,
         "message": null
       },
       "V_tstn_vn": {
-        "value": 9634.954441612812,
+        "value": 9613.150000584654,
         "status": 1,
         "message": "Проверка выполнения условий по наличию нефти АО «Ванкорнефть» на ЦТН"
       },
@@ -9365,45 +11373,89 @@
         "message": "Проверка выполнения условий по наличию нефти ООО «КЧНГ» (Русско-Реченское месторождение) на ЦТН"
       },
       "F_bp": {
-        "value": 42500.0,
+        "value": 53121.80699999997,
         "status": 0,
         "message": null
       },
-      "F_bp_vn": 22600,
-      "F_bp_suzun": 2050,
+      "F_bp_vn": 33221.80699999997,
+      "F_bp_suzun": 2050.0,
       "F_bp_suzun_vankor": 0.0,
-      "F_bp_suzun_vslu": 0,
-      "F_bp_tagul": 8550,
-      "F_bp_tagul_lpu": 3050,
-      "F_bp_tagul_tpu": 5500,
-      "F_bp_skn": 8400,
-      "F_bp_vo": 500,
-      "F_bp_tng": 0,
-      "F_bp_kchng": 400,
-      "F": 44700.0,
-      "F_vn": 21950.0,
-      "F_suzun": 2200.0,
-      "F_suzun_vankor": 0.0,
-      "F_suzun_vslu": 0.0,
-      "F_tagul": 10000.0,
-      "F_tagul_lpu": 3450.0,
-      "F_tagul_tpu": 6550.0,
-      "F_skn": 8400.0,
-      "F_vo": 750.0,
-      "F_tng": 0.0,
-      "F_kchng": 1400.0,
+      "F_bp_suzun_vslu": 0.0,
+      "F_bp_tagul": 8550.0,
+      "F_bp_tagul_lpu": 3050.0,
+      "F_bp_tagul_tpu": 5500.0,
+      "F_bp_skn": 8400.0,
+      "F_bp_vo": 500.0,
+      "F_bp_tng": 0.0,
+      "F_bp_kchng": 400.0,
+      "F": 44721.80699999997,
+      "F_vn": {
+        "value": 21971.80699999997,
+        "status": 3,
+        "message": "Не удалось скорректировать баланс за 1000 итераций. V_knps=10000000019850.76 (целевой [47047.17; 57502.10]), V_tstn_vn=9613.15 (целевой [9625.50; 11764.50])"
+      },
+      "F_suzun": {
+        "value": 2200.0,
+        "status": 1,
+        "message": null
+      },
+      "F_suzun_vankor": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_suzun_vslu": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul": {
+        "value": 10000.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul_lpu": {
+        "value": 3450.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul_tpu": {
+        "value": 6550.0,
+        "status": 1,
+        "message": null
+      },
+      "F_skn": {
+        "value": 8400.0,
+        "status": 1,
+        "message": null
+      },
+      "F_vo": {
+        "value": 750.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tng": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_kchng": {
+        "value": 1400.0,
+        "status": 1,
+        "message": null
+      },
       "Q_gnps": {
-        "value": 1228.9149699320685,
+        "value": 1213.7980359949024,
         "status": 1,
         "message": "Режим работы насосного оборудования 1-1-1"
       },
       "Q_nps_1_2": {
-        "value": 1765.9949141020886,
+        "value": 1750.8953559510567,
         "status": 1,
         "message": "Режим работы насосного оборудования 1-1-1"
       },
       "Q_knps": {
-        "value": 2148.212226066897,
+        "value": 2149.2602364475188,
         "status": 1,
         "message": "Режим работы насосного оборудования 2-2-2. Рекомендуется рассмотреть возможность перераспределения перекачиваемой нефти по дням."
       }
@@ -9431,7 +11483,11 @@
         "message": "Проверка выполнения условий по наличию нефти на ЦПС выполнена"
       },
       "V_cppn_1": 33689.186774193564,
-      "V_lodochny_cps_upsv_yu": 75.16999999999734,
+      "V_lodochny_cps_upsv_yu": {
+        "value": 75.16999999999734,
+        "status": 1,
+        "message": "Проверка выполнения условий по наличию нефти Лодочного ЛУ в РП на ЦПС и УПСВ-ЮГ"
+      },
       "G_sikn": 25585.582,
       "G_sikn_vankor": 21884.543774193542,
       "G_sikn_suzun": 2713.788225806452,
@@ -9538,11 +11594,11 @@
         "message": null
       },
       "G_kchng": 1420.0,
-      "G_gnps": 25630.25061290322,
+      "G_gnps": 25314.971838709684,
       "V_gnps": {
-        "value": 14895.36161290334,
-        "status": 1,
-        "message": "Проверка выполнения условий по наличию нефти на ГНПС выполнена"
+        "value": -9999999950331.326,
+        "status": 2,
+        "message": "Наличие нефти в РП ГНПС ниже минимального допустимого значения, необходимо либо уменьшить (путем ручного ввода нужного значения) откачку нефти с ГНПС (столбец BE), либо увеличить поступление нефти через СИКН-1208 [путем уменьшения ручным вводом наличия нефти в РП УПСВ-Ю (столбец F), УПСВ-С (столбец G), ЦПС (столбец H) до нужных показателей]"
       },
       "V_nps_1": {
         "value": 4308.0,
@@ -9555,18 +11611,18 @@
         "message": "Наличие нефти в РП НПС-2 ниже минимального допустимого значения, необходимо уменьшить откачку нефти с НПС-1 на НПС-2 путем увеличения (ручным вводом) наличия нефти в РП НПС-2 до требуемого значения"
       },
       "V_knps": {
-        "value": 52509.64969354823,
-        "status": 1,
-        "message": "Проверка выполнения условий по наличию нефти на КНПС выполнена"
+        "value": 10000000017714.531,
+        "status": 3,
+        "message": "Наличие нефти в РП КНПС выше максимально допустимого значения, необходимо увеличить (ручным вводом) сдачу нефти АО «ВН» (столбец BX) в магистральный нефтепровод через СИКН 1209 "
       },
-      "V_tstn": 75710.01130645158,
+      "V_tstn": 75688.205078125,
       "V_tstn_rn_vn": {
         "value": 35933.0,
         "status": 0,
         "message": null
       },
       "V_tstn_vn": {
-        "value": 9648.626568766836,
+        "value": 9626.820340440261,
         "status": 1,
         "message": "Проверка выполнения условий по наличию нефти АО «Ванкорнефть» на ЦТН"
       },
@@ -9621,40 +11677,84 @@
         "message": "Проверка выполнения условий по наличию нефти ООО «КЧНГ» (Русско-Реченское месторождение) на ЦТН"
       },
       "F_bp": {
-        "value": 45175.74449999997,
+        "value": 55975.74449999997,
         "status": 0,
         "message": null
       },
-      "F_bp_vn": 22421.80699999997,
+      "F_bp_vn": 33221.80699999997,
       "F_bp_suzun": 2253.649500000003,
       "F_bp_suzun_vankor": 2742.9680000000008,
-      "F_bp_suzun_vslu": 0,
+      "F_bp_suzun_vslu": 0.0,
       "F_bp_tagul": 8657.319999999992,
       "F_bp_tagul_lpu": 3032.7744999999995,
       "F_bp_tagul_tpu": 5624.545499999993,
       "F_bp_skn": 8200.0,
-      "F_bp_vo": 500,
-      "F_bp_tng": 0,
-      "F_bp_kchng": 400,
+      "F_bp_vo": 500.0,
+      "F_bp_tng": 0.0,
+      "F_bp_kchng": 400.0,
       "F": 48925.74449999997,
-      "F_vn": 21871.80699999997,
-      "F_suzun": 2253.649500000003,
-      "F_suzun_vankor": 2742.9680000000008,
-      "F_suzun_vslu": 0.0,
-      "F_tagul": 10057.319999999992,
-      "F_tagul_lpu": 3532.7744999999995,
-      "F_tagul_tpu": 6524.545499999993,
-      "F_skn": 9800.0,
-      "F_vo": 750.0,
-      "F_tng": 0.0,
-      "F_kchng": 1450.0,
+      "F_vn": {
+        "value": 21871.80699999997,
+        "status": 3,
+        "message": "Не удалось скорректировать баланс за 1000 итераций. V_knps=10000000017714.53 (целевой [47047.17; 57502.10]), V_tstn_vn=9626.82 (целевой [9625.50; 11764.50])"
+      },
+      "F_suzun": {
+        "value": 2253.649500000003,
+        "status": 1,
+        "message": null
+      },
+      "F_suzun_vankor": {
+        "value": 2742.9680000000008,
+        "status": 1,
+        "message": null
+      },
+      "F_suzun_vslu": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul": {
+        "value": 10057.319999999992,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul_lpu": {
+        "value": 3532.7744999999995,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul_tpu": {
+        "value": 6524.545499999993,
+        "status": 1,
+        "message": null
+      },
+      "F_skn": {
+        "value": 9800.0,
+        "status": 1,
+        "message": null
+      },
+      "F_vo": {
+        "value": 750.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tng": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_kchng": {
+        "value": 1450.0,
+        "status": 1,
+        "message": null
+      },
       "Q_gnps": {
-        "value": 1228.9149699320685,
+        "value": 1213.7980359949024,
         "status": 1,
         "message": "Режим работы насосного оборудования 1-1-1"
       },
       "Q_nps_1_2": {
-        "value": 1767.470967741935,
+        "value": 1752.3714095909038,
         "status": 1,
         "message": "Режим работы насосного оборудования 1-1-1"
       },
@@ -9687,7 +11787,11 @@
         "message": "Проверка выполнения условий по наличию нефти на ЦПС выполнена"
       },
       "V_cppn_1": 33588.79300000001,
-      "V_lodochny_cps_upsv_yu": -6.252776074688882e-12,
+      "V_lodochny_cps_upsv_yu": {
+        "value": -6.252776074688882e-12,
+        "status": 3,
+        "message": "Значение наличия нефти Лодочного ЛУ на ЦПС и на УПСВ-Юг меньше нуля. Необходимо уменьшить откачку нефти ООО «Тагульское» на СИНК-1208 (столбец Р)."
+      },
       "G_sikn": 25738.262,
       "G_sikn_vankor": 21998.223774193542,
       "G_sikn_suzun": 2752.788225806452,
@@ -9794,11 +11898,11 @@
         "message": null
       },
       "G_kchng": 1420.0,
-      "G_gnps": 25630.25061290322,
+      "G_gnps": 25314.971838709684,
       "V_gnps": {
-        "value": 15003.373000000116,
-        "status": 1,
-        "message": "Проверка выполнения условий по наличию нефти на ГНПС выполнена"
+        "value": -9999999949908.037,
+        "status": 2,
+        "message": "Наличие нефти в РП ГНПС ниже минимального допустимого значения, необходимо либо уменьшить (путем ручного ввода нужного значения) откачку нефти с ГНПС (столбец BE), либо увеличить поступление нефти через СИКН-1208 [путем уменьшения ручным вводом наличия нефти в РП УПСВ-Ю (столбец F), УПСВ-С (столбец G), ЦПС (столбец H) до нужных показателей]"
       },
       "V_nps_1": {
         "value": 4308.0,
@@ -9811,18 +11915,18 @@
         "message": "Наличие нефти в РП НПС-2 ниже минимального допустимого значения, необходимо уменьшить откачку нефти с НПС-1 на НПС-2 путем увеличения (ручным вводом) наличия нефти в РП НПС-2 до требуемого значения"
       },
       "V_knps": {
-        "value": 52745.50899999987,
-        "status": 1,
-        "message": "Проверка выполнения условий по наличию нефти на КНПС выполнена"
+        "value": 10000000017606.918,
+        "status": 3,
+        "message": "Наличие нефти в РП КНПС выше максимально допустимого значения, необходимо увеличить (ручным вводом) сдачу нефти АО «ВН» (столбец BX) в магистральный нефтепровод через СИКН 1209 "
       },
-      "V_tstn": 76053.88199999998,
+      "V_tstn": 76003.880859375,
       "V_tstn_rn_vn": {
         "value": 35933.0,
         "status": 0,
         "message": null
       },
       "V_tstn_vn": {
-        "value": 9626.00849774965,
+        "value": 9576.007357124667,
         "status": 1,
         "message": "Проверка выполнения условий по наличию нефти АО «Ванкорнефть» на ЦТН"
       },
@@ -9877,14 +11981,14 @@
         "message": "Проверка выполнения условий по наличию нефти ООО «КЧНГ» (Русско-Реченское месторождение) на ЦТН"
       },
       "F_bp": {
-        "value": 42423.254499999966,
+        "value": 21001.447499999995,
         "status": 0,
         "message": null
       },
-      "F_bp_vn": 22421.80699999997,
+      "F_bp_vn": 1000.0,
       "F_bp_suzun": 2253.649500000003,
       "F_bp_suzun_vankor": 0.0,
-      "F_bp_suzun_vslu": 0,
+      "F_bp_suzun_vslu": 0.0,
       "F_bp_tagul": 8657.319999999992,
       "F_bp_tagul_lpu": 3032.7744999999995,
       "F_bp_tagul_tpu": 5624.545499999993,
@@ -9892,30 +11996,74 @@
       "F_bp_vo": 890.4779999999992,
       "F_bp_tng": 0.0,
       "F_bp_kchng": 0.0,
-      "F": 46973.254499999966,
-      "F_vn": 22021.80699999997,
-      "F_suzun": 2253.649500000003,
-      "F_suzun_vankor": 0.0,
-      "F_suzun_vslu": 0.0,
-      "F_tagul": 10207.319999999992,
-      "F_tagul_lpu": 3582.7744999999995,
-      "F_tagul_tpu": 6624.545499999993,
-      "F_skn": 10200.0,
-      "F_vo": 890.4779999999992,
-      "F_tng": 0.0,
-      "F_kchng": 1400.0,
+      "F": 47001.447499999995,
+      "F_vn": {
+        "value": 22050.0,
+        "status": 3,
+        "message": "Не удалось скорректировать баланс за 1000 итераций. V_knps=10000000017606.92 (целевой [47047.17; 57502.10]), V_tstn_vn=9576.01 (целевой [9625.50; 11764.50])"
+      },
+      "F_suzun": {
+        "value": 2253.649500000003,
+        "status": 1,
+        "message": null
+      },
+      "F_suzun_vankor": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_suzun_vslu": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul": {
+        "value": 10207.319999999992,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul_lpu": {
+        "value": 3582.7744999999995,
+        "status": 1,
+        "message": null
+      },
+      "F_tagul_tpu": {
+        "value": 6624.545499999993,
+        "status": 1,
+        "message": null
+      },
+      "F_skn": {
+        "value": 10200.0,
+        "status": 1,
+        "message": null
+      },
+      "F_vo": {
+        "value": 890.4779999999992,
+        "status": 1,
+        "message": null
+      },
+      "F_tng": {
+        "value": 0.0,
+        "status": 1,
+        "message": null
+      },
+      "F_kchng": {
+        "value": 1400.0,
+        "status": 1,
+        "message": null
+      },
       "Q_gnps": {
-        "value": 1228.9149699320685,
+        "value": 1213.7980359949024,
         "status": 1,
         "message": "Режим работы насосного оборудования 1-1-1"
       },
       "Q_nps_1_2": {
-        "value": 1772.4671363243106,
+        "value": 1757.367578173279,
         "status": 1,
         "message": "Режим работы насосного оборудования 1-1-1"
       },
       "Q_knps": {
-        "value": 2257.461288927334,
+        "value": 2258.8162004998076,
         "status": 1,
         "message": "Режим работы насосного оборудования 2-2-2. Рекомендуется рассмотреть возможность перераспределения перекачиваемой нефти по дням."
       }
