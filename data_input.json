@@ -1,35 +1,28 @@
 {
-  "control":{
+  "control": {
     "Start_autobalance": false,
     "Date_calculation": "2025-11-30",
     "Month": 12
-    },
-
-  "last_day":{
+  },
+  "last_day": {
     "V_upsv_yu_0": { "value": 14100, "status": 0, "message": null },
     "V_upsv_s_0": { "value": 12453, "status": 0, "message": null },
     "V_cps_0": { "value": 10148, "status": 0, "message": null },
     "V_cppn_1_0": null,
     "V_lodochny_cps_upsv_yu_0": { "value": 0, "status": 0, "message": null },
-
     "V_upn_suzun_0": { "value": 10280, "status": 0, "message": null },
     "V_suzun_vslu_0": { "value": 1097, "status": 0, "message": null },
     "V_suzun_tng_0": { "value": 2, "status": 0, "message": null },
     "V_suzun_slu_0": null,
-
     "V_tagul_tr_0": { "value": 2729, "status": 0, "message": null },
-
     "V_upn_lodochny_0": { "value": 2871, "status": 0, "message": null },
     "V_lodochny_0": { "value": 2662, "status": 0, "message": null },
     "V_ichem_0": { "value": 210, "status": 0, "message": null },
-
     "V_gnps_0": { "value": 14625, "status": 0, "message": null },
     "V_nps_1_0": { "value": 4308, "status": 0, "message": null },
     "V_nps_2_0": { "value": 3997, "status": 0, "message": null },
     "V_knps_0": { "value": 51200, "status": 0, "message": null },
-    
     "V_suzun_0": { "value": 4420, "status": 0, "message": null },
-
     "V_tstn_rn_vn_0": { "value": 35933, "status": 0, "message": null },
     "V_tstn_suzun_vankor_0": { "value": 1250, "status": 0, "message": null },
     "V_tstn_suzun_vslu_0": { "value": 800, "status": 0, "message": null },
@@ -44,8 +37,7 @@
     "V_tstn_tagul_obsh_0": null,
     "V_tstn_vn_0": null
   },
-
-  "month":{
+  "month": {
     "Q_vankor_month": null,
     "G_sikn_month": null,
     "G_sikn_vankor_month": null,
@@ -79,77 +71,62 @@
     "Q_kchng_month": null,
     "G_kchng_month": null,
     "G_skn_month": null,
-    "G_gnps_month": null, 
-
+    "G_gnps_month": null,
     "F_bp_month": null,
     "F_bp_sr_month": null,
     "F_sum": null,
     "delta_F": { "value": null, "status": null, "message": null },
-
     "F_vn_month": { "value": 700243.614, "status": 0, "message": null },
     "F_bp_vn_month": null,
     "F_vn_sum": null,
     "delta_F_vn": { "value": null, "status": null, "message": null },
-
     "F_suzun_month": { "value": 77500.267, "status": 0, "message": null },
     "F_bp_suzun_month": null,
     "F_suzun_sum": null,
     "delta_F_suzun": { "value": null, "status": null, "message": null },
-
     "F_suzun_vankor_month": { "value": 13542.968, "status": 0, "message": null },
     "F_bp_suzun_vankor_month": null,
     "F_suzun_vankor_sum": null,
     "delta_F_suzun_vankor": { "value": null, "status": null, "message": null },
-
     "F_suzun_vslu_month": { "value": 0, "status": 0, "message": null },
     "F_bp_suzun_vslu_month": null,
     "F_suzun_vslu_sum": null,
     "delta_F_suzun_vslu": { "value": null, "status": null, "message": null },
-
     "F_bp_tagul_month": null,
-    "F_tagul_sum": null,    
+    "F_tagul_sum": null,
     "delta_F_tagul": { "value": null, "status": null, "message": null },
-
     "F_tagul_lpu_month": { "value": 94515.549, "status": 0, "message": null },
     "F_bp_tagul_lpu_month": null,
     "F_tagul_lpu_sum": null,
     "delta_F_tagul_lpu": { "value": null, "status": null, "message": null },
-
     "F_tagul_tpu_month": { "value": 170749.091, "status": 0, "message": null },
     "F_bp_tagul_tpu_month": null,
     "F_tagul_tpu_sum": null,
     "delta_F_tagul_tpu": { "value": null, "status": null, "message": null },
-
     "F_skn_month": { "value": 260000, "status": 0, "message": null },
     "F_bp_skn_month": null,
     "F_skn_sum": null,
     "delta_F_skn": { "value": null, "status": null, "message": null },
-
     "F_vo_month": { "value": 15890.478, "status": 0, "message": null },
     "F_bp_vo_month": null,
     "F_vo_sum": null,
     "delta_F_vo": { "value": null, "status": null, "message": null },
-    
     "F_tng_month": { "value": 0, "status": 0, "message": null },
     "F_bp_tng_month": null,
     "F_tng_sum": null,
     "delta_F_tng": { "value": null, "status": null, "message": null },
-
     "F_kchng_month": { "value": 12000, "status": 0, "message": null },
     "F_bp_kchng_month": null,
     "F_kchng_sum": null,
     "delta_F_kchng": { "value": null, "status": null, "message": null }
   },
-
   "standards": {
     "e_suzun": { "value": 6, "status": null, "message": null },
     "e_vo": { "value": 1, "status": null, "message": null },
     "e_tng": { "value": 1, "status": null, "message": null },
     "e_kchng": { "value": 1, "status": null, "message": null },
-
     "K_otkachki": { "value": 0.74, "status": null, "message": null },
     "K_otkachki_month": null,
-
     "k_suzun": { "value": 0.06291, "status": null, "message": null },
     "k_vankor": { "value": 0.01648, "status": null, "message": null },
     "K_lodochny": { "value": 0.00896, "status": null, "message": null },
@@ -157,16 +134,13 @@
     "K_skn": { "value": 0.00274, "status": null, "message": null },
     "K_payaha": { "value": 0.06291, "status": null, "message": null },
     "K_ichem": { "value": 0.00896, "status": null, "message": null },
-
     "K_delta_G_sikn": { "value": 0.869, "status": null, "message": null },
     "K_delta_G_suzun": { "value": 0.869, "status": null, "message": null },
     "K_delta_G_tagul": { "value": 0.87, "status": null, "message": null },
-    "K_delta_G_upn_lodochny": { "value": 0.867, "status": null, "message": null },    
-
+    "K_delta_G_upn_lodochny": { "value": 0.867, "status": null, "message": null },
     "p_gnps": { "value": 0.869, "status": null, "message": null },
     "p_nps_1_2": { "value": 0.87, "status": null, "message": null },
     "p_knps": { "value": 0.867, "status": null, "message": null },
-
     "VN_upsv_yu_min": { "value": 12974.199, "status": null, "message": null },
     "VN_upsv_s_min": { "value": 12264.585, "status": null, "message": null },
     "VN_cps_min": { "value": 8350.009, "status": null, "message": null },
@@ -177,7 +151,6 @@
     "VN_nps_1_min": { "value": 4658.715, "status": null, "message": null },
     "VN_nps_2_min": { "value": 4417.299, "status": null, "message": null },
     "VN_knps_min": { "value": 52274.638, "status": null, "message": null },
-    
     "VA_upsv_yu_min": { "value": 12900, "status": null, "message": null },
     "VA_upsv_s_min": { "value": 8200, "status": null, "message": null },
     "VA_cps_min": { "value": 6500, "status": null, "message": null },
@@ -188,7 +161,6 @@
     "VA_nps_1_min": { "value": 4200, "status": null, "message": null },
     "VA_nps_2_min": { "value": 4000, "status": null, "message": null },
     "VA_knps_min": { "value": 34000, "status": null, "message": null },
-    
     "VA_upsv_yu_max": { "value": 26000, "status": null, "message": null },
     "VA_upsv_s_max": { "value": 23700, "status": null, "message": null },
     "VA_cps_max": { "value": 26000, "status": null, "message": null },
@@ -199,7 +171,6 @@
     "VA_nps_1_max": { "value": 11500, "status": null, "message": null },
     "VA_nps_2_max": { "value": 11500, "status": null, "message": null },
     "VA_knps_max": { "value": 59000, "status": null, "message": null },
-
     "delta_V_upsv_yu_max": { "value": 3300, "status": null, "message": null },
     "delta_V_upsv_s_max": { "value": 2500, "status": null, "message": null },
     "delta_V_cps_max": { "value": 3300, "status": null, "message": null },
@@ -208,8 +179,7 @@
     "delta_V_gnps_max": { "value": 8500, "status": null, "message": null },
     "delta_V_nps_1_max": { "value": 3500, "status": null, "message": null },
     "delta_V_nps_2_max": { "value": 3500, "status": null, "message": null },
-    "delta_V_knps_max": { "value": 8500, "status": null, "message": null }, 
-
+    "delta_V_knps_max": { "value": 8500, "status": null, "message": null },
     "delta_VO_upsv_yu_max": { "value": 2500, "status": null, "message": null },
     "delta_VO_upsv_s_max": { "value": 1500, "status": null, "message": null },
     "delta_VO_cps_max": { "value": 2500, "status": null, "message": null },
@@ -219,74 +189,58 @@
     "delta_VO_nps_1_max": { "value": 2500, "status": null, "message": null },
     "delta_VO_nps_2_max": { "value": 2500, "status": null, "message": null },
     "delta_VO_knps_max": { "value": 8500, "status": null, "message": null },
-
     "V_tstn_vn_min": { "value": 4000, "status": null, "message": null },
     "V_tstn_vn_norm": { "value": 10695, "status": null, "message": null },
     "V_tstn_vn_max": { "value": 14000, "status": null, "message": null },
-
     "V_tstn_suzun_min": { "value": 2000, "status": null, "message": null },
     "V_tstn_suzun_norm": { "value": 2487, "status": null, "message": null },
     "V_tstn_suzun_max": { "value": 6000, "status": null, "message": null },
-
     "V_tstn_suzun_vankor_min": { "value": 1000, "status": null, "message": null },
     "V_tstn_suzun_vankor_norm": { "value": 1500, "status": null, "message": null },
     "V_tstn_suzun_vankor_max": { "value": 5000, "status": null, "message": null },
-
     "V_tstn_suzun_vslu_min": { "value": 500, "status": null, "message": null },
     "V_tstn_suzun_vslu_norm": { "value": 1300, "status": null, "message": null },
     "V_tstn_suzun_vslu_max": { "value": 4000, "status": null, "message": null },
-
     "V_tstn_tagul_obsh_min": { "value": 5000, "status": null, "message": null },
     "V_tstn_tagul_obsh_max": { "value": 16000, "status": null, "message": null },
-
     "V_tstn_lodochny_min": { "value": 3000, "status": null, "message": null },
     "V_tstn_lodochny_norm": { "value": 4991, "status": null, "message": null },
     "V_tstn_lodochny_max": { "value": 11000, "status": null, "message": null },
-
     "V_tstn_tagul_min": { "value": 4000, "status": null, "message": null },
     "V_tstn_tagul_norm": { "value": 7317, "status": null, "message": null },
     "V_tstn_tagul_max": { "value": 12000, "status": null, "message": null },
-
     "V_tstn_skn_min": { "value": 3000, "status": null, "message": null },
     "V_tstn_skn_norm": { "value": 5000, "status": null, "message": null },
     "V_tstn_skn_max": { "value": 8000, "status": null, "message": null },
-
     "V_tstn_vo_min": { "value": 1000, "status": null, "message": null },
     "V_tstn_vo_norm": { "value": 1600, "status": null, "message": null },
     "V_tstn_vo_max": { "value": 6000, "status": null, "message": null },
-
     "V_tstn_tng_min": { "value": 300, "status": null, "message": null },
     "V_tstn_tng_norm": { "value": 600, "status": null, "message": null },
     "V_tstn_tng_max": { "value": 1200, "status": null, "message": null },
-
     "V_tstn_kchng_min": { "value": 1500, "status": null, "message": null },
     "V_tstn_kchng_norm": { "value": 3000, "status": null, "message": null },
     "V_tstn_kchng_max": { "value": 5000, "status": null, "message": null },
-
     "V_ichem_min": { "value": 100, "status": null, "message": null },
     "V_ichem_norm": { "value": 200, "status": null, "message": null },
     "V_ichem_max": { "value": 400, "status": null, "message": null },
-    
     "Q_gnps_min1": { "value": 623.322, "status": null, "message": null },
     "Q_gnps_max1": { "value": 1438.435, "status": null, "message": null },
     "Q_gnps_min2": { "value": 1438.435, "status": null, "message": null },
     "Q_gnps_max2": { "value": 2013.809, "status": null, "message": null },
-      
     "Q_nps_1_2_min1": { "value": 838.1226, "status": null, "message": null },
     "Q_nps_1_2_max1": { "value": 1810.3448, "status": null, "message": null },
     "Q_nps_1_2_min2": { "value": 1810.3448, "status": null, "message": null },
     "Q_nps_1_2_max2": { "value": 2490.421, "status": null, "message": null },
-
     "Q_knps_min1": { "value": 807.82, "status": null, "message": null },
     "Q_knps_max1": { "value": 1441.753, "status": null, "message": null },
     "Q_knps_min2": { "value": 1446.559, "status": null, "message": null },
     "Q_knps_max2": { "value": 2667.243, "status": null, "message": null }
   },
-
-  "plan_BP":{
+  "plan_BP": {
     "V_vn_ost_np_nm": { "value": 10340.396, "status": 0, "message": null },
-    "V_vn_ost_app_nm": { "value": 3946.780, "status": 0, "message": null },
-    "V_vn_ost_tech_nm": { "value": 27903.380, "status": 0, "message": null },
+    "V_vn_ost_app_nm": { "value": 3946.78, "status": 0, "message": null },
+    "V_vn_ost_tech_nm": { "value": 27903.38, "status": 0, "message": null },
     "V_vn_ost_dead_nm": { "value": 0, "status": 0, "message": null },
     "V_vn_ost_rvs_nm": { "value": 0, "status": 0, "message": null },
     "V_vn_ost_tov_nm": { "value": 0, "status": 0, "message": null },
@@ -299,17 +253,16 @@
     "G_vn_fuel": { "value": 0, "status": 0, "message": null },
     "G_vn_fill": { "value": 0, "status": 0, "message": null },
     "G_vn_release_rn_drillig": { "value": 0, "status": 0, "message": null },
-    "G_vn_release_suzun": { "value": 18811, "status": 0, "message": null }, 
+    "G_vn_release_suzun": { "value": 18811, "status": 0, "message": null },
     "G_vn_release_well_service": { "value": 0, "status": 0, "message": null },
     "F_vn_total": { "value": 700244, "status": 0, "message": null },
     "V_vn_ost_np_km": { "value": 10340.396, "status": 0, "message": null },
-    "V_vn_ost_app_km": { "value": 3946.780, "status": 0, "message": null },
-    "V_vn_ost_tech_km": { "value": 27903.380, "status": 0, "message": null },
+    "V_vn_ost_app_km": { "value": 3946.78, "status": 0, "message": null },
+    "V_vn_ost_tech_km": { "value": 27903.38, "status": 0, "message": null },
     "V_vn_ost_dead_km": { "value": 0, "status": 0, "message": null },
     "V_vn_ost_rvs_km": { "value": 0, "status": 0, "message": null },
     "V_vn_ost_tov_km": { "value": 0, "status": 0, "message": null },
     "V_vn_path_km": { "value": 10695.101, "status": 0, "message": null },
-
     "V_suzun_ost_np_nm": { "value": 18123.917, "status": 0, "message": null },
     "V_suzun_ost_app_nm": { "value": 383.009, "status": 0, "message": null },
     "V_suzun_ost_tech_nm": { "value": 3612.771, "status": 0, "message": null },
@@ -334,7 +287,6 @@
     "V_suzun_ost_rvs_km": { "value": 0, "status": 0, "message": null },
     "V_suzun_ost_tov_km": { "value": 0, "status": 0, "message": null },
     "V_suzun_path_km": { "value": 5287, "status": 0, "message": null },
-
     "V_vo_ost_np_nm": { "value": 10.051, "status": 0, "message": null },
     "V_vo_ost_app_nm": { "value": 87.057, "status": 0, "message": null },
     "V_vo_ost_tech_nm": { "value": 87, "status": 0, "message": null },
@@ -358,7 +310,6 @@
     "V_vo_ost_rvs_km": { "value": 0, "status": 0, "message": null },
     "V_vo_ost_tov_km": { "value": 0, "status": 0, "message": null },
     "V_vo_path_km": { "value": 0, "status": 0, "message": null },
-
     "V_lodochny_ost_np_nm": { "value": 1456, "status": 0, "message": null },
     "V_lodochny_ost_app_nm": { "value": 714.635, "status": 0, "message": null },
     "V_lodochny_ost_tech_nm": { "value": 3725.502, "status": 0, "message": null },
@@ -380,7 +331,6 @@
     "V_lodochny_ost_rvs_km": { "value": 0, "status": 0, "message": null },
     "V_lodochny_ost_tov_km": { "value": 0, "status": 0, "message": null },
     "V_lodochny_path_km": { "value": 4990.598, "status": 0, "message": null },
-    
     "V_tagul_ost_np_nm": { "value": 1980, "status": 0, "message": null },
     "V_tagul_ost_app_nm": { "value": 1012.612, "status": 0, "message": null },
     "V_tagul_ost_tech_nm": { "value": 0, "status": 0, "message": null },
@@ -403,7 +353,6 @@
     "V_tagul_ost_rvs_km": { "value": 0, "status": 0, "message": null },
     "V_tagul_ost_tov_km": { "value": 0, "status": 0, "message": null },
     "V_tagul_path_km": { "value": 7317.394, "status": 0, "message": null },
-
     "V_vn_ost_vpy_nm": null,
     "V_vn_ost_nm": null,
     "Q_vn_total": null,
@@ -414,7 +363,6 @@
     "V_vn_ost_km": null,
     "V_vn_delta_ost": null,
     "V_vn_check": { "value": null, "status": null, "message": null },
-
     "V_suzun_ost_spy_nm": null,
     "V_suzun_ost_nm": null,
     "Q_suzun_total": null,
@@ -426,7 +374,6 @@
     "V_suzun_ost_km": null,
     "V_suzun_delta_ost": null,
     "V_suzun_check": { "value": null, "status": null, "message": null },
-
     "V_vo_ost_vpy_nm": null,
     "V_vo_ost_nm": null,
     "Q_vo_total": null,
@@ -436,7 +383,6 @@
     "V_vo_ost_km": null,
     "V_vo_delta_ost": null,
     "V_vo_check": { "value": null, "status": null, "message": null },
-
     "V_lodochny_ost_lpy_nm": null,
     "V_lodochny_ost_nm": null,
     "Q_lodochny_total": null,
@@ -447,7 +393,6 @@
     "V_lodochny_ost_km": null,
     "V_lodochny_delta_ost": null,
     "V_lodochny_check": { "value": null, "status": null, "message": null },
-
     "V_tagul_ost_tpy_nm": null,
     "V_tagul_ost_nm": null,
     "Q_tagul_total": null,
@@ -458,24 +403,20 @@
     "V_tagul_ost_km": null,
     "delta_V_tagul_ost": null,
     "V_tagul_check": { "value": null, "status": null, "message": null }
-
   },
-
-  "plan_GTM":{
+  "plan_GTM": {
     "V_vn_gtm_ost_dead_nm": { "value": 0, "status": 0, "message": null },
     "V_vn_gtm_ost_np_nm": { "value": 2772.479, "status": 0, "message": null },
-    "V_vn_gtm_ost_app_nm": { "value": 3946.780, "status": 0, "message": null },
+    "V_vn_gtm_ost_app_nm": { "value": 3946.78, "status": 0, "message": null },
     "V_vn_gtm_ost_rvs_clean_nm": { "value": 0, "status": 0, "message": null },
     "V_vn_gtm_ost_tov_nm": { "value": 0, "status": 0, "message": null },
     "Q_vn_gtm_condensate": { "value": 1608, "status": 0, "message": null },
     "K_vn_prod": { "value": 0.00016, "status": 0, "message": null },
     "V_vn_gtm_lost_condensate": { "value": 0, "status": 0, "message": null },
-    
     "G_vn_gtm_fuel": { "value": 0, "status": 0, "message": null },
     "G_vn_gtm_fill": { "value": 0, "status": 0, "message": null },
     "G_tagul_gtm_release_tbs": { "value": 0, "status": 0, "message": null },
     "G_vn_gtm_release_rn_drillig": { "value": 0, "status": 0, "message": null },
-
     "V_suzun_gtm_ost_np_nm": { "value": 18123.917, "status": 0, "message": null },
     "V_suzun_gtm_ost_app_nm": { "value": 383.009, "status": 0, "message": null },
     "V_suzun_gtm_ost_dead_nm": { "value": 0, "status": 0, "message": null },
@@ -486,7 +427,6 @@
     "K_suzun_prod": { "value": 0.00011, "status": 0, "message": null },
     "G_suzun_gtm_fuel": { "value": 0, "status": 0, "message": null },
     "G_suzun_gtm_release_rn_drillig": { "value": 0, "status": 0, "message": null },
-
     "V_vo_gtm_ost_np_nm": { "value": 10.051, "status": 0, "message": null },
     "V_vo_gtm_ost_app_nm": { "value": 87.057, "status": 0, "message": null },
     "V_vo_gtm_ost_dead_nm": { "value": 0, "status": 0, "message": null },
@@ -499,7 +439,6 @@
     "G_vo_gtm_fuel": { "value": 0, "status": 0, "message": null },
     "G_vo_gtm_fill": { "value": 0, "status": 0, "message": null },
     "G_vo_gtm_release": { "value": 0, "status": 0, "message": null },
-
     "V_lodochny_gtm_ost_np_nm": { "value": 1456.067, "status": 0, "message": null },
     "V_lodochny_gtm_ost_app_nm": { "value": 714.635, "status": 0, "message": null },
     "V_lodochny_gtm_ost_upn_ichem_nm": { "value": 0, "status": 0, "message": null },
@@ -513,7 +452,6 @@
     "K_lodochny_transp": { "value": 0.00868, "status": 0, "message": null },
     "G_lodochny_gtm_release": { "value": 0, "status": 0, "message": null },
     "G_lodochny_gtm_own": { "value": 0, "status": 0, "message": null },
-    
     "V_tagul_gtm_ost_np_nm": { "value": 1980.049, "status": 0, "message": null },
     "V_tagul_gtm_ost_app_nm": { "value": 1012.612, "status": 0, "message": null },
     "V_tagul_gtm_ost_dead_nm": { "value": 0, "status": 0, "message": null },
@@ -527,7 +465,6 @@
     "G_tagul_gtm_release_rr": { "value": 0, "status": 0, "message": null },
     "V_tagul_gtm_ost_np_km": { "value": 0, "status": 0, "message": null },
     "V_tagul_gtm_ost_app_km": { "value": 0, "status": 0, "message": null },
-
     "V_vn_gtm_ost_texn_nm": null,
     "V_vn_gtm_ost_rvs_nm": null,
     "V_vn_gtm_path_nm": null,
@@ -552,7 +489,6 @@
     "V_vn_gtm_ost_km": null,
     "delta_V_vn_gtm_ost": null,
     "V_vn_gtm_check": { "value": null, "status": null, "message": null },
-
     "V_suzun_gtm_ost_upn_nm": null,
     "V_suzun_gtm_ost_texn_nm": null,
     "V_suzun_gtm_ost_rvs_nm": null,
@@ -585,7 +521,6 @@
     "V_suzun_gtm_ost_km": null,
     "delta_V_suzun_gtm_ost": null,
     "V_suzun_gtm_check": { "value": null, "status": null, "message": null },
-
     "V_vo_gtm_ost_upn_lodochny_nm": null,
     "V_vo_gtm_ost_rvs_nm": null,
     "V_vo_gtm_path_nm": null,
@@ -610,7 +545,6 @@
     "V_vo_gtm_ost_km": null,
     "delta_V_vo_gtm_ost": null,
     "V_vo_gtm_check": { "value": null, "status": null, "message": null },
-
     "V_lodochny_gtm_ost_upn_lodochny_nm": null,
     "V_lodochny_gtm_ost_rvs_nm": null,
     "V_lodochny_gtm_ost_nm": null,
@@ -634,7 +568,6 @@
     "V_lodochny_gtm_ost_km": null,
     "delta_V_lodochny_gtm_ost": null,
     "V_lodochny_gtm_check": { "value": null, "status": null, "message": null },
-    
     "V_tagul_gtm_ost_rvs_nm": null,
     "V_tagul_gtm_ost_tpu_nm": null,
     "V_tagul_gtm_path_nm": null,
@@ -657,10 +590,8 @@
     "V_tagul_gtm_ost_km": null,
     "delta_V_tagul_gtm_ost": null,
     "V_tagul_gtm_check": { "value": null, "status": null, "message": null }
-
   },
- 
-  "days":[
+  "days": [
     {
       "date": "01.12.2025",
       "Q_vankor": { "value": 22295, "status": 0, "message": null },
@@ -712,12 +643,10 @@
       "G_skn": { "value": 10200, "status": 0, "message": null },
       "G_kchng": null,
       "G_gnps": null,
-
       "V_gnps": { "value": null, "status": null, "message": null },
       "V_nps_1": { "value": null, "status": null, "message": null },
       "V_nps_2": { "value": null, "status": null, "message": null },
       "V_knps": { "value": null, "status": null, "message": null },
-
       "V_tstn": null,
       "V_tstn_rn_vn": { "value": null, "status": null, "message": null },
       "V_tstn_vn": { "value": null, "status": null, "message": null },
@@ -731,7 +660,6 @@
       "V_tstn_vo": { "value": null, "status": null, "message": null },
       "V_tstn_tng": { "value": null, "status": null, "message": null },
       "V_tstn_kchng": { "value": null, "status": null, "message": null },
-
       "F_bp": { "value": null, "status": null, "message": null },
       "F_bp_vn": 0,
       "F_bp_suzun": 0,
@@ -744,7 +672,6 @@
       "F_bp_vo": 0,
       "F_bp_tng": 0,
       "F_bp_kchng": 0,
-
       "F": null,
       "F_vn": null,
       "F_suzun": null,
@@ -757,12 +684,13 @@
       "F_vo": null,
       "F_tng": null,
       "F_kchng": null,
-
       "Q_gnps": { "value": null, "status": null, "message": null },
       "Q_nps_1_2": { "value": null, "status": null, "message": null },
-      "Q_knps": { "value": null, "status": null, "message": null }
+      "Q_knps": { "value": null, "status": null, "message": null },
+      "node": { "value": null, "status": null, "message": null },
+      "K_work": null,
+      "t_ost_sikn_1209": null
     },
-
     {
       "date": "02.12.2025",
       "Q_vankor": { "value": 22083, "status": null, "message": null },
@@ -818,7 +746,6 @@
       "V_nps_1": { "value": null, "status": null, "message": null },
       "V_nps_2": { "value": null, "status": null, "message": null },
       "V_knps": { "value": null, "status": null, "message": null },
-
       "V_tstn": null,
       "V_tstn_rn_vn": { "value": null, "status": null, "message": null },
       "V_tstn_vn": { "value": null, "status": null, "message": null },
@@ -832,7 +759,6 @@
       "V_tstn_vo": { "value": null, "status": null, "message": null },
       "V_tstn_tng": { "value": null, "status": null, "message": null },
       "V_tstn_kchng": { "value": null, "status": null, "message": null },
-
       "F_bp": { "value": null, "status": null, "message": null },
       "F_bp_vn": null,
       "F_bp_suzun": null,
@@ -845,7 +771,6 @@
       "F_bp_vo": null,
       "F_bp_tng": null,
       "F_bp_kchng": null,
-
       "F": null,
       "F_vn": null,
       "F_suzun": null,
@@ -858,12 +783,13 @@
       "F_vo": null,
       "F_tng": null,
       "F_kchng": null,
-
       "Q_gnps": { "value": null, "status": null, "message": null },
       "Q_nps_1_2": { "value": null, "status": null, "message": null },
-      "Q_knps": { "value": null, "status": null, "message": null }
+      "Q_knps": { "value": null, "status": null, "message": null },
+      "node": { "value": null, "status": null, "message": null },
+      "K_work": null,
+      "t_ost_sikn_1209": null
     },
-
     {
       "date": "03.12.2025",
       "Q_vankor": { "value": 21946, "status": null, "message": null },
@@ -915,12 +841,10 @@
       "G_skn": { "value": 10200, "status": 0, "message": null },
       "G_kchng": null,
       "G_gnps": null,
-
       "V_gnps": { "value": null, "status": null, "message": null },
       "V_nps_1": { "value": null, "status": null, "message": null },
       "V_nps_2": { "value": null, "status": null, "message": null },
       "V_knps": { "value": null, "status": null, "message": null },
-
       "V_tstn": null,
       "V_tstn_rn_vn": { "value": null, "status": null, "message": null },
       "V_tstn_vn": { "value": null, "status": null, "message": null },
@@ -934,7 +858,6 @@
       "V_tstn_vo": { "value": null, "status": null, "message": null },
       "V_tstn_tng": { "value": null, "status": null, "message": null },
       "V_tstn_kchng": { "value": null, "status": null, "message": null },
-
       "F_bp": { "value": null, "status": null, "message": null },
       "F_bp_vn": null,
       "F_bp_suzun": null,
@@ -947,7 +870,6 @@
       "F_bp_vo": null,
       "F_bp_tng": null,
       "F_bp_kchng": null,
-
       "F": null,
       "F_vn": null,
       "F_suzun": null,
@@ -960,12 +882,13 @@
       "F_vo": null,
       "F_tng": null,
       "F_kchng": null,
-
       "Q_gnps": { "value": null, "status": null, "message": null },
       "Q_nps_1_2": { "value": null, "status": null, "message": null },
-      "Q_knps": { "value": null, "status": null, "message": null }
+      "Q_knps": { "value": null, "status": null, "message": null },
+      "node": { "value": null, "status": null, "message": null },
+      "K_work": null,
+      "t_ost_sikn_1209": null
     },
-
     {
       "date": "04.12.2025",
       "Q_vankor": { "value": 21836, "status": null, "message": null },
@@ -1017,12 +940,10 @@
       "G_skn": { "value": 10200, "status": 0, "message": null },
       "G_kchng": null,
       "G_gnps": null,
-
       "V_gnps": { "value": null, "status": null, "message": null },
       "V_nps_1": { "value": null, "status": null, "message": null },
       "V_nps_2": { "value": null, "status": null, "message": null },
       "V_knps": { "value": null, "status": null, "message": null },
-
       "V_tstn": null,
       "V_tstn_rn_vn": { "value": null, "status": null, "message": null },
       "V_tstn_vn": { "value": null, "status": null, "message": null },
@@ -1036,7 +957,6 @@
       "V_tstn_vo": { "value": null, "status": null, "message": null },
       "V_tstn_tng": { "value": null, "status": null, "message": null },
       "V_tstn_kchng": { "value": null, "status": null, "message": null },
-
       "F_bp": { "value": null, "status": null, "message": null },
       "F_bp_vn": null,
       "F_bp_suzun": null,
@@ -1049,7 +969,6 @@
       "F_bp_vo": null,
       "F_bp_tng": null,
       "F_bp_kchng": null,
-
       "F": null,
       "F_vn": null,
       "F_suzun": null,
@@ -1062,12 +981,13 @@
       "F_vo": null,
       "F_tng": null,
       "F_kchng": null,
-
       "Q_gnps": { "value": null, "status": null, "message": null },
       "Q_nps_1_2": { "value": null, "status": null, "message": null },
-      "Q_knps": { "value": null, "status": null, "message": null }
+      "Q_knps": { "value": null, "status": null, "message": null },
+      "node": { "value": null, "status": null, "message": null },
+      "K_work": null,
+      "t_ost_sikn_1209": null
     },
-
     {
       "date": "05.12.2025",
       "Q_vankor": { "value": 21813, "status": null, "message": null },
@@ -1119,12 +1039,10 @@
       "G_skn": { "value": 10200, "status": 0, "message": null },
       "G_kchng": null,
       "G_gnps": null,
-
       "V_gnps": { "value": null, "status": null, "message": null },
       "V_nps_1": { "value": null, "status": null, "message": null },
       "V_nps_2": { "value": null, "status": null, "message": null },
       "V_knps": { "value": null, "status": null, "message": null },
-
       "V_tstn": null,
       "V_tstn_rn_vn": { "value": null, "status": null, "message": null },
       "V_tstn_vn": { "value": null, "status": null, "message": null },
@@ -1138,7 +1056,6 @@
       "V_tstn_vo": { "value": null, "status": null, "message": null },
       "V_tstn_tng": { "value": null, "status": null, "message": null },
       "V_tstn_kchng": { "value": null, "status": null, "message": null },
-
       "F_bp": { "value": null, "status": null, "message": null },
       "F_bp_vn": null,
       "F_bp_suzun": null,
@@ -1151,7 +1068,6 @@
       "F_bp_vo": null,
       "F_bp_tng": null,
       "F_bp_kchng": null,
-
       "F": null,
       "F_vn": null,
       "F_suzun": null,
@@ -1164,12 +1080,13 @@
       "F_vo": null,
       "F_tng": null,
       "F_kchng": null,
-
       "Q_gnps": { "value": null, "status": null, "message": null },
       "Q_nps_1_2": { "value": null, "status": null, "message": null },
-      "Q_knps": { "value": null, "status": null, "message": null }
+      "Q_knps": { "value": null, "status": null, "message": null },
+      "node": { "value": null, "status": null, "message": null },
+      "K_work": null,
+      "t_ost_sikn_1209": null
     },
-
     {
       "date": "06.12.2025",
       "Q_vankor": { "value": 21739, "status": null, "message": null },
@@ -1221,12 +1138,10 @@
       "G_skn": { "value": 10200, "status": 0, "message": null },
       "G_kchng": null,
       "G_gnps": null,
-
       "V_gnps": { "value": null, "status": null, "message": null },
       "V_nps_1": { "value": null, "status": null, "message": null },
       "V_nps_2": { "value": null, "status": null, "message": null },
       "V_knps": { "value": null, "status": null, "message": null },
-
       "V_tstn": null,
       "V_tstn_rn_vn": { "value": null, "status": null, "message": null },
       "V_tstn_vn": { "value": null, "status": null, "message": null },
@@ -1240,7 +1155,6 @@
       "V_tstn_vo": { "value": null, "status": null, "message": null },
       "V_tstn_tng": { "value": null, "status": null, "message": null },
       "V_tstn_kchng": { "value": null, "status": null, "message": null },
-
       "F_bp": { "value": null, "status": null, "message": null },
       "F_bp_vn": null,
       "F_bp_suzun": null,
@@ -1253,7 +1167,6 @@
       "F_bp_vo": null,
       "F_bp_tng": null,
       "F_bp_kchng": null,
-
       "F": null,
       "F_vn": null,
       "F_suzun": null,
@@ -1266,12 +1179,13 @@
       "F_vo": null,
       "F_tng": null,
       "F_kchng": null,
-
       "Q_gnps": { "value": null, "status": null, "message": null },
       "Q_nps_1_2": { "value": null, "status": null, "message": null },
-      "Q_knps": { "value": null, "status": null, "message": null }
+      "Q_knps": { "value": null, "status": null, "message": null },
+      "node": { "value": null, "status": null, "message": null },
+      "K_work": null,
+      "t_ost_sikn_1209": null
     },
-
     {
       "date": "07.12.2025",
       "Q_vankor": { "value": 21629, "status": null, "message": null },
@@ -1323,12 +1237,10 @@
       "G_skn": { "value": 10200, "status": 0, "message": null },
       "G_kchng": null,
       "G_gnps": null,
-
       "V_gnps": { "value": null, "status": null, "message": null },
       "V_nps_1": { "value": null, "status": null, "message": null },
       "V_nps_2": { "value": null, "status": null, "message": null },
       "V_knps": { "value": null, "status": null, "message": null },
-
       "V_tstn": null,
       "V_tstn_rn_vn": { "value": null, "status": null, "message": null },
       "V_tstn_vn": { "value": null, "status": null, "message": null },
@@ -1342,7 +1254,6 @@
       "V_tstn_vo": { "value": null, "status": null, "message": null },
       "V_tstn_tng": { "value": null, "status": null, "message": null },
       "V_tstn_kchng": { "value": null, "status": null, "message": null },
-
       "F_bp": { "value": null, "status": null, "message": null },
       "F_bp_vn": null,
       "F_bp_suzun": null,
@@ -1355,7 +1266,6 @@
       "F_bp_vo": null,
       "F_bp_tng": null,
       "F_bp_kchng": null,
-
       "F": null,
       "F_vn": null,
       "F_suzun": null,
@@ -1368,12 +1278,13 @@
       "F_vo": null,
       "F_tng": null,
       "F_kchng": null,
-
       "Q_gnps": { "value": null, "status": null, "message": null },
       "Q_nps_1_2": { "value": null, "status": null, "message": null },
-      "Q_knps": { "value": null, "status": null, "message": null }
+      "Q_knps": { "value": null, "status": null, "message": null },
+      "node": { "value": null, "status": null, "message": null },
+      "K_work": null,
+      "t_ost_sikn_1209": null
     },
-
     {
       "date": "08.12.2025",
       "Q_vankor": { "value": 21602, "status": null, "message": null },
@@ -1425,12 +1336,10 @@
       "G_skn": { "value": 9200, "status": 0, "message": null },
       "G_kchng": null,
       "G_gnps": null,
-
       "V_gnps": { "value": null, "status": null, "message": null },
       "V_nps_1": { "value": null, "status": null, "message": null },
       "V_nps_2": { "value": null, "status": null, "message": null },
       "V_knps": { "value": null, "status": null, "message": null },
-
       "V_tstn": null,
       "V_tstn_rn_vn": { "value": null, "status": null, "message": null },
       "V_tstn_vn": { "value": null, "status": null, "message": null },
@@ -1444,7 +1353,6 @@
       "V_tstn_vo": { "value": null, "status": null, "message": null },
       "V_tstn_tng": { "value": null, "status": null, "message": null },
       "V_tstn_kchng": { "value": null, "status": null, "message": null },
-
       "F_bp": { "value": null, "status": null, "message": null },
       "F_bp_vn": null,
       "F_bp_suzun": null,
@@ -1457,7 +1365,6 @@
       "F_bp_vo": null,
       "F_bp_tng": null,
       "F_bp_kchng": null,
-
       "F": null,
       "F_vn": null,
       "F_suzun": null,
@@ -1470,12 +1377,13 @@
       "F_vo": null,
       "F_tng": null,
       "F_kchng": null,
-
       "Q_gnps": { "value": null, "status": null, "message": null },
       "Q_nps_1_2": { "value": null, "status": null, "message": null },
-      "Q_knps": { "value": null, "status": null, "message": null }
+      "Q_knps": { "value": null, "status": null, "message": null },
+      "node": { "value": null, "status": null, "message": null },
+      "K_work": null,
+      "t_ost_sikn_1209": null
     },
-
     {
       "date": "09.12.2025",
       "Q_vankor": { "value": 21520, "status": null, "message": null },
@@ -1527,12 +1435,10 @@
       "G_skn": { "value": 8000, "status": 0, "message": null },
       "G_kchng": null,
       "G_gnps": null,
-
       "V_gnps": { "value": null, "status": null, "message": null },
       "V_nps_1": { "value": null, "status": null, "message": null },
       "V_nps_2": { "value": null, "status": null, "message": null },
       "V_knps": { "value": null, "status": null, "message": null },
-
       "V_tstn": null,
       "V_tstn_rn_vn": { "value": null, "status": null, "message": null },
       "V_tstn_vn": { "value": null, "status": null, "message": null },
@@ -1546,7 +1452,6 @@
       "V_tstn_vo": { "value": null, "status": null, "message": null },
       "V_tstn_tng": { "value": null, "status": null, "message": null },
       "V_tstn_kchng": { "value": null, "status": null, "message": null },
-
       "F_bp": { "value": null, "status": null, "message": null },
       "F_bp_vn": null,
       "F_bp_suzun": null,
@@ -1559,7 +1464,6 @@
       "F_bp_vo": null,
       "F_bp_tng": null,
       "F_bp_kchng": null,
-
       "F": null,
       "F_vn": null,
       "F_suzun": null,
@@ -1572,12 +1476,13 @@
       "F_vo": null,
       "F_tng": null,
       "F_kchng": null,
-
       "Q_gnps": { "value": null, "status": null, "message": null },
       "Q_nps_1_2": { "value": null, "status": null, "message": null },
-      "Q_knps": { "value": null, "status": null, "message": null }
+      "Q_knps": { "value": null, "status": null, "message": null },
+      "node": { "value": null, "status": null, "message": null },
+      "K_work": null,
+      "t_ost_sikn_1209": null
     },
-
     {
       "date": "10.12.2025",
       "Q_vankor": { "value": 21621, "status": null, "message": null },
@@ -1629,12 +1534,10 @@
       "G_skn": { "value": 10200, "status": 0, "message": null },
       "G_kchng": null,
       "G_gnps": null,
-
       "V_gnps": { "value": null, "status": null, "message": null },
       "V_nps_1": { "value": null, "status": null, "message": null },
       "V_nps_2": { "value": null, "status": null, "message": null },
       "V_knps": { "value": null, "status": null, "message": null },
-
       "V_tstn": null,
       "V_tstn_rn_vn": { "value": null, "status": null, "message": null },
       "V_tstn_vn": { "value": null, "status": null, "message": null },
@@ -1648,7 +1551,6 @@
       "V_tstn_vo": { "value": null, "status": null, "message": null },
       "V_tstn_tng": { "value": null, "status": null, "message": null },
       "V_tstn_kchng": { "value": null, "status": null, "message": null },
-
       "F_bp": { "value": null, "status": null, "message": null },
       "F_bp_vn": null,
       "F_bp_suzun": null,
@@ -1661,7 +1563,6 @@
       "F_bp_vo": null,
       "F_bp_tng": null,
       "F_bp_kchng": null,
-
       "F": null,
       "F_vn": null,
       "F_suzun": null,
@@ -1674,12 +1575,13 @@
       "F_vo": null,
       "F_tng": null,
       "F_kchng": null,
-
       "Q_gnps": { "value": null, "status": null, "message": null },
       "Q_nps_1_2": { "value": null, "status": null, "message": null },
-      "Q_knps": { "value": null, "status": null, "message": null }
+      "Q_knps": { "value": null, "status": null, "message": null },
+      "node": { "value": null, "status": null, "message": null },
+      "K_work": null,
+      "t_ost_sikn_1209": null
     },
-
     {
       "date": "11.12.2025",
       "Q_vankor": { "value": 21629, "status": null, "message": null },
@@ -1731,12 +1633,10 @@
       "G_skn": { "value": 10200, "status": 0, "message": null },
       "G_kchng": null,
       "G_gnps": null,
-
       "V_gnps": { "value": null, "status": null, "message": null },
       "V_nps_1": { "value": null, "status": null, "message": null },
       "V_nps_2": { "value": null, "status": null, "message": null },
       "V_knps": { "value": null, "status": null, "message": null },
-
       "V_tstn": null,
       "V_tstn_rn_vn": { "value": null, "status": null, "message": null },
       "V_tstn_vn": { "value": null, "status": null, "message": null },
@@ -1750,7 +1650,6 @@
       "V_tstn_vo": { "value": null, "status": null, "message": null },
       "V_tstn_tng": { "value": null, "status": null, "message": null },
       "V_tstn_kchng": { "value": null, "status": null, "message": null },
-
       "F_bp": { "value": null, "status": null, "message": null },
       "F_bp_vn": null,
       "F_bp_suzun": null,
@@ -1763,7 +1662,6 @@
       "F_bp_vo": null,
       "F_bp_tng": null,
       "F_bp_kchng": null,
-
       "F": null,
       "F_vn": null,
       "F_suzun": null,
@@ -1776,12 +1674,13 @@
       "F_vo": null,
       "F_tng": null,
       "F_kchng": null,
-
       "Q_gnps": { "value": null, "status": null, "message": null },
       "Q_nps_1_2": { "value": null, "status": null, "message": null },
-      "Q_knps": { "value": null, "status": null, "message": null }
+      "Q_knps": { "value": null, "status": null, "message": null },
+      "node": { "value": null, "status": null, "message": null },
+      "K_work": null,
+      "t_ost_sikn_1209": null
     },
-
     {
       "date": "12.12.2025",
       "Q_vankor": { "value": 21659, "status": null, "message": null },
@@ -1833,12 +1732,10 @@
       "G_skn": { "value": 10200, "status": 0, "message": null },
       "G_kchng": null,
       "G_gnps": null,
-
       "V_gnps": { "value": null, "status": null, "message": null },
       "V_nps_1": { "value": null, "status": null, "message": null },
       "V_nps_2": { "value": null, "status": null, "message": null },
       "V_knps": { "value": null, "status": null, "message": null },
-
       "V_tstn": null,
       "V_tstn_rn_vn": { "value": null, "status": null, "message": null },
       "V_tstn_vn": { "value": null, "status": null, "message": null },
@@ -1852,7 +1749,6 @@
       "V_tstn_vo": { "value": null, "status": null, "message": null },
       "V_tstn_tng": { "value": null, "status": null, "message": null },
       "V_tstn_kchng": { "value": null, "status": null, "message": null },
-
       "F_bp": { "value": null, "status": null, "message": null },
       "F_bp_vn": null,
       "F_bp_suzun": null,
@@ -1865,7 +1761,6 @@
       "F_bp_vo": null,
       "F_bp_tng": null,
       "F_bp_kchng": null,
-
       "F": null,
       "F_vn": null,
       "F_suzun": null,
@@ -1878,12 +1773,13 @@
       "F_vo": null,
       "F_tng": null,
       "F_kchng": null,
-
       "Q_gnps": { "value": null, "status": null, "message": null },
       "Q_nps_1_2": { "value": null, "status": null, "message": null },
-      "Q_knps": { "value": null, "status": null, "message": null }
+      "Q_knps": { "value": null, "status": null, "message": null },
+      "node": { "value": null, "status": null, "message": null },
+      "K_work": null,
+      "t_ost_sikn_1209": null
     },
-
     {
       "date": "13.12.2025",
       "Q_vankor": { "value": 21715, "status": null, "message": null },
@@ -1935,12 +1831,10 @@
       "G_skn": { "value": 10200, "status": 0, "message": null },
       "G_kchng": null,
       "G_gnps": null,
-
       "V_gnps": { "value": null, "status": null, "message": null },
       "V_nps_1": { "value": null, "status": null, "message": null },
       "V_nps_2": { "value": null, "status": null, "message": null },
       "V_knps": { "value": null, "status": null, "message": null },
-
       "V_tstn": null,
       "V_tstn_rn_vn": { "value": null, "status": null, "message": null },
       "V_tstn_vn": { "value": null, "status": null, "message": null },
@@ -1954,7 +1848,6 @@
       "V_tstn_vo": { "value": null, "status": null, "message": null },
       "V_tstn_tng": { "value": null, "status": null, "message": null },
       "V_tstn_kchng": { "value": null, "status": null, "message": null },
-
       "F_bp": { "value": null, "status": null, "message": null },
       "F_bp_vn": null,
       "F_bp_suzun": null,
@@ -1967,7 +1860,6 @@
       "F_bp_vo": null,
       "F_bp_tng": null,
       "F_bp_kchng": null,
-
       "F": null,
       "F_vn": null,
       "F_suzun": null,
@@ -1980,12 +1872,13 @@
       "F_vo": null,
       "F_tng": null,
       "F_kchng": null,
-
       "Q_gnps": { "value": null, "status": null, "message": null },
       "Q_nps_1_2": { "value": null, "status": null, "message": null },
-      "Q_knps": { "value": null, "status": null, "message": null }
+      "Q_knps": { "value": null, "status": null, "message": null },
+      "node": { "value": null, "status": null, "message": null },
+      "K_work": null,
+      "t_ost_sikn_1209": null
     },
-
     {
       "date": "14.12.2025",
       "Q_vankor": { "value": 21804, "status": null, "message": null },
@@ -2037,12 +1930,10 @@
       "G_skn": { "value": 10200, "status": 0, "message": null },
       "G_kchng": null,
       "G_gnps": null,
-
       "V_gnps": { "value": null, "status": null, "message": null },
       "V_nps_1": { "value": null, "status": null, "message": null },
       "V_nps_2": { "value": null, "status": null, "message": null },
       "V_knps": { "value": null, "status": null, "message": null },
-
       "V_tstn": null,
       "V_tstn_rn_vn": { "value": null, "status": null, "message": null },
       "V_tstn_vn": { "value": null, "status": null, "message": null },
@@ -2056,7 +1947,6 @@
       "V_tstn_vo": { "value": null, "status": null, "message": null },
       "V_tstn_tng": { "value": null, "status": null, "message": null },
       "V_tstn_kchng": { "value": null, "status": null, "message": null },
-
       "F_bp": { "value": null, "status": null, "message": null },
       "F_bp_vn": null,
       "F_bp_suzun": null,
@@ -2069,7 +1959,6 @@
       "F_bp_vo": null,
       "F_bp_tng": null,
       "F_bp_kchng": null,
-
       "F": null,
       "F_vn": null,
       "F_suzun": null,
@@ -2082,12 +1971,13 @@
       "F_vo": null,
       "F_tng": null,
       "F_kchng": null,
-
       "Q_gnps": { "value": null, "status": null, "message": null },
       "Q_nps_1_2": { "value": null, "status": null, "message": null },
-      "Q_knps": { "value": null, "status": null, "message": null }
+      "Q_knps": { "value": null, "status": null, "message": null },
+      "node": { "value": null, "status": null, "message": null },
+      "K_work": null,
+      "t_ost_sikn_1209": null
     },
-
     {
       "date": "15.12.2025",
       "Q_vankor": { "value": 21821, "status": null, "message": null },
@@ -2139,12 +2029,10 @@
       "G_skn": { "value": 10200, "status": 0, "message": null },
       "G_kchng": null,
       "G_gnps": null,
-
       "V_gnps": { "value": null, "status": null, "message": null },
       "V_nps_1": { "value": null, "status": null, "message": null },
       "V_nps_2": { "value": null, "status": null, "message": null },
       "V_knps": { "value": null, "status": null, "message": null },
-
       "V_tstn": null,
       "V_tstn_rn_vn": { "value": null, "status": null, "message": null },
       "V_tstn_vn": { "value": null, "status": null, "message": null },
@@ -2158,7 +2046,6 @@
       "V_tstn_vo": { "value": null, "status": null, "message": null },
       "V_tstn_tng": { "value": null, "status": null, "message": null },
       "V_tstn_kchng": { "value": null, "status": null, "message": null },
-
       "F_bp": { "value": null, "status": null, "message": null },
       "F_bp_vn": null,
       "F_bp_suzun": null,
@@ -2171,7 +2058,6 @@
       "F_bp_vo": null,
       "F_bp_tng": null,
       "F_bp_kchng": null,
-
       "F": null,
       "F_vn": null,
       "F_suzun": null,
@@ -2184,12 +2070,13 @@
       "F_vo": null,
       "F_tng": null,
       "F_kchng": null,
-
       "Q_gnps": { "value": null, "status": null, "message": null },
       "Q_nps_1_2": { "value": null, "status": null, "message": null },
-      "Q_knps": { "value": null, "status": null, "message": null }
+      "Q_knps": { "value": null, "status": null, "message": null },
+      "node": { "value": null, "status": null, "message": null },
+      "K_work": null,
+      "t_ost_sikn_1209": null
     },
-
     {
       "date": "16.12.2025",
       "Q_vankor": { "value": 21886, "status": null, "message": null },
@@ -2241,12 +2128,10 @@
       "G_skn": { "value": 10200, "status": 0, "message": null },
       "G_kchng": null,
       "G_gnps": null,
-
       "V_gnps": { "value": null, "status": null, "message": null },
       "V_nps_1": { "value": null, "status": null, "message": null },
       "V_nps_2": { "value": null, "status": null, "message": null },
       "V_knps": { "value": null, "status": null, "message": null },
-
       "V_tstn": null,
       "V_tstn_rn_vn": { "value": null, "status": null, "message": null },
       "V_tstn_vn": { "value": null, "status": null, "message": null },
@@ -2260,7 +2145,6 @@
       "V_tstn_vo": { "value": null, "status": null, "message": null },
       "V_tstn_tng": { "value": null, "status": null, "message": null },
       "V_tstn_kchng": { "value": null, "status": null, "message": null },
-
       "F_bp": { "value": null, "status": null, "message": null },
       "F_bp_vn": null,
       "F_bp_suzun": null,
@@ -2273,7 +2157,6 @@
       "F_bp_vo": null,
       "F_bp_tng": null,
       "F_bp_kchng": null,
-
       "F": null,
       "F_vn": null,
       "F_suzun": null,
@@ -2286,12 +2169,13 @@
       "F_vo": null,
       "F_tng": null,
       "F_kchng": null,
-
       "Q_gnps": { "value": null, "status": null, "message": null },
       "Q_nps_1_2": { "value": null, "status": null, "message": null },
-      "Q_knps": { "value": null, "status": null, "message": null }
+      "Q_knps": { "value": null, "status": null, "message": null },
+      "node": { "value": null, "status": null, "message": null },
+      "K_work": null,
+      "t_ost_sikn_1209": null
     },
-
     {
       "date": "17.12.2025",
       "Q_vankor": { "value": 21933, "status": null, "message": null },
@@ -2343,12 +2227,10 @@
       "G_skn": { "value": 10200, "status": 0, "message": null },
       "G_kchng": null,
       "G_gnps": null,
-
       "V_gnps": { "value": null, "status": null, "message": null },
       "V_nps_1": { "value": null, "status": null, "message": null },
       "V_nps_2": { "value": null, "status": null, "message": null },
       "V_knps": { "value": null, "status": null, "message": null },
-
       "V_tstn": null,
       "V_tstn_rn_vn": { "value": null, "status": null, "message": null },
       "V_tstn_vn": { "value": null, "status": null, "message": null },
@@ -2362,7 +2244,6 @@
       "V_tstn_vo": { "value": null, "status": null, "message": null },
       "V_tstn_tng": { "value": null, "status": null, "message": null },
       "V_tstn_kchng": { "value": null, "status": null, "message": null },
-
       "F_bp": { "value": null, "status": null, "message": null },
       "F_bp_vn": null,
       "F_bp_suzun": null,
@@ -2375,7 +2256,6 @@
       "F_bp_vo": null,
       "F_bp_tng": null,
       "F_bp_kchng": null,
-
       "F": null,
       "F_vn": null,
       "F_suzun": null,
@@ -2388,12 +2268,13 @@
       "F_vo": null,
       "F_tng": null,
       "F_kchng": null,
-
       "Q_gnps": { "value": null, "status": null, "message": null },
       "Q_nps_1_2": { "value": null, "status": null, "message": null },
-      "Q_knps": { "value": null, "status": null, "message": null }
+      "Q_knps": { "value": null, "status": null, "message": null },
+      "node": { "value": null, "status": null, "message": null },
+      "K_work": null,
+      "t_ost_sikn_1209": null
     },
-
     {
       "date": "18.12.2025",
       "Q_vankor": { "value": 21981, "status": null, "message": null },
@@ -2445,12 +2326,10 @@
       "G_skn": { "value": 9200, "status": 0, "message": null },
       "G_kchng": null,
       "G_gnps": null,
-
       "V_gnps": { "value": null, "status": null, "message": null },
       "V_nps_1": { "value": null, "status": null, "message": null },
       "V_nps_2": { "value": null, "status": null, "message": null },
       "V_knps": { "value": null, "status": null, "message": null },
-
       "V_tstn": null,
       "V_tstn_rn_vn": { "value": null, "status": null, "message": null },
       "V_tstn_vn": { "value": null, "status": null, "message": null },
@@ -2464,7 +2343,6 @@
       "V_tstn_vo": { "value": null, "status": null, "message": null },
       "V_tstn_tng": { "value": null, "status": null, "message": null },
       "V_tstn_kchng": { "value": null, "status": null, "message": null },
-
       "F_bp": { "value": null, "status": null, "message": null },
       "F_bp_vn": null,
       "F_bp_suzun": null,
@@ -2477,7 +2355,6 @@
       "F_bp_vo": null,
       "F_bp_tng": null,
       "F_bp_kchng": null,
-
       "F": null,
       "F_vn": null,
       "F_suzun": null,
@@ -2490,12 +2367,13 @@
       "F_vo": null,
       "F_tng": null,
       "F_kchng": null,
-
       "Q_gnps": { "value": null, "status": null, "message": null },
       "Q_nps_1_2": { "value": null, "status": null, "message": null },
-      "Q_knps": { "value": null, "status": null, "message": null }
+      "Q_knps": { "value": null, "status": null, "message": null },
+      "node": { "value": null, "status": null, "message": null },
+      "K_work": null,
+      "t_ost_sikn_1209": null
     },
-
     {
       "date": "19.12.2025",
       "Q_vankor": { "value": 21991, "status": null, "message": null },
@@ -2547,12 +2425,10 @@
       "G_skn": { "value": 8000, "status": 0, "message": null },
       "G_kchng": null,
       "G_gnps": null,
-
       "V_gnps": { "value": null, "status": null, "message": null },
       "V_nps_1": { "value": null, "status": null, "message": null },
       "V_nps_2": { "value": null, "status": null, "message": null },
       "V_knps": { "value": null, "status": null, "message": null },
-
       "V_tstn": null,
       "V_tstn_rn_vn": { "value": null, "status": null, "message": null },
       "V_tstn_vn": { "value": null, "status": null, "message": null },
@@ -2566,7 +2442,6 @@
       "V_tstn_vo": { "value": null, "status": null, "message": null },
       "V_tstn_tng": { "value": null, "status": null, "message": null },
       "V_tstn_kchng": { "value": null, "status": null, "message": null },
-
       "F_bp": { "value": null, "status": null, "message": null },
       "F_bp_vn": null,
       "F_bp_suzun": null,
@@ -2579,7 +2454,6 @@
       "F_bp_vo": null,
       "F_bp_tng": null,
       "F_bp_kchng": null,
-
       "F": null,
       "F_vn": null,
       "F_suzun": null,
@@ -2592,12 +2466,13 @@
       "F_vo": null,
       "F_tng": null,
       "F_kchng": null,
-
       "Q_gnps": { "value": null, "status": null, "message": null },
       "Q_nps_1_2": { "value": null, "status": null, "message": null },
-      "Q_knps": { "value": null, "status": null, "message": null }
+      "Q_knps": { "value": null, "status": null, "message": null },
+      "node": { "value": null, "status": null, "message": null },
+      "K_work": null,
+      "t_ost_sikn_1209": null
     },
-
     {
       "date": "20.12.2025",
       "Q_vankor": { "value": 21998, "status": null, "message": null },
@@ -2649,12 +2524,10 @@
       "G_skn": { "value": 10000, "status": 0, "message": null },
       "G_kchng": null,
       "G_gnps": null,
-
       "V_gnps": { "value": null, "status": null, "message": null },
       "V_nps_1": { "value": null, "status": null, "message": null },
       "V_nps_2": { "value": null, "status": null, "message": null },
       "V_knps": { "value": null, "status": null, "message": null },
-
       "V_tstn": null,
       "V_tstn_rn_vn": { "value": null, "status": null, "message": null },
       "V_tstn_vn": { "value": null, "status": null, "message": null },
@@ -2668,7 +2541,6 @@
       "V_tstn_vo": { "value": null, "status": null, "message": null },
       "V_tstn_tng": { "value": null, "status": null, "message": null },
       "V_tstn_kchng": { "value": null, "status": null, "message": null },
-
       "F_bp": { "value": null, "status": null, "message": null },
       "F_bp_vn": null,
       "F_bp_suzun": null,
@@ -2681,7 +2553,6 @@
       "F_bp_vo": null,
       "F_bp_tng": null,
       "F_bp_kchng": null,
-
       "F": null,
       "F_vn": null,
       "F_suzun": null,
@@ -2694,12 +2565,13 @@
       "F_vo": null,
       "F_tng": null,
       "F_kchng": null,
-
       "Q_gnps": { "value": null, "status": null, "message": null },
       "Q_nps_1_2": { "value": null, "status": null, "message": null },
-      "Q_knps": { "value": null, "status": null, "message": null }
+      "Q_knps": { "value": null, "status": null, "message": null },
+      "node": { "value": null, "status": null, "message": null },
+      "K_work": null,
+      "t_ost_sikn_1209": null
     },
-
     {
       "date": "21.12.2025",
       "Q_vankor": { "value": 21996, "status": null, "message": null },
@@ -2751,12 +2623,10 @@
       "G_skn": { "value": 10000, "status": 0, "message": null },
       "G_kchng": null,
       "G_gnps": null,
-
       "V_gnps": { "value": null, "status": null, "message": null },
       "V_nps_1": { "value": null, "status": null, "message": null },
       "V_nps_2": { "value": null, "status": null, "message": null },
       "V_knps": { "value": null, "status": null, "message": null },
-
       "V_tstn": null,
       "V_tstn_rn_vn": { "value": null, "status": null, "message": null },
       "V_tstn_vn": { "value": null, "status": null, "message": null },
@@ -2770,7 +2640,6 @@
       "V_tstn_vo": { "value": null, "status": null, "message": null },
       "V_tstn_tng": { "value": null, "status": null, "message": null },
       "V_tstn_kchng": { "value": null, "status": null, "message": null },
-
       "F_bp": { "value": null, "status": null, "message": null },
       "F_bp_vn": null,
       "F_bp_suzun": null,
@@ -2783,7 +2652,6 @@
       "F_bp_vo": null,
       "F_bp_tng": null,
       "F_bp_kchng": null,
-
       "F": null,
       "F_vn": null,
       "F_suzun": null,
@@ -2796,12 +2664,13 @@
       "F_vo": null,
       "F_tng": null,
       "F_kchng": null,
-
       "Q_gnps": { "value": null, "status": null, "message": null },
       "Q_nps_1_2": { "value": null, "status": null, "message": null },
-      "Q_knps": { "value": null, "status": null, "message": null }
+      "Q_knps": { "value": null, "status": null, "message": null },
+      "node": { "value": null, "status": null, "message": null },
+      "K_work": null,
+      "t_ost_sikn_1209": null
     },
-
     {
       "date": "22.12.2025",
       "Q_vankor": { "value": 21975, "status": null, "message": null },
@@ -2853,12 +2722,10 @@
       "G_skn": { "value": 10000, "status": 0, "message": null },
       "G_kchng": null,
       "G_gnps": null,
-
       "V_gnps": { "value": null, "status": null, "message": null },
       "V_nps_1": { "value": null, "status": null, "message": null },
       "V_nps_2": { "value": null, "status": null, "message": null },
       "V_knps": { "value": null, "status": null, "message": null },
-
       "V_tstn": null,
       "V_tstn_rn_vn": { "value": null, "status": null, "message": null },
       "V_tstn_vn": { "value": null, "status": null, "message": null },
@@ -2872,7 +2739,6 @@
       "V_tstn_vo": { "value": null, "status": null, "message": null },
       "V_tstn_tng": { "value": null, "status": null, "message": null },
       "V_tstn_kchng": { "value": null, "status": null, "message": null },
-
       "F_bp": { "value": null, "status": null, "message": null },
       "F_bp_vn": null,
       "F_bp_suzun": null,
@@ -2885,7 +2751,6 @@
       "F_bp_vo": null,
       "F_bp_tng": null,
       "F_bp_kchng": null,
-
       "F": null,
       "F_vn": null,
       "F_suzun": null,
@@ -2898,12 +2763,13 @@
       "F_vo": null,
       "F_tng": null,
       "F_kchng": null,
-
       "Q_gnps": { "value": null, "status": null, "message": null },
       "Q_nps_1_2": { "value": null, "status": null, "message": null },
-      "Q_knps": { "value": null, "status": null, "message": null }
+      "Q_knps": { "value": null, "status": null, "message": null },
+      "node": { "value": null, "status": null, "message": null },
+      "K_work": null,
+      "t_ost_sikn_1209": null
     },
-
     {
       "date": "23.12.2025",
       "Q_vankor": { "value": 21955, "status": null, "message": null },
@@ -2955,12 +2821,10 @@
       "G_skn": { "value": 10000, "status": 0, "message": null },
       "G_kchng": null,
       "G_gnps": null,
-
       "V_gnps": { "value": null, "status": null, "message": null },
       "V_nps_1": { "value": null, "status": null, "message": null },
       "V_nps_2": { "value": null, "status": null, "message": null },
       "V_knps": { "value": null, "status": null, "message": null },
-
       "V_tstn": null,
       "V_tstn_rn_vn": { "value": null, "status": null, "message": null },
       "V_tstn_vn": { "value": null, "status": null, "message": null },
@@ -2974,7 +2838,6 @@
       "V_tstn_vo": { "value": null, "status": null, "message": null },
       "V_tstn_tng": { "value": null, "status": null, "message": null },
       "V_tstn_kchng": { "value": null, "status": null, "message": null },
-
       "F_bp": { "value": null, "status": null, "message": null },
       "F_bp_vn": null,
       "F_bp_suzun": null,
@@ -2987,7 +2850,6 @@
       "F_bp_vo": null,
       "F_bp_tng": null,
       "F_bp_kchng": null,
-
       "F": null,
       "F_vn": null,
       "F_suzun": null,
@@ -3000,12 +2862,13 @@
       "F_vo": null,
       "F_tng": null,
       "F_kchng": null,
-
       "Q_gnps": { "value": null, "status": null, "message": null },
       "Q_nps_1_2": { "value": null, "status": null, "message": null },
-      "Q_knps": { "value": null, "status": null, "message": null }
+      "Q_knps": { "value": null, "status": null, "message": null },
+      "node": { "value": null, "status": null, "message": null },
+      "K_work": null,
+      "t_ost_sikn_1209": null
     },
-
     {
       "date": "24.12.2025",
       "Q_vankor": { "value": 21926, "status": null, "message": null },
@@ -3057,12 +2920,10 @@
       "G_skn": { "value": 10000, "status": 0, "message": null },
       "G_kchng": null,
       "G_gnps": null,
-
       "V_gnps": { "value": null, "status": null, "message": null },
       "V_nps_1": { "value": null, "status": null, "message": null },
       "V_nps_2": { "value": null, "status": null, "message": null },
       "V_knps": { "value": null, "status": null, "message": null },
-
       "V_tstn": null,
       "V_tstn_rn_vn": { "value": null, "status": null, "message": null },
       "V_tstn_vn": { "value": null, "status": null, "message": null },
@@ -3076,7 +2937,6 @@
       "V_tstn_vo": { "value": null, "status": null, "message": null },
       "V_tstn_tng": { "value": null, "status": null, "message": null },
       "V_tstn_kchng": { "value": null, "status": null, "message": null },
-
       "F_bp": { "value": null, "status": null, "message": null },
       "F_bp_vn": null,
       "F_bp_suzun": null,
@@ -3089,7 +2949,6 @@
       "F_bp_vo": null,
       "F_bp_tng": null,
       "F_bp_kchng": null,
-
       "F": null,
       "F_vn": null,
       "F_suzun": null,
@@ -3102,12 +2961,13 @@
       "F_vo": null,
       "F_tng": null,
       "F_kchng": null,
-
       "Q_gnps": { "value": null, "status": null, "message": null },
       "Q_nps_1_2": { "value": null, "status": null, "message": null },
-      "Q_knps": { "value": null, "status": null, "message": null }
+      "Q_knps": { "value": null, "status": null, "message": null },
+      "node": { "value": null, "status": null, "message": null },
+      "K_work": null,
+      "t_ost_sikn_1209": null
     },
-
     {
       "date": "25.12.2025",
       "Q_vankor": { "value": 21904, "status": null, "message": null },
@@ -3159,12 +3019,10 @@
       "G_skn": { "value": 10000, "status": 0, "message": null },
       "G_kchng": null,
       "G_gnps": null,
-
       "V_gnps": { "value": null, "status": null, "message": null },
       "V_nps_1": { "value": null, "status": null, "message": null },
       "V_nps_2": { "value": null, "status": null, "message": null },
       "V_knps": { "value": null, "status": null, "message": null },
-
       "V_tstn": null,
       "V_tstn_rn_vn": { "value": null, "status": null, "message": null },
       "V_tstn_vn": { "value": null, "status": null, "message": null },
@@ -3178,7 +3036,6 @@
       "V_tstn_vo": { "value": null, "status": null, "message": null },
       "V_tstn_tng": { "value": null, "status": null, "message": null },
       "V_tstn_kchng": { "value": null, "status": null, "message": null },
-
       "F_bp": { "value": null, "status": null, "message": null },
       "F_bp_vn": null,
       "F_bp_suzun": null,
@@ -3191,7 +3048,6 @@
       "F_bp_vo": null,
       "F_bp_tng": null,
       "F_bp_kchng": null,
-
       "F": null,
       "F_vn": null,
       "F_suzun": null,
@@ -3204,12 +3060,13 @@
       "F_vo": null,
       "F_tng": null,
       "F_kchng": null,
-
       "Q_gnps": { "value": null, "status": null, "message": null },
       "Q_nps_1_2": { "value": null, "status": null, "message": null },
-      "Q_knps": { "value": null, "status": null, "message": null }
+      "Q_knps": { "value": null, "status": null, "message": null },
+      "node": { "value": null, "status": null, "message": null },
+      "K_work": null,
+      "t_ost_sikn_1209": null
     },
-
     {
       "date": "26.12.2025",
       "Q_vankor": { "value": 21935, "status": null, "message": null },
@@ -3261,12 +3118,10 @@
       "G_skn": { "value": 10200, "status": 0, "message": null },
       "G_kchng": null,
       "G_gnps": null,
-
       "V_gnps": { "value": null, "status": null, "message": null },
       "V_nps_1": { "value": null, "status": null, "message": null },
       "V_nps_2": { "value": null, "status": null, "message": null },
       "V_knps": { "value": null, "status": null, "message": null },
-
       "V_tstn": null,
       "V_tstn_rn_vn": { "value": null, "status": null, "message": null },
       "V_tstn_vn": { "value": null, "status": null, "message": null },
@@ -3280,7 +3135,6 @@
       "V_tstn_vo": { "value": null, "status": null, "message": null },
       "V_tstn_tng": { "value": null, "status": null, "message": null },
       "V_tstn_kchng": { "value": null, "status": null, "message": null },
-
       "F_bp": { "value": null, "status": null, "message": null },
       "F_bp_vn": null,
       "F_bp_suzun": null,
@@ -3293,7 +3147,6 @@
       "F_bp_vo": null,
       "F_bp_tng": null,
       "F_bp_kchng": null,
-
       "F": null,
       "F_vn": null,
       "F_suzun": null,
@@ -3306,12 +3159,13 @@
       "F_vo": null,
       "F_tng": null,
       "F_kchng": null,
-
       "Q_gnps": { "value": null, "status": null, "message": null },
       "Q_nps_1_2": { "value": null, "status": null, "message": null },
-      "Q_knps": { "value": null, "status": null, "message": null }
+      "Q_knps": { "value": null, "status": null, "message": null },
+      "node": { "value": null, "status": null, "message": null },
+      "K_work": null,
+      "t_ost_sikn_1209": null
     },
-
     {
       "date": "27.12.2025",
       "Q_vankor": { "value": 21929, "status": null, "message": null },
@@ -3363,12 +3217,10 @@
       "G_skn": { "value": 10200, "status": 0, "message": null },
       "G_kchng": null,
       "G_gnps": null,
-
       "V_gnps": { "value": null, "status": null, "message": null },
       "V_nps_1": { "value": null, "status": null, "message": null },
       "V_nps_2": { "value": null, "status": null, "message": null },
       "V_knps": { "value": null, "status": null, "message": null },
-
       "V_tstn": null,
       "V_tstn_rn_vn": { "value": null, "status": null, "message": null },
       "V_tstn_vn": { "value": null, "status": null, "message": null },
@@ -3382,7 +3234,6 @@
       "V_tstn_vo": { "value": null, "status": null, "message": null },
       "V_tstn_tng": { "value": null, "status": null, "message": null },
       "V_tstn_kchng": { "value": null, "status": null, "message": null },
-
       "F_bp": { "value": null, "status": null, "message": null },
       "F_bp_vn": null,
       "F_bp_suzun": null,
@@ -3395,7 +3246,6 @@
       "F_bp_vo": null,
       "F_bp_tng": null,
       "F_bp_kchng": null,
-
       "F": null,
       "F_vn": null,
       "F_suzun": null,
@@ -3408,12 +3258,13 @@
       "F_vo": null,
       "F_tng": null,
       "F_kchng": null,
-
       "Q_gnps": { "value": null, "status": null, "message": null },
       "Q_nps_1_2": { "value": null, "status": null, "message": null },
-      "Q_knps": { "value": null, "status": null, "message": null }
+      "Q_knps": { "value": null, "status": null, "message": null },
+      "node": { "value": null, "status": null, "message": null },
+      "K_work": null,
+      "t_ost_sikn_1209": null
     },
-
     {
       "date": "28.12.2025",
       "Q_vankor": { "value": 21908, "status": null, "message": null },
@@ -3465,12 +3316,10 @@
       "G_skn": { "value": 9200, "status": 0, "message": null },
       "G_kchng": null,
       "G_gnps": null,
-
       "V_gnps": { "value": null, "status": null, "message": null },
       "V_nps_1": { "value": null, "status": null, "message": null },
       "V_nps_2": { "value": null, "status": null, "message": null },
       "V_knps": { "value": null, "status": null, "message": null },
-
       "V_tstn": null,
       "V_tstn_rn_vn": { "value": null, "status": null, "message": null },
       "V_tstn_vn": { "value": null, "status": null, "message": null },
@@ -3484,7 +3333,6 @@
       "V_tstn_vo": { "value": null, "status": null, "message": null },
       "V_tstn_tng": { "value": null, "status": null, "message": null },
       "V_tstn_kchng": { "value": null, "status": null, "message": null },
-
       "F_bp": { "value": null, "status": null, "message": null },
       "F_bp_vn": null,
       "F_bp_suzun": null,
@@ -3497,7 +3345,6 @@
       "F_bp_vo": null,
       "F_bp_tng": null,
       "F_bp_kchng": null,
-
       "F": null,
       "F_vn": null,
       "F_suzun": null,
@@ -3510,12 +3357,13 @@
       "F_vo": null,
       "F_tng": null,
       "F_kchng": null,
-
       "Q_gnps": { "value": null, "status": null, "message": null },
       "Q_nps_1_2": { "value": null, "status": null, "message": null },
-      "Q_knps": { "value": null, "status": null, "message": null }
+      "Q_knps": { "value": null, "status": null, "message": null },
+      "node": { "value": null, "status": null, "message": null },
+      "K_work": null,
+      "t_ost_sikn_1209": null
     },
-
     {
       "date": "29.12.2025",
       "Q_vankor": { "value": 21872, "status": null, "message": null },
@@ -3567,12 +3415,10 @@
       "G_skn": { "value": 8000, "status": 0, "message": null },
       "G_kchng": null,
       "G_gnps": null,
-
       "V_gnps": { "value": null, "status": null, "message": null },
       "V_nps_1": { "value": null, "status": null, "message": null },
       "V_nps_2": { "value": null, "status": null, "message": null },
       "V_knps": { "value": null, "status": null, "message": null },
-
       "V_tstn": null,
       "V_tstn_rn_vn": { "value": null, "status": null, "message": null },
       "V_tstn_vn": { "value": null, "status": null, "message": null },
@@ -3586,7 +3432,6 @@
       "V_tstn_vo": { "value": null, "status": null, "message": null },
       "V_tstn_tng": { "value": null, "status": null, "message": null },
       "V_tstn_kchng": { "value": null, "status": null, "message": null },
-
       "F_bp": { "value": null, "status": null, "message": null },
       "F_bp_vn": null,
       "F_bp_suzun": null,
@@ -3599,7 +3444,6 @@
       "F_bp_vo": null,
       "F_bp_tng": null,
       "F_bp_kchng": null,
-
       "F": null,
       "F_vn": null,
       "F_suzun": null,
@@ -3612,12 +3456,13 @@
       "F_vo": null,
       "F_tng": null,
       "F_kchng": null,
-
       "Q_gnps": { "value": null, "status": null, "message": null },
       "Q_nps_1_2": { "value": null, "status": null, "message": null },
-      "Q_knps": { "value": null, "status": null, "message": null }
+      "Q_knps": { "value": null, "status": null, "message": null },
+      "node": { "value": null, "status": null, "message": null },
+      "K_work": null,
+      "t_ost_sikn_1209": null
     },
-
     {
       "date": "30.12.2025",
       "Q_vankor": { "value": 21864, "status": null, "message": null },
@@ -3669,12 +3514,10 @@
       "G_skn": { "value": 10200, "status": 0, "message": null },
       "G_kchng": null,
       "G_gnps": null,
-
       "V_gnps": { "value": null, "status": null, "message": null },
       "V_nps_1": { "value": null, "status": null, "message": null },
       "V_nps_2": { "value": null, "status": null, "message": null },
       "V_knps": { "value": null, "status": null, "message": null },
-
       "V_tstn": null,
       "V_tstn_rn_vn": { "value": null, "status": null, "message": null },
       "V_tstn_vn": { "value": null, "status": null, "message": null },
@@ -3688,7 +3531,6 @@
       "V_tstn_vo": { "value": null, "status": null, "message": null },
       "V_tstn_tng": { "value": null, "status": null, "message": null },
       "V_tstn_kchng": { "value": null, "status": null, "message": null },
-
       "F_bp": { "value": null, "status": null, "message": null },
       "F_bp_vn": null,
       "F_bp_suzun": null,
@@ -3701,7 +3543,6 @@
       "F_bp_vo": null,
       "F_bp_tng": null,
       "F_bp_kchng": null,
-
       "F": null,
       "F_vn": null,
       "F_suzun": null,
@@ -3714,13 +3555,13 @@
       "F_vo": null,
       "F_tng": null,
       "F_kchng": null,
-
       "Q_gnps": { "value": null, "status": null, "message": null },
       "Q_nps_1_2": { "value": null, "status": null, "message": null },
-      "Q_knps": { "value": null, "status": null, "message": null }
+      "Q_knps": { "value": null, "status": null, "message": null },
+      "node": { "value": null, "status": null, "message": null },
+      "K_work": null,
+      "t_ost_sikn_1209": null
     },
-
-    
     {
       "date": "31.12.2025",
       "Q_vankor": { "value": 21973, "status": null, "message": null },
@@ -3733,7 +3574,7 @@
       "G_sikn_vankor": null,
       "G_sikn_suzun": null,
       "G_sikn_vslu": null,
-      "G_sikn_tagul": { "value": 1400, "status": null, "message": null },
+      "G_sikn_tagul": { "value": 1100, "status": null, "message": null },
       "G_sikn_tng": null,
       "delta_G_sikn": null,
       "Q_suzun": { "value": 2101, "status": 0, "message": null },
@@ -3772,12 +3613,10 @@
       "G_skn": { "value": 10200, "status": 0, "message": null },
       "G_kchng": null,
       "G_gnps": null,
-
       "V_gnps": { "value": null, "status": null, "message": null },
       "V_nps_1": { "value": null, "status": null, "message": null },
       "V_nps_2": { "value": null, "status": null, "message": null },
       "V_knps": { "value": null, "status": null, "message": null },
-
       "V_tstn": null,
       "V_tstn_rn_vn": { "value": null, "status": null, "message": null },
       "V_tstn_vn": { "value": null, "status": null, "message": null },
@@ -3791,9 +3630,8 @@
       "V_tstn_vo": { "value": null, "status": null, "message": null },
       "V_tstn_tng": { "value": null, "status": null, "message": null },
       "V_tstn_kchng": { "value": null, "status": null, "message": null },
-
       "F_bp": { "value": null, "status": null, "message": null },
-      "F_bp_vn": 1000,
+      "F_bp_vn": null,
       "F_bp_suzun": null,
       "F_bp_suzun_vankor": null,
       "F_bp_suzun_vslu": null,
@@ -3804,7 +3642,6 @@
       "F_bp_vo": null,
       "F_bp_tng": null,
       "F_bp_kchng": null,
-
       "F": null,
       "F_vn": null,
       "F_suzun": null,
@@ -3817,10 +3654,12 @@
       "F_vo": null,
       "F_tng": null,
       "F_kchng": null,
-
       "Q_gnps": { "value": null, "status": null, "message": null },
       "Q_nps_1_2": { "value": null, "status": null, "message": null },
-      "Q_knps": { "value": null, "status": null, "message": null }
+      "Q_knps": { "value": null, "status": null, "message": null },
+      "node": { "value": null, "status": null, "message": null },
+      "K_work": null,
+      "t_ost_sikn_1209": null
     }
   ]
 }

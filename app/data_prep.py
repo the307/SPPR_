@@ -1484,7 +1484,6 @@ def get_planned_balance_for_bp_tagul_gtm_data(master_df, prev_month):
 # Подтягивает F_bp_* и связанные значения на конкретный день,
 # чтобы передать их в node_correction_calc.
 def get_node_correction_data(master_df, day, prev_day):
-    F_bp = _get_day_value(master_df, "F_bp", day)
     F_bp_vn = _get_day_value(master_df, "F_bp_vn", day)
     F_bp_suzun = _get_day_value(master_df, "F_bp_suzun", day)
     F_bp_suzun_vankor = _get_day_value(master_df, "F_bp_suzun_vankor", day)
@@ -1498,7 +1497,6 @@ def get_node_correction_data(master_df, day, prev_day):
     F_bp_kchng = _get_day_value(master_df, "F_bp_kchng", day)
 
     return {
-        "F_bp": F_bp,
         "F_bp_vn": F_bp_vn,
         "F_bp_suzun": F_bp_suzun,
         "F_bp_suzun_vankor": F_bp_suzun_vankor,
@@ -1510,4 +1508,30 @@ def get_node_correction_data(master_df, day, prev_day):
         "F_bp_vo": F_bp_vo,
         "F_bp_tng": F_bp_tng,
         "F_bp_kchng": F_bp_kchng,
+    }
+
+
+def get_adjusting_availability_oil_data(master_df, day,prev_day):
+    V_knps = _get_day_value(master_df, "V_knps", day)
+    VN_knps_min = _get_const(master_df,"VN_knps_min",day)
+    delta_VO_nps_1_max = _get_const(master_df,"delta_VO_nps_1_max")
+    delta_VO_gnps_max = _get_const(master_df,"delta_VO_gnps_max")
+    delta_VO_nps_2_max = _get_const(master_df,"delta_VO_nps_2_max")
+    V_nps_1_prev = _get_day_value(master_df,"V_nps_1",prev_day)
+    V_nps_2_prev = _get_day_value(master_df,"V_nps_2",prev_day)
+    VA_nps_1_max = _get_const(master_df,"VA_nps_1_max")
+    VA_nps_2_max = _get_const(master_df,"VA_nps_2_max")
+    G_gnps_prev = _get_day_value(master_df,"G_gnps",prev_day)
+    return {
+        "V_knps": V_knps,
+        "VN_knps_min":VN_knps_min,
+        "delta_VO_nps_1_max":delta_VO_nps_1_max,
+        "delta_VO_gnps_max":delta_VO_gnps_max,
+        "delta_VO_nps_2_max":delta_VO_nps_2_max,
+        "V_nps_1_prev":V_nps_1_prev,
+        "V_nps_2_prev":V_nps_2_prev,
+        "VA_nps_2_max":VA_nps_2_max,
+        "VA_nps_1_max":VA_nps_1_max,
+        "G_gnps_prev":G_gnps_prev,
+
     }

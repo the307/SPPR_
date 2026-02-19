@@ -129,9 +129,16 @@ def precalc_value(
         if day in set(remainder_days):
             manual_sum = sum(G_sikn_tagul_manual_entries.values())
             base_count = N - len(G_sikn_tagul_manual_entries) - len(remainder_days)
-            G_sikn_tagul = (G_lodochny_upsv_yu_month - base * base_count - manual_sum) / len(remainder_days)
+            remainder = (G_lodochny_upsv_yu_month - base * base_count - manual_sum) / len(remainder_days)
+            if remainder >= 900:
+                G_sikn_tagul = remainder
+            elif day == remainder_days[0]:
+                G_sikn_tagul = G_lodochny_upsv_yu_month - base * (base_count + 1) - manual_sum
+            else:
+                G_sikn_tagul = base
         else:
             G_sikn_tagul = base
+
     if not (900 <= G_sikn_tagul <= 1500):
         G_sikn_tagul = {
             "value": G_sikn_tagul,
@@ -231,20 +238,24 @@ def rn_vankor_calc (
 # =========================================================
 # 40. Ванкорнефть
     if not F_bp_vn:
-        base = round((F_vn_month / N) / 50) * 50
         rset, msum, bcnt, rcnt = bp_rdays["F_bp_vn"]
+        remaining = F_vn_month - msum
+        auto_days = bcnt + rcnt
+        base = round((remaining / auto_days) / 50) * 50 if auto_days > 0 else 0
         if day in rset:
-            F_bp_vn = (F_vn_month - base * bcnt - msum) / rcnt
+            F_bp_vn = (remaining - base * bcnt) / rcnt if rcnt > 0 else 0
         else:
             F_bp_vn = base
     F_suzun = F_suzun_month - F_suzun_vankor_month
 # =========================================================
 # 41. Сузун (общий)
     if not F_bp_suzun:
-        base = round((F_suzun / N) / 50) * 50
         rset, msum, bcnt, rcnt = bp_rdays["F_bp_suzun"]
+        remaining = F_suzun - msum
+        auto_days = bcnt + rcnt
+        base = round((remaining / auto_days) / 50) * 50 if auto_days > 0 else 0
         if day in rset:
-            F_bp_suzun = (F_suzun - base * bcnt - msum) / rcnt
+            F_bp_suzun = (remaining - base * bcnt) / rcnt if rcnt > 0 else 0
         else:
             F_bp_suzun = base
 # =========================================================
@@ -261,23 +272,29 @@ def rn_vankor_calc (
                 )
             delivery_days = [d for d in range(1, N + 1) if d % e_suzun == 0]
             if delivery_days:
-                delivery_count = len(delivery_days)
-                last_day = delivery_days[-1]
-                base = round((F_suzun_vankor_month / delivery_count) / 50) * 50
-                if day in delivery_days:
-                    if day != last_day:
+                manual_var = bp_manual.get("F_bp_suzun_vankor", {})
+                msum_all = sum(manual_var.values())
+                remaining = F_suzun_vankor_month - msum_all
+                auto_delivery = [d for d in delivery_days if d not in manual_var]
+                if day in auto_delivery:
+                    auto_count = len(auto_delivery)
+                    last_auto = auto_delivery[-1]
+                    base = round((remaining / auto_count) / 50) * 50 if auto_count > 0 else 0
+                    if day != last_auto:
                         F_bp_suzun_vankor = base
                     else:
-                        F_bp_suzun_vankor = F_suzun_vankor_month - base * (delivery_count - 1)
+                        F_bp_suzun_vankor = remaining - base * (auto_count - 1)
                 else:
                     F_bp_suzun_vankor = 0
             else:
                 F_bp_suzun_vankor = 0
         elif F_suzun_vankor_month >= 20000:
-            base = round((F_suzun_vankor_month / N) / 50) * 50
             rset, msum, bcnt, rcnt = bp_rdays["F_bp_suzun_vankor"]
+            remaining = F_suzun_vankor_month - msum
+            auto_days = bcnt + rcnt
+            base = round((remaining / auto_days) / 50) * 50 if auto_days > 0 else 0
             if day in rset:
-                F_bp_suzun_vankor = (F_suzun_vankor_month - base * bcnt - msum) / rcnt
+                F_bp_suzun_vankor = (remaining - base * bcnt) / rcnt if rcnt > 0 else 0
             else:
                 F_bp_suzun_vankor = base
 # =========================================================
@@ -291,19 +308,23 @@ def rn_vankor_calc (
 # =========================================================
 # 44. Тагульское — ЛПУ
     if not F_bp_tagul_lpu:
-        base = round((F_tagul_lpu_month / N) / 50) * 50
         rset, msum, bcnt, rcnt = bp_rdays["F_bp_tagul_lpu"]
+        remaining = F_tagul_lpu_month - msum
+        auto_days = bcnt + rcnt
+        base = round((remaining / auto_days) / 50) * 50 if auto_days > 0 else 0
         if day in rset:
-            F_bp_tagul_lpu = (F_tagul_lpu_month - base * bcnt - msum) / rcnt
+            F_bp_tagul_lpu = (remaining - base * bcnt) / rcnt if rcnt > 0 else 0
         else:
             F_bp_tagul_lpu = base
 # =========================================================
 # 45. Тагульское — ТПУ
     if not F_bp_tagul_tpu:
-        base = round((F_tagul_tpu_month / N) / 50) * 50
         rset, msum, bcnt, rcnt = bp_rdays["F_bp_tagul_tpu"]
+        remaining = F_tagul_tpu_month - msum
+        auto_days = bcnt + rcnt
+        base = round((remaining / auto_days) / 50) * 50 if auto_days > 0 else 0
         if day in rset:
-            F_bp_tagul_tpu = (F_tagul_tpu_month - base * bcnt - msum) / rcnt
+            F_bp_tagul_tpu = (remaining - base * bcnt) / rcnt if rcnt > 0 else 0
         else:
             F_bp_tagul_tpu = base
 # 46. Расчет суммарной сдачи ООО "Тагульское" через СИКН №1209
@@ -311,10 +332,12 @@ def rn_vankor_calc (
 # =========================================================
 # 47. СКН
     if not F_bp_skn:
-        base = round((F_skn_month / N) / 50) * 50
         rset, msum, bcnt, rcnt = bp_rdays["F_bp_skn"]
+        remaining = F_skn_month - msum
+        auto_days = bcnt + rcnt
+        base = round((remaining / auto_days) / 50) * 50 if auto_days > 0 else 0
         if day in rset:
-            F_bp_skn = (F_skn_month - base * bcnt - msum) / rcnt
+            F_bp_skn = (remaining - base * bcnt) / rcnt if rcnt > 0 else 0
         else:
             F_bp_skn = base
 
@@ -332,23 +355,29 @@ def rn_vankor_calc (
                 )
             delivery_days = [d for d in range(1, N + 1) if d % e_vo == 0]
             if delivery_days:
-                delivery_count = len(delivery_days)
-                last_day = delivery_days[-1]
-                base = round((F_vo_month / delivery_count) / 50) * 50
-                if day in delivery_days:
-                    if day != last_day:
+                manual_var = bp_manual.get("F_bp_vo", {})
+                msum_all = sum(manual_var.values())
+                remaining = F_vo_month - msum_all
+                auto_delivery = [d for d in delivery_days if d not in manual_var]
+                if day in auto_delivery:
+                    auto_count = len(auto_delivery)
+                    last_auto = auto_delivery[-1]
+                    base = round((remaining / auto_count) / 50) * 50 if auto_count > 0 else 0
+                    if day != last_auto:
                         F_bp_vo = base
                     else:
-                        F_bp_vo = F_vo_month - base * (delivery_count - 1)
+                        F_bp_vo = remaining - base * (auto_count - 1)
                 else:
                     F_bp_vo = 0
             else:
                 F_bp_vo = 0
         else:
-            base = round((F_vo_month / N) / 50) * 50
             rset, msum, bcnt, rcnt = bp_rdays["F_bp_vo"]
+            remaining = F_vo_month - msum
+            auto_days = bcnt + rcnt
+            base = round((remaining / auto_days) / 50) * 50 if auto_days > 0 else 0
             if day in rset:
-                F_bp_vo = (F_vo_month - base * bcnt - msum) / rcnt
+                F_bp_vo = (remaining - base * bcnt) / rcnt if rcnt > 0 else 0
             else:
                 F_bp_vo = base
 # =========================================================
@@ -365,23 +394,29 @@ def rn_vankor_calc (
                 )
             delivery_days = [d for d in range(1, N + 1) if d % e_tng == 0]
             if delivery_days:
-                delivery_count = len(delivery_days)
-                last_day = delivery_days[-1]
-                base = round((F_tng_month / delivery_count) / 50) * 50
-                if day in delivery_days:
-                    if day != last_day:
+                manual_var = bp_manual.get("F_bp_tng", {})
+                msum_all = sum(manual_var.values())
+                remaining = F_tng_month - msum_all
+                auto_delivery = [d for d in delivery_days if d not in manual_var]
+                if day in auto_delivery:
+                    auto_count = len(auto_delivery)
+                    last_auto = auto_delivery[-1]
+                    base = round((remaining / auto_count) / 50) * 50 if auto_count > 0 else 0
+                    if day != last_auto:
                         F_bp_tng = base
                     else:
-                        F_bp_tng = F_tng_month - base * (delivery_count - 1)
+                        F_bp_tng = remaining - base * (auto_count - 1)
                 else:
                     F_bp_tng = 0
             else:
                 F_bp_tng = 0
         else:
-            base = round((F_tng_month / N) / 50) * 50
             rset, msum, bcnt, rcnt = bp_rdays["F_bp_tng"]
+            remaining = F_tng_month - msum
+            auto_days = bcnt + rcnt
+            base = round((remaining / auto_days) / 50) * 50 if auto_days > 0 else 0
             if day in rset:
-                F_bp_tng = (F_tng_month - base * bcnt - msum) / rcnt
+                F_bp_tng = (remaining - base * bcnt) / rcnt if rcnt > 0 else 0
             else:
                 F_bp_tng = base
 # =========================================================
@@ -398,23 +433,29 @@ def rn_vankor_calc (
                 )
             delivery_days = [d for d in range(1, N + 1) if d % e_kchng == 0]
             if delivery_days:
-                delivery_count = len(delivery_days)
-                last_day = delivery_days[-1]
-                base = round((F_kchng_month / delivery_count) / 50) * 50
-                if day in delivery_days:
-                    if day != last_day:
+                manual_var = bp_manual.get("F_bp_kchng", {})
+                msum_all = sum(manual_var.values())
+                remaining = F_kchng_month - msum_all
+                auto_delivery = [d for d in delivery_days if d not in manual_var]
+                if day in auto_delivery:
+                    auto_count = len(auto_delivery)
+                    last_auto = auto_delivery[-1]
+                    base = round((remaining / auto_count) / 50) * 50 if auto_count > 0 else 0
+                    if day != last_auto:
                         F_bp_kchng = base
                     else:
-                        F_bp_kchng = F_kchng_month - base * (delivery_count - 1)
+                        F_bp_kchng = remaining - base * (auto_count - 1)
                 else:
                     F_bp_kchng = 0
             else:
                 F_bp_kchng = 0
         else:
-            base = round((F_kchng_month / N) / 50) * 50
             rset, msum, bcnt, rcnt = bp_rdays["F_bp_kchng"]
+            remaining = F_kchng_month - msum
+            auto_days = bcnt + rcnt
+            base = round((remaining / auto_days) / 50) * 50 if auto_days > 0 else 0
             if day in rset:
-                F_bp_kchng = (F_kchng_month - base * bcnt - msum) / rcnt
+                F_bp_kchng = (remaining - base * bcnt) / rcnt if rcnt > 0 else 0
             else:
                 F_bp_kchng = base
     F_bp = F_bp_vn + F_bp_tagul_lpu + F_bp_tagul_tpu + F_bp_suzun_vankor + F_bp_suzun_vslu + F_bp_skn + F_bp_vo + F_bp_tng + F_bp_kchng + F_bp_suzun
@@ -500,18 +541,16 @@ def month_calc (
     F_bp_suzun_month = F_bp_suzun.sum()
     F_bp_sr_month = F_bp_month/N
 
-    # # Подсветка "месячного" F_bp_month (если среди первых 10 суток есть F_bp < F_bp_sr_month)
-    # for ind, F_bp_day in enumerate(F_bp[:10]):
-    #     if F_bp_day < F_bp_sr_month:
-    #         F_bp[ind] = {
-    #             "value":F_bp_day,
-    #             "status": 2,
-    #             "message":None
-    #         }
-
-
+    _F_bp_day_flags = None
+    if sum(F_bp[:10]) < F_bp_sr_month:
+        _F_bp_day_flags = [
+            {"value": float(F_bp[i]), "status": 2,
+             "message": "Сдача за 1-10 сутки меньше среднесуточного значения за месяц"}
+            for i in range(min(10, len(F_bp)))
+        ]
 
     return {
+        "_F_bp_day_flags": _F_bp_day_flags,
         "G_ichem_month":G_ichem_month,
         "F_bp_vn_month":F_bp_vn_month,
         "F_bp_tagul_lpu_month":F_bp_tagul_lpu_month,
@@ -2219,57 +2258,115 @@ def planned_balance_for_bp_tagul_gtm_calc(
 # Получает текущие F_bp_* и текст node, корректирует значения.
 # ------------------------------------------------------------------
 def node_correction_calc(
-    F_bp, F_bp_vn, F_bp_suzun, F_bp_suzun_vankor, F_bp_suzun_vslu,
+    F_bp_vn, F_bp_suzun, F_bp_suzun_vankor, F_bp_suzun_vslu,
     F_bp_tagul, F_bp_tagul_lpu, F_bp_tagul_tpu,
     F_bp_skn, F_bp_vo, F_bp_tng, F_bp_kchng,
-    node,
+    node, t_ost_sikn_1209=0,
 ):
-    _status = 0
-    _message = f"Скорректировано по node: {node}"
     parts = node.split()
-    obj = parts[1]
+    obj = parts[1] if len(parts) > 1 else ""
 
-    vals = {
-        "F_bp_vn": F_bp_vn,
-        "F_bp_suzun": F_bp_suzun,
-        "F_bp_suzun_vankor": F_bp_suzun_vankor,
-        "F_bp_suzun_vslu": F_bp_suzun_vslu,
-        "F_bp_tagul": F_bp_tagul,
-        "F_bp_tagul_lpu": F_bp_tagul_lpu,
-        "F_bp_tagul_tpu": F_bp_tagul_tpu,
-        "F_bp_skn": F_bp_skn,
-        "F_bp_vo": F_bp_vo,
-        "F_bp_tng": F_bp_tng,
-        "F_bp_kchng": F_bp_kchng,
-    }
-
+    K_work = None
+    F_vn = None
+    F_suzun = None
+    F_suzun_vankor = None
+    F_suzun_vslu = None
+    F_tagul = None
+    F_tagul_lpu = None
+    F_tagul_tpu = None
+    F_skn = None
+    F_vo = None
+    F_tng = None
+    F_kchng = None
+    F = None
 
     if obj == "СИКН-1209":
-        K_work = (24 - int(parts[2])) / 24
-        for key in vals:
-            vals[key] *= K_work
-        F_bp = sum(vals.values())
+        K_work = (24 - t_ost_sikn_1209) / 24
+        F_vn = F_bp_vn * K_work
+        F_suzun = F_bp_suzun * K_work
+        F_suzun_vankor = F_bp_suzun_vankor * K_work
+        F_suzun_vslu = F_bp_suzun_vslu * K_work
+        F_tagul = F_bp_tagul * K_work
+        F_tagul_lpu = F_bp_tagul_lpu * K_work
+        F_tagul_tpu = F_bp_tagul_tpu * K_work
+        F_skn = F_bp_skn * K_work
+        F_vo = F_bp_vo * K_work
+        F_tng = F_bp_tng * K_work
+        F_kchng = F_bp_kchng * K_work
+        F = F_vn + F_suzun + F_suzun_vankor + F_suzun_vslu + F_tagul + F_tagul_lpu + F_tagul_tpu + F_skn + F_vo + F_tng + F_kchng
+
     elif obj in ("НПС-1", "НПС-2"):
-        t_ost_nps_1_2 = int(parts[2])
+        pass
 
-
-    elif len(parts) > 10:
-        t_ost_sikn = int(parts[2])
-        t_ost_nps_1_2 = int(parts[10])
-
+    elif obj in ("НПС-1", "НПС-2") and obj in ("СИКН-1209"):
+        pass
 
     return {
-        "K_work":K_work,
-        "F_bp_vn":F_bp_vn,
-        "F_bp_suzun":F_bp_suzun,
-        "F_bp_suzun_vankor":F_bp_suzun_vankor,
-        "F_bp_suzun_vslu":F_bp_suzun_vslu,
-        "F_bp_tagul":F_bp_tagul,
-        "F_bp_tagul_lpu":F_bp_tagul_lpu,
-        "F_bp_tagul_tpu": F_bp_tagul_tpu,
-        "F_bp_skn":F_bp_skn,
-        "F_bp_vo":F_bp_vo,
-        "F_bp_tng":F_bp_tng,
-        "F_bp_kchng":F_bp_kchng,
-        "F_bp":F_bp
+        "K_work": K_work,
+        "F_vn": F_vn,
+        "F_suzun": F_suzun,
+        "F_suzun_vankor": F_suzun_vankor,
+        "F_suzun_vslu": F_suzun_vslu,
+        "F_tagul": F_tagul,
+        "F_tagul_lpu": F_tagul_lpu,
+        "F_tagul_tpu": F_tagul_tpu,
+        "F_skn": F_skn,
+        "F_vo": F_vo,
+        "F_tng": F_tng,
+        "F_kchng": F_kchng,
+        "F": F,
+    }
+def adjusting_availability_oil_RP_CTN(
+    t_ost_sikn_1209, V_knps, VN_knps_min,
+    delta_VO_nps_1_max, delta_VO_gnps_max, delta_VO_nps_2_max,
+    V_nps_1_prev, V_nps_2_prev,
+    VA_nps_2_max, VA_nps_1_max, G_gnps_prev,
+    day_type="adj", segment_length=0,
+):
+    delta_V_knps = None
+    V_nps_1 = None
+    V_nps_2 = None
+    G_gnps = None
+
+    if t_ost_sikn_1209 < 24:
+        total_max = delta_VO_gnps_max + delta_VO_nps_1_max + delta_VO_nps_2_max
+        delta_V_knps = V_knps - VN_knps_min
+
+        if day_type == "adj":
+            delta_V_nps_1 = delta_V_knps * (delta_VO_nps_1_max / total_max)
+            if delta_V_nps_1 > delta_VO_nps_1_max:
+                delta_V_nps_1 = delta_VO_nps_1_max
+            V_nps_1 = V_nps_1_prev + delta_V_nps_1
+            if V_nps_1 > VA_nps_1_max:
+                V_nps_1 = VA_nps_1_max
+
+            delta_V_nps_2 = delta_V_knps * (delta_VO_nps_2_max / total_max)
+            if delta_V_nps_2 > delta_VO_nps_2_max:
+                delta_V_nps_2 = delta_VO_nps_2_max
+            V_nps_2 = V_nps_2_prev + delta_V_nps_2
+            if V_nps_2 > VA_nps_2_max:
+                V_nps_2 = VA_nps_2_max
+
+            delta_V_gnps = delta_V_knps * (delta_VO_gnps_max / total_max)
+            if delta_V_gnps > delta_VO_gnps_max:
+                delta_V_gnps = delta_VO_gnps_max
+            G_gnps = G_gnps_prev - delta_V_gnps
+            if G_gnps < ((V_nps_1 - V_nps_1_prev) + (V_nps_2 - V_nps_2_prev)):
+                G_gnps = (V_nps_1 - V_nps_1_prev) + (V_nps_2 - V_nps_2_prev)
+
+        elif day_type == "between":
+            # Дни между остановами: равномерный возврат к нормативу за segment_length дней
+            G_gnps = (G_gnps + 8500)/segment_length
+
+        elif day_type == "after":
+            # Дни после последнего останова до конца месяца: равномерный возврат за segment_length дней
+            V_nps_1 = V_nps_1_prev
+            V_nps_2 = V_nps_2_prev
+            G_gnps = G_gnps_prev
+
+    return {
+        "delta_V_knps": delta_V_knps,
+        "V_nps_1": V_nps_1,
+        "V_nps_2": V_nps_2,
+        "G_gnps": G_gnps,
     }

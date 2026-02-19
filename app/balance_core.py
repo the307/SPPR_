@@ -30,6 +30,7 @@ from .calculate import (
     planned_balance_for_bp_lodochny_gtm_calc,
     planned_balance_for_bp_tagul_gtm_calc,
     node_correction_calc,
+    adjusting_availability_oil_RP_CTN,
 )
 
 from .data_prep import (
@@ -37,6 +38,7 @@ from .data_prep import (
     get_month_data,
     precalc_value_data,
     _get_day_value_nullable,
+    _get_day_value,
     recalculation_data,
     vankor_data,
     lodochny_upsv_yu_data,
@@ -59,6 +61,7 @@ from .data_prep import (
     get_planned_balance_for_bp_lodochny_gtm_data,
     get_planned_balance_for_bp_tagul_gtm_data,
     get_node_correction_data,
+    get_adjusting_availability_oil_data,
 )
 from .export import export_to_json
 from .error_handler import handle_error
@@ -291,7 +294,12 @@ def stage_month_calc(master_df: pd.DataFrame, dates: list[pd.Timestamp], state: 
     
     payload = get_month_data(master_df, month, N, day)
     result = month_calc(**payload)
+    day_flags = result.pop("_F_bp_day_flags", None)
     master_df = update_df(master_df, {"date": last_date, **result})
+    if day_flags:
+        for idx, flag in enumerate(day_flags):
+            if idx < len(dates):
+                master_df = update_df(master_df, {"date": dates[idx], "F_bp": flag})
     return master_df
 
 
@@ -578,42 +586,163 @@ def calculate_json_data(input_data):
         master_df = stage_rn_vankor(master_df, dates, N, state)
         master_df = stage_availability_and_pumping(master_df, dates, N, state)
         master_df = stage_month_calc(master_df, dates, state,N)
-        master_df, earliest_change = stage_auto_balance_volumes(master_df, dates, N, prev_month, state)
-       
-        # Если autobalance изменил ключевые объёмы — пересчитываем зависимые блоки заново
-        # (value_recalculation и далее), чтобы все показатели соответствовали новым V_upn_*.
-        if earliest_change is not None:
-            # 1) пересчёт дневных балансов с даты первого изменения
-            master_df = stage_value_recalculation(master_df, dates, N, prev_month, state, start_from=earliest_change,)
-            # 2) availability_and_pumping зависит от месячной суммы G_gpns_i,
-            # поэтому безопаснее пересчитать его для всего месяца
-            master_df = stage_availability_and_pumping(master_df, dates, N, state)
+        # Определяем дни с node (остановки/ремонты)
+        node_vals = {}
+        if "node" in master_df.columns:
+            for n in dates:
+                row = master_df.loc[master_df["date"] == n]
+                if row.empty:
+                    continue
+                node_raw = row.iloc[0]["node"]
+                if isinstance(node_raw, dict):
+                    nv = node_raw.get("value")
+                else:
+                    nv = node_raw
+                if nv is None or (isinstance(nv, float) and pd.isna(nv)):
+                    continue
+                if isinstance(nv, str) and nv.strip() == "":
+                    continue
+                node_vals[n] = nv
 
-            # 3) пересчёт месячных сумм и баланса/остатков
-            master_df = stage_month_calc(master_df, dates, state, N)
+        if node_vals:
+            last_5_days = set(dates[-5:])
+            bad_days = [n for n in node_vals if n in last_5_days]
+            if bad_days:
+                for n in bad_days:
+                    master_df = update_df(master_df, {
+                        "date": n,
+                        "node": {
+                            "value": node_vals[n],
+                            "status": 2,
+                            "message": "В последние 5 дней текущего месяца остановку СИКН делать нельзя",
+                        },
+                    })
+                return export_to_json(master_df=master_df, input_json=input_data)
 
-        # Баланс + суточные остатки нужно считать последовательно по дням:
-        # баланс дня n зависит от остатков prev_day, которые появляются после расчёта availability для prev_day.
-        for n in dates:
-            master_df = stage_balance_calc(master_df, [n], state)
-            master_df = stage_availability_oil(master_df, [n], state)
+            t_ost_sikn_1209_total = 0
+            for nv in node_vals.values():
+                p = str(nv).split()
+                if any(tok.upper() == "СИКН-1209" for tok in p):
+                    for tok in p:
+                        if tok.isdigit():
+                            t_ost_sikn_1209_total += int(tok)
 
-        master_df = stage_bp_month_calc(master_df, dates, state)
-        master_df = stage_rn_vankor_check(master_df, dates, state)
-        master_df = stage_deviations_from_bp(master_df, dates)
-        master_df = stage_planned_balance_for_bp_vn(master_df, dates)
-        master_df = stage_planned_balance_for_suzun_vn(master_df, dates)
-        master_df = stage_planned_balance_for_bp_vo(master_df, dates)
-        master_df = stage_planned_balance_for_bp_lodochny(master_df, dates)
-        master_df = stage_planned_balance_for_bp_tagul(master_df, dates)
-        master_df = stage_planned_balance_for_bp_vn_gtm(master_df, dates, prev_month)
-        master_df = stage_planned_balance_for_bp_suzun_gtm(master_df, dates, prev_month)
-        master_df = stage_planned_balance_for_bp_vo_gtm(master_df, dates, prev_month)
-        master_df = stage_planned_balance_for_bp_lodochny_gtm(master_df, dates, prev_month)
-        master_df = stage_planned_balance_for_bp_tagul_gtm(master_df, dates, prev_month)
+            # Для не-node дней: F_* = F_bp_* (план = факт без корректировки)
+            f_bp_keys = [
+                "F_bp_vn", "F_bp_suzun", "F_bp_suzun_vankor", "F_bp_suzun_vslu",
+                "F_bp_tagul", "F_bp_tagul_lpu", "F_bp_tagul_tpu",
+                "F_bp_skn", "F_bp_vo", "F_bp_tng", "F_bp_kchng", "F_bp",
+            ]
+            for n in dates:
+                if n not in node_vals:
+                    row = {}
+                    for bp_key in f_bp_keys:
+                        f_key = bp_key.replace("F_bp_", "F_", 1) if bp_key != "F_bp" else "F"
+                        row[f_key] = _get_day_value(master_df, bp_key, n)
+                    master_df = update_df(master_df, {"date": n, **row})
 
-        # Корректировка по node: пересчёт для дней с остановками/ремонтами
-        # master_df = stage_node_correction(master_df, dates, state)
+            # Для node-дней: F_* = F_bp_* × K_work
+            for n, nv in node_vals.items():
+                state["current_date"] = n
+                prev_day = n - timedelta(days=1)
+                payload = get_node_correction_data(master_df, n, prev_day)
+                result = node_correction_calc(**payload, node=nv, t_ost_sikn_1209=t_ost_sikn_1209_total)
+                master_df = update_df(master_df, {"date": n, **result})
+
+            # Пересчёт V_tstn_* для ВСЕХ дней (зависят от F_*)
+            for n in dates:
+                master_df = stage_availability_oil(master_df, [n], state)
+
+            # Корректировка V_knps: день останова + 2 следующих дня без останова.
+            # При подряд идущих остановах — 2 дня после последнего в группе.
+            node_days_sorted = sorted(node_vals.keys())
+            dates_set = set(dates)
+
+            groups = [[node_days_sorted[0]]]
+            for i in range(1, len(node_days_sorted)):
+                if (node_days_sorted[i] - node_days_sorted[i - 1]).days == 1:
+                    groups[-1].append(node_days_sorted[i])
+                else:
+                    groups.append([node_days_sorted[i]])
+
+            adjustment_days = []
+            for group in groups:
+                adjustment_days.extend(group)
+                last_stop = group[-1]
+                for offset in range(1, 3):
+                    next_day = last_stop + timedelta(days=offset)
+                    if next_day in dates_set and next_day not in node_vals:
+                        adjustment_days.append(next_day)
+            adjustment_set = set(adjustment_days)
+
+            # day_info: date → ("adj"|"between"|"after", segment_length)
+            day_info = {}
+            for d in adjustment_days:
+                day_info[d] = ("adj", 0)
+
+            for g_idx, group in enumerate(groups):
+                last_stop = group[-1]
+                group_last_adj = last_stop
+                for offset in range(1, 3):
+                    candidate = last_stop + timedelta(days=offset)
+                    if candidate in dates_set and candidate not in node_vals:
+                        group_last_adj = candidate
+
+                is_last_group = (g_idx == len(groups) - 1)
+                boundary = groups[g_idx + 1][0] if not is_last_group else dates[-1] + timedelta(days=1)
+                day_type = "after" if is_last_group else "between"
+
+                segment = []
+                day = group_last_adj + timedelta(days=1)
+                while day < boundary and day in dates_set:
+                    segment.append(day)
+                    day += timedelta(days=1)
+
+                seg_len = len(segment)
+                for d in segment:
+                    day_info[d] = (day_type, seg_len)
+
+            all_processing_days = sorted(day_info.keys())
+
+            for n in all_processing_days:
+                state["current_date"] = n
+                prev_day = n - timedelta(days=1)
+                dtype, seg_len = day_info[n]
+                payload = get_adjusting_availability_oil_data(master_df, n, prev_day)
+                result = adjusting_availability_oil_RP_CTN(
+                    t_ost_sikn_1209_total, **payload,
+                    day_type=dtype, segment_length=seg_len,
+                )
+                master_df = update_df(master_df, {"date": n, **result})
+
+            master_df = stage_bp_month_calc(master_df, dates, state)
+
+        else:
+            # --- Стандартный путь (без node): автобаланс + балансировка + все стадии ---
+            master_df, earliest_change = stage_auto_balance_volumes(master_df, dates, N, prev_month, state)
+
+            if earliest_change is not None:
+                master_df = stage_value_recalculation(master_df, dates, N, prev_month, state, start_from=earliest_change)
+                master_df = stage_availability_and_pumping(master_df, dates, N, state)
+                master_df = stage_month_calc(master_df, dates, state, N)
+
+            for n in dates:
+                master_df = stage_balance_calc(master_df, [n], state)
+                master_df = stage_availability_oil(master_df, [n], state)
+
+            master_df = stage_bp_month_calc(master_df, dates, state)
+            master_df = stage_rn_vankor_check(master_df, dates, state)
+            master_df = stage_deviations_from_bp(master_df, dates)
+            master_df = stage_planned_balance_for_bp_vn(master_df, dates)
+            master_df = stage_planned_balance_for_suzun_vn(master_df, dates)
+            master_df = stage_planned_balance_for_bp_vo(master_df, dates)
+            master_df = stage_planned_balance_for_bp_lodochny(master_df, dates)
+            master_df = stage_planned_balance_for_bp_tagul(master_df, dates)
+            master_df = stage_planned_balance_for_bp_vn_gtm(master_df, dates, prev_month)
+            master_df = stage_planned_balance_for_bp_suzun_gtm(master_df, dates, prev_month)
+            master_df = stage_planned_balance_for_bp_vo_gtm(master_df, dates, prev_month)
+            master_df = stage_planned_balance_for_bp_lodochny_gtm(master_df, dates, prev_month)
+            master_df = stage_planned_balance_for_bp_tagul_gtm(master_df, dates, prev_month)
 
         # Экспорт результата
         result = export_to_json( master_df=master_df, input_json= input_data)  # dict в памяти, файл НЕ создаётся
